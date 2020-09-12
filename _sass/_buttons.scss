@@ -218,11 +218,6 @@ article a[target="_blank"] {
     }
   }
   
-  &:not(.correct) ~ * {
-    opacity: 0.25;
-    transition: opacity 300ms;
-  }
-  
   .feedback {
     opacity: 0;
     pointer-events: none;
@@ -237,6 +232,11 @@ article a[target="_blank"] {
       color: #C62828;
       border: 1px solid #FF1744;
       background-color: #FFCDD2;
+    }
+    
+    svg {
+	    display: inline;
+	    vertical-align: middle;
     }
   }
   

@@ -47,7 +47,7 @@ Dahil may tatlong magkakaibang languages ang Web platform, may kakayahan tayo bi
 
 Madalas i-take for granted ang HTML. Karamihan sa mga nag-aaral ng Web development, pinapaspasan lang ang pag-aaral ng HTML. Worth it ang oras na gagamitin mo para pag-aralan ang lahat ng HTML elements, at attributes para magamit mo nang buo ang lahat ng kaya nitong gawin.
 <script>
-[
+const checkpoints  = [
   {
     "id":"1598631012023",
     "question": "Ano ang ibig sabihin ng <abbbr>HTML</abbr>?",

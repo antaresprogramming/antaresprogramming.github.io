@@ -1,3 +1,5 @@
+---
+---
 const checkpointMarkers = [...document.querySelectorAll('.js-checkpoint-marker')]
 checkpointMarkers.forEach(marker => {
   const checkpointData = getCheckpointData(marker.dataset.checkpoint)
@@ -45,7 +47,7 @@ function buildCheckpointElement(data) {
   });
   
   const footer = document.createElement('footer')
-  footer.innerHTML = `<p class="feedback feedback--correct">{% include svg/checmark.svg %}${data.feedback && data.feedback.correct? data.feedback.correct : "Tama ka!"}</p>
+  footer.innerHTML = `<p class="feedback feedback--correct">{% include svg/checkmark.svg %}${data.feedback && data.feedback.correct? data.feedback.correct : "Tama ka!"}</p>
     <p class="feedback feedback--wrong">${data.feedback && data.feedback.wrong? data.feedback.wrong : "Hindi iyan ang tamang sagot, pero ayos lang. Puwede mo ulit i-try."}</p>`
   
   checkpointElement.appendChild(checkpointContent)

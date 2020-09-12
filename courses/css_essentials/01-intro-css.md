@@ -1,6 +1,6 @@
 ---
 id: 01-intro-css
-course_id: css-essentials
+course: css-essentials
 permalink: /courses/css-essentials/01-intro-css/
 layout: lesson
 
