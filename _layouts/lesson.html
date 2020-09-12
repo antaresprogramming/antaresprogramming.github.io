@@ -4,7 +4,6 @@
   <body class="{% if page.url == '/' %}home {% endif %}">
     {% assign courseData = site.data.courses | where: 'id', page.course %}
     {% assign coursePage = site.courses | where: 'course_id', page.course %}
-    {% include course-banner.html course=coursePage isALesson=true %}
     {% include nav.html %}
     {% assign currentLesson = courseData[0].lessons | where: 'id', page.id %}
     {% assign lessonsCount = courseData[0].lessons | size | minus: 1 %}

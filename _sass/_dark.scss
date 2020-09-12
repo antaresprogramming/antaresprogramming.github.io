@@ -12,6 +12,12 @@ body {
     --fg-color-emphasis: #fff;
   }
   
+  .note strong,
+  .note em {
+    --fg-color-emphasis: var(--blueberry-900);
+    
+  }
+  
   .color {
     background-color: var(--black-700);
     border-color: var(--black-900);
