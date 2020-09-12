@@ -7,6 +7,10 @@ body {
       filter: invert(1) hue-rotate(180deg);
   }
   
+  .course-list a strong {
+    --fg-color-emphasis: #fff;
+  }
+  
   .color {
     background-color: var(--black-700);
     border-color: var(--black-900);
