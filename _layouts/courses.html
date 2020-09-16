@@ -5,7 +5,7 @@
     {% unless page.type %}{% assign thisCourse = page %}{% endunless %}
     {% include course-banner.html course=thisCourse %}
     {% include nav.html %}
-    <section>
+    <main>
       <article>
       {% if page.type == 'index' %}
         {{ content | replace: '<a href="http', '<a rel="nofollow noopener noreferrer" target="_blank" href="http' }}
@@ -48,7 +48,7 @@
       </ol>
       {% endif %}
       </article>
-    </section>
+    </main>
     {% include footer.html %}
     {% include scripts.html %}
   </body>
