@@ -1,12 +1,14 @@
 ---
 ---
 const checkpointMarkers = [...document.querySelectorAll('.js-checkpoint-marker')]
-checkpointMarkers.forEach(marker => {
-  const checkpointData = getCheckpointData(marker.dataset.checkpoint)
-  const checkpointElement = buildCheckpointElement(checkpointData)
-  
-  marker.replaceWith(checkpointElement);
-})
+if(checkpoints != null) {
+  checkpointMarkers.forEach(marker => {
+    const checkpointData = getCheckpointData(marker.dataset.checkpoint)
+    const checkpointElement = buildCheckpointElement(checkpointData)
+    
+    marker.replaceWith(checkpointElement);
+  })
+}
 
 function getCheckpointData(id) {
   return checkpoints.find(item => item.id === id)
