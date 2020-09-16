@@ -6,8 +6,8 @@ summary: "Ang grammar na sinusunod ng HTML"
 course: html-essentials
 
 permalink: /courses/html-essentials/02-html-syntax/
-video: 
-has_downloads: false
+video: https://www.youtube.com/embed/xFBScXcPQvQ
+has_downloads: true
 code:
 ---
 ## HTML Syntax
