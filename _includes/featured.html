@@ -1,12 +1,12 @@
 {% assign post = include.post %}
 
-<a aria-labelledby="{{ post.slug }}" class="featured{% if post.image %} with-image{% endif %}{% if include.size %} {{ include.size }}{% endif %}" href="{{ post.url | prepend: site.baseurl }}">
+<a aria-labelledby="{{ post.slug | slugify: 'pretty' }}" class="featured{% if post.image %} with-image{% endif %}{% if include.size %} {{ include.size }}{% endif %}" href="{{ post.url | prepend: site.baseurl }}">
   {% if post.image %}
     <div class="featured-image" style="background-image: url({{ post.image }});"></div>
   {% endif %}
 
   <header>
-    <h2 id="{{ post.slug }}">{% include title.html title=post.title %}</h2>
+    <h2 id="{{ post.slug | slugify: 'pretty' }}">{% include title.html title=post.title %}</h2>
     {% if post.description %}
       <h3>
         {% include title.html title=post.description %}

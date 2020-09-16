@@ -3,6 +3,7 @@ layout: default
 ---
 
 {% include outdated.html post=page %}
+<main>
 <article class="post">
   {% if page.hidden %}
     <aside class="embargo">
@@ -36,8 +37,10 @@ layout: default
 
 {% include license.html %}
 {% include social.html %}
+</main>
 
-<h2 class="up-next">Up Next</h2>
+<section aria-labelledby="up-next">
+<h2 id="up-next" class="up-next">Up Next</h2>
 {% if page.next %}
   {% unless page.next.hidden %}
     {% include featured.html post=page.next %}
@@ -49,4 +52,5 @@ layout: default
     {% include featured.html post=page.previous %}
   {% endunless %}
 {% endif %}
+</section>
 
