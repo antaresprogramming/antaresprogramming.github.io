@@ -4,11 +4,11 @@
   <body class="{% if page.url == '/' %}home {% endif %}">
     {% if page.has_banner %}{% include cta-banner.html %}{% endif %}
     {% include nav.html %}
-    <section>
+    <div class="page-width">
       {{ content | replace: '<a href="http', '<a rel="nofollow noopener noreferrer" target="_blank" href="http' }}
 
       {% include medium.html %}
-    </section>
+    </div>
     {% include footer.html %}
     {% include scripts.html %}
   </body>

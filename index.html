@@ -7,7 +7,7 @@ redirect_from:
   - /archive/1
 has_banner: true
 ---
-
+<main>
 {% unless paginator.previous_page %}
   {% comment %}
     Newest posts in a unique, Medium-like layout on the first page
@@ -26,7 +26,6 @@ has_banner: true
     {% include featured.html post=post %}
   </section>
 {% endunless %}
-{% include notice-banner.html %}
 <section class="more">
 {% if paginator.previous_page %}
   <h2>Archive Page {{ paginator.page }}</h2>
@@ -44,8 +43,9 @@ has_banner: true
   {% endfor %}
 {% endif %}
 </section>
-
-<nav class="pagination">
+</main>
+{% include notice-banner.html %}
+<nav class="pagination" aria-label="Archives">
   {% if paginator.previous_page %}
     <a href="{{ paginator.previous_page_path }}" class="previous">Newer</a>
   {% endif %}
@@ -54,4 +54,4 @@ has_banner: true
     <a href="{{ paginator.next_page_path }}" class="next">Older</a>
   {% endif %}
 </nav>
-    
+

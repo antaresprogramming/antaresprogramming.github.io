@@ -1,14 +1,12 @@
-body > header {
-  background-color: var(--header-bg-color);
-  color: var(--header-fg-color);
-  fill: var(--header-fg-color);
-  border-bottom: 1px solid var(--banana-700);
-
-  nav {
+body > nav {
     display: flex;
     font-size: 0;
     flex-wrap: wrap;
     padding: 0.5rem 1rem;
+    background-color: var(--header-bg-color);
+    color: var(--header-fg-color);
+    fill: var(--header-fg-color);
+    border-bottom: 1px solid var(--banana-700);
 
     ul {
       display: inline-block;
@@ -84,13 +82,13 @@ body > header {
 	      stroke-opacity: 0;
       }
     }
-  }
 
-  .primary {
+
+  &.primary {
     justify-content: space-between;
   }
 
-  .secondary {
+  &.secondary {
     background-color: var(--secondary-bg-color);
     justify-content: center;
 

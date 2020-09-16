@@ -3,6 +3,8 @@
   --content-width: 40rem;
 }
 
+body > .page-width,
+body > main,
 body > section {
   margin: 0 auto;
   max-width: var(--page-width);
@@ -63,7 +65,7 @@ body > footer {
 	padding: 1rem;
 	padding-bottom: 2rem;
 	background-color: var(--black-500);
-	color: var(--silver-700);
+	color: var(--silver-100);
 }
 
 .footer__section__title {
@@ -476,7 +478,7 @@ mark {
 }
 
 .notice {
-	background-color: var(--blueberry-100);
+	background-color: var(--header-bg-color);
 	color: var(--header-fg-color);
 	margin: 100px -1rem;
 	max-width: none;
