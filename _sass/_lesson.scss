@@ -615,3 +615,49 @@ article section:not([class]) {
 .codepen {
 	margin: 1em auto !important;
 }
+
+.callout {
+  background-color: var(--callout-bg);
+  color: var(--callout-fg);
+  border: 1px solid var(--callout-bg-darker);
+  border-left: 5px solid var(--callout-bg-darker);
+  padding: 0.5rem;
+  margin: auto;
+  margin-bottom: 1rem;
+  max-width: var(--content-width);
+
+  --callout-bg: var(--silver-100);
+  --callout-bg-darker: var(--silver-300);
+  --callout-fg: var(--black-500);
+  --callout-fg-darker: var(--black-700);
+  
+  strong:first-child {
+    color: var(--callout-fg-darker);
+  }
+  
+  p {
+	  margin: 0.5em auto;
+	  
+	  & + p {
+	    margin-top: 2em;
+	  }
+  }
+
+  &.note {
+    --callout-bg: var(--blueberry-100);
+    --callout-bg-darker: var(--blueberry-300);
+    --callout-fg-darker: var(--blueberry-900);
+  }
+  
+  &.warning {
+    --callout-bg: var(--orange-100);
+    --callout-bg-darker: var(--orange-300);
+    --callout-fg-darker: var(--orange-900);
+  }
+  
+  &.error {
+    --callout-bg: var(--strawberry-100);
+    --callout-bg-darker: var(--strawberry-300);
+    --callout-fg-darker: var(--strawberry-900);
+  }
+}
