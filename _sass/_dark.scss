@@ -7,6 +7,14 @@ body {
       filter: invert(1) hue-rotate(180deg);
   }
   
+
+  .note {
+    code {
+      color: #eee;
+    }
+
+  }
+
   em, strong,
   .course-list a strong {
     --fg-color-emphasis: #fff;
