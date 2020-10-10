@@ -1,0 +1,31 @@
+{% assign currentLessonID = include.currentLessonID %}
+{% assign course = include.course %}
+
+{% assign courseData = site.data.courses | where: "id", course %}
+{% assign currentLessonData = courseData[0].lessons | where: "id", currentLessonID %}
+{% assign lessonsCount = courseData[0].lessons | size | minus: 1 %}
+
+{% for i in (0..lessonsCount) %}
+  {% if courseData[0].lessons[i].id == page.id %}
+    {% assign nextLessonIndex = i | plus: 1 %}
+    {% assign prevLessonIndex = i | minus: 1 %}
+    
+    {% if courseData[0].lessons[nextLessonIndex] and nextLessonIndex <= lessonsCount %}
+      {% assign nextLesson = courseData[0].lessons[nextLessonIndex] %}
+    {% endif %}
+    
+    {% if courseData[0].lessons[prevLessonIndex] and prevLessonIndex >= 0 %}
+      {% assign prevLesson = courseData[0].lessons[prevLessonIndex] %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
+
+
+<nav class="zirconium-lesson-nav" aria-label="Pagination">
+  {% if prevLesson != nil %}
+  <a class="btn prev" href="{{ site.url }}/courses/{{ course }}/{{ prevLesson.id }}/">Previous Lesson</a>
+  {% endif %}
+  {% if nextLesson != nil %}
+  <a class="btn next" href="{{ site.url }}/courses/{{ course }}/{{ nextLesson.id }}/">Next Lesson</a>
+  {% endif %}
+</nav>

@@ -1,24 +1,29 @@
-// Solarized Code Highlighting
-// Adapted from https://gist.github.com/nicolashery/5765395
-
-code {
-  background-color: var(--secondary-bg-color);
+kbd {
+  background-color: var(--bg-code);
+  display: inline-block;
+  padding: 0.1em 0.25em;
   border-radius: 0.25em;
-  font-size: 1;
-  padding: 0.2em;
-  padding-bottom: 0;
-  line-height:inherit;
+  font-family: var(--monospace), monospace;
+  border: 1px solid #0002;
+  text-indent: 0;
+  box-shadow: 0 3px 0 var(--kbd-shadow);
 }
 
-.highlighter-rouge {
-  margin: 2em auto;
-  text-align: center;
+article section > pre {
+	max-width: var(--content-width);
+	margin: auto;
+	background-color: var(--black-500);
+	color: var(--silver-300);
+	padding: 1rem;
+	border-radius: 0.25rem;
+}
 
-  > .highlight {
-    border-radius: 0.25em;
-    
-    line-height: 1;
-  }
+
+div.highlighter-rouge {
+	margin: 2em auto;
+	display: block;
+	width: max-content;
+	max-width: var(--content-width);
 }
 
 .highlight {
@@ -41,7 +46,7 @@ code {
 
 .highlight {
   display: block;
-  max-width : var(--content-width);
+  max-width: var(--content-width);
   font-size: 1rem;
   line-height: 1.33em;
   margin: auto;

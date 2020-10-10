@@ -1,5 +1,5 @@
 ---
-layout: lesson
+layout: zirconium-lesson
 id: 01-hypertext-markup-language
 title: HyperText Markup Language
 summary: "Ano ang HTML, at ano ang lugar nito sa Web development?"

@@ -35,7 +35,7 @@
                   {% else %}
                     {% assign lessonIsOpen = false %}
                   {% endif %}
-                  <li>
+                  <li {% if page.is_done and lessonIsOpen %}class="lesson--open"{% endif %}>
                     <a {% if page.is_done and lessonIsOpen %}href="{{ lessonPermalink }}"{% endif %}>
                       <strong>{{ lesson.title }}</strong>
                       <p>{{ lesson.summary }}</p>
