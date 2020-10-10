@@ -59,14 +59,16 @@
       <h1 class="lesson__title">{{ lessonData.title }}</h1>
       <p class="lead">{{ lessonData.summary }}</p>
     </header>
+    {% if page.downloads != nil %}
     <section class="lesson__downloads">
       <h2>Downloads</h2>
       <div class="lesson__downloads__buttons">
-        <a href="#!" download class="btn">Code</a>
-        <a href="#!" download class="btn">Article (PDF, 1.5MB)</a>
-        <a href="#!" download class="btn">Video</a>
+        {% if page.downloads.code != nil %}<a href="{{ page.downloads.code }}" download class="btn">Code</a>{% endif %}
+        {% if page.downloads.pdf != nil %}<a href="{{ page.downloads.pdf.link }}" download class="btn">Article (PDF, {% if page.downloads.pdf.file_size != nil %}{{ page.downloads.pdf.file_size }}{% endif %})</a>{% endif %}
+        {% if page.downloads.video != nil %}<a href="{{ page.downloads.video }}" download class="btn">Video</a>{% endif %}
       </div>
     </section>
+    {% endif %}
     <section class="lesson__body">
       {{ content | replace: '<a href="http', '<a rel="nofollow noopener noreferrer" target="_blank" href="http' }}
     </section>

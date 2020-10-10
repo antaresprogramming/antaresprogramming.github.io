@@ -6,9 +6,7 @@ summary: "Ang grammar na sinusunod ng HTML"
 course: html-essentials
 
 permalink: /courses/html-essentials/02-html-syntax/
-video: https://www.youtube.com/embed/xFBScXcPQvQ
-has_downloads: true
-code:
+video_embed: https://www.youtube.com/embed/xFBScXcPQvQ
 ---
 ## HTML Syntax
 {:.no_toc}
