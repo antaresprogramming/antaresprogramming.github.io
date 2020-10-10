@@ -511,6 +511,7 @@ mark {
 	  position: absolute;
 	  left: -170px;
 	  bottom: -170px;
+	  pointer-events:none;
   }
   
   .attribution {
@@ -566,4 +567,8 @@ mark {
 
 .pagination {
 	text-align: center;
+}
+
+.main--homepage {
+  padding-top: 2rem;
 }
