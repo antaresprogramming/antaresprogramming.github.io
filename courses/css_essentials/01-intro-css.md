@@ -2,7 +2,7 @@
 id: 01-intro-css
 course: css-essentials
 permalink: /courses/css-essentials/01-intro-css/
-layout: lesson
+layout: zirconium-lesson
 
 title: Ang Cascading Style Sheets
 description: Bakit kailangan ang CSS? At paano ito gagamitin kasama ng HTML?

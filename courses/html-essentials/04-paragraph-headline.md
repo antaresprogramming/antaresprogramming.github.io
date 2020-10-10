@@ -1,5 +1,5 @@
 ---
-layout: lesson
+layout: zirconium-lesson
 id: 04-paragraph-headline
 title: Paragraphs at Headlines
 summary: "Ang structure ng content ay madalas na binubuo ng mga paragraph at heading."

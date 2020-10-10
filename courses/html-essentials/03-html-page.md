@@ -1,5 +1,5 @@
 ---
-layout: lesson
+layout: zirconium-lesson
 id: 03-html-page
 title: Ang HTML Page
 summary: "Ang basic structure ng isang HTML page"

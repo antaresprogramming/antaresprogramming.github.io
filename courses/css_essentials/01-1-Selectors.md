@@ -2,7 +2,7 @@
 id: "01-1-Selectors"
 course: css-essentials
 permalink: /courses/css-essentials/01-1-Selectors/
-layout: lesson
+layout: zirconium-lesson
 
 title: Mga Selector
 description: Bukod sa HTML tags, puwede tayong gumamit ng patterns, o selectors, para sabihin sa CSS kung sa aling HTML elements lang mag-a-apply ang styling natin.

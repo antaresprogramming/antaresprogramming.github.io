@@ -2,7 +2,7 @@
 id: "02-cascade-inheritance-specificity"
 course: css-essentials
 permalink: /courses/css-essentials/02-cascade-inheritance-specificity/
-layout: lesson
+layout: zirconium-lesson
 
 title: Ang Cascade, Inheritance, at Specificity
 description: Mga nakakalitong concepts ng CSS, at kung paano sila gumagana.
