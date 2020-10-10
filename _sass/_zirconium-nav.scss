@@ -5,6 +5,9 @@ body > nav {
     background-color: #212121;
     color: #fff;
     fill: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 99;
 
     ul {
       display: inline-block;

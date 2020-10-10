@@ -7,6 +7,10 @@
   display: none !important;
 }
 
+body {
+  height: 100vh;
+}
+
 body > .page-width,
 body > main,
 body > section {
