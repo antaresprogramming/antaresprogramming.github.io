@@ -23,9 +23,17 @@
 
 <nav class="zirconium-lesson-nav" aria-label="Pagination">
   {% if prevLesson != nil %}
-  <a class="btn prev" href="{{ site.url }}/courses/{{ course }}/{{ prevLesson.id }}/">Previous Lesson</a>
+  <a class="btn prev" href="{{ site.url }}/courses/{{ course }}/{{ prevLesson.id }}/"><svg height='16' width='16' xmlns='http://www.w3.org/2000/svg'>
+            <g color='currentColor' transform='translate(-293 3)'>
+                <path d='M301 10.676l-7-6.192 7-6.16V2h6.001v5h-6z' fill='currentColor' overflow='visible' style='marker:none'/>
+            </g>
+        </svg> Previous Lesson</a>
   {% endif %}
   {% if nextLesson != nil %}
-  <a class="btn next" href="{{ site.url }}/courses/{{ course }}/{{ nextLesson.id }}/">Next Lesson</a>
+  <a class="btn next" href="{{ site.url }}/courses/{{ course }}/{{ nextLesson.id }}/">Next Lesson <svg height='16' width='16' xmlns='http://www.w3.org/2000/svg' style="margin: 0; margin-left: 0.5ch">
+        <g color='currentColor' transform='translate(-313 3)'>
+            <path d='M321 10.676l7.001-6.192-7-6.16V2H315v5h6z' fill='currentColor' overflow='visible' style='marker:none'/>
+        </g>
+    </svg> </a>
   {% endif %}
 </nav>
