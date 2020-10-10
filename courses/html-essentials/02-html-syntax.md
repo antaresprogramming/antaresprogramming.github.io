@@ -1,16 +1,14 @@
 ---
-layout: lesson
+layout: zirconium-lesson
 id: 02-html-syntax
 title: HTML Syntax
 summary: "Ang grammar na sinusunod ng HTML"
 course: html-essentials
 
 permalink: /courses/html-essentials/02-html-syntax/
-video_embed: https://www.youtube.com/embed/xFBScXcPQvQ
-downloads:
-  pdf:
-    link: https://www.dropbox.com/s/g5luvdpi9j24akk/html-essentials-02.pdf?dl=1
-    file_size: 1.32 MB
+video: https://www.youtube.com/embed/xFBScXcPQvQ
+has_downloads: true
+code:
 ---
 ## HTML Syntax
 {:.no_toc}

@@ -7,8 +7,7 @@
 {% assign date=include.date %}
 
 <div class="byline">
-  <div class="avatar">
-    <img
+    <img class="avatar"
       {% if author.gravatar %}
         srcset="https://www.gravatar.com/avatar/{{ author.gravatar }}?s=96&d=blank 2x"
         src="{{ site.url }}/images/authors/{{ author.gravatar }}.jpg"
@@ -21,18 +20,20 @@
       width="96"
       height="96"
     />
-  </div>
   <div class="author">
-    {% if include.link == true %}<a href="{{ site.baseurl }}/authors/{{ include.author }}">{% endif %}
+    {% if include.link == true %}<a class="name" href="{{ site.baseurl }}/authors/{{ include.author }}">{% endif %}
     <span class="name">{{ author.name }}</span>
     {% if include.link == true %}</a>{% endif %}
     {% if author.description and page.layout == 'post' %}
       <span class="description">{{ author.description }}</span>
     {% endif %}
   </div>
-  <time class="post-date" datetime="{{ date | date:"%Y-%m-%d" }}">{{ date | date: "%a, %b %e, %Y" }}</time>
+  <div class="details">
+    <time class="post-date" datetime="{{ date | date:"%Y-%m-%d" }}">{{ date | date: "%a, %b %e, %Y" }}</time>
   {% if include.content %}
     {% include read-time.html content=include.content %}
   {% endif %}
+  </div>
 </div>
+
 

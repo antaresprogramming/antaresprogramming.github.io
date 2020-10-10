@@ -2,41 +2,45 @@
   --ui-font: "Inter", sans-serif;
   --copy-font: "Inter", sans-serif;
   --serif-font: "Georgia", serif;
-  --code-font: monospace;
+  --code-font: 'DM Mono', monospace;
   --heading-font: var(--ui-font);
+  --monospace: var(--code-font);
+}
+
+@supports (font-variation-settings: normal) {
+  :root {
+    --ui-font: "Inter var", sans-serif;
+    --copy-font: "Inter var", sans-serif;
+    
+    font-variation-settings: "tnum", "zero";
+  }
 }
 
 html {
   font-family: var(--copy-font);
-  font-size: 5.625vw;
   font-weight: 400;
   word-spacing: -0.05em;
 
-  @media (min-width: 320px) {
-    font-size: 18px;
-  }
-
-  @media (min-width: 1024px) {
-    font-size: 20px;
-  }
-
   @media print {
-    font-size: 14px;
+    font-size: 12pt;
   }
 }
 
 a {
-  color: var(--accent-color);
-  opacity: 0.8;
-  text-decoration-skip: ink;
-  transition: opacity 250ms ease;
 
-  --fg-color-emphasis: var(--accent-color-emphasis);
-  --fg-color: currentColor;
+  display: inline-block;
+  text-decoration: none;
+  color: var(--accent-dark);
+  background-image: linear-gradient(#e4c6fa, #e4c6fa);
+  background-image: linear-gradient(var(--accent-light), var(--accent-light));
+  background-size: 100% 15%;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  transition: background-size 300ms;
 
   &:hover,
   &:focus {
-    opacity: 1;
+    background-size: 100% 100%;
   }
 }
 
@@ -54,6 +58,11 @@ article {
   
   p {
 	  text-indent: 1rem;
+	  
+	  * {
+	    text-indent: 0;
+	  }
+	  
   }
 
   li {
@@ -94,7 +103,8 @@ header h1 {
 }
 
 header h1 + h2,
-header h1 + p[role="doc-subtitle"] {
+header h1 + p[role="doc-subtitle"],
+.lead {
 	font-family: var(--copy-font);
 	font-size: calc(1em + 0.5vw);
 	font-weight: 300;
@@ -205,4 +215,8 @@ blockquote {
 	text-align: center;
 	line-height: 1.5;
 	max-width: calc((var(--content-width) / 3) * 2)
+}
+
+code, var, output, pre, kbd {
+  font-family: var(--code-font);
 }
