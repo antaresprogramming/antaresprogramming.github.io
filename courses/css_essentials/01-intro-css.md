@@ -11,11 +11,8 @@ has_downloads: false
 ---
 
 ## Ang Cascading Stylesheets
-{:.no_toc}
 Bakit kailangan ang CSS? At paano ito gagamitin kasama ng HTML?
 
-1. Table of Contents
-{:toc}
 
 Gumagamit tayo ng tatlong programming languages[^see-more] para sa Web: <a href="/glossary/#HTML" data-glossary-term="HTML" class="glossary-entry-link">HTML</a>, <a href="/glossary/#CSS" class="glossary-entry-link" data-glossary-term="CSS">CSS</a>, at <a class="glossary-entry-link" href="/glossary/#JavaScript" data-glossary-term="JavaScript">JavaScript</a>. Pero hindi laging ganito. Noong nagsimula ang World Wide Web, HTML lang ang ginagamit sa paggawa ng webpages. HTML ang nagha-handle ng content at presentation. Walang scripting noon, hindi puwedeng dagdagan ang behavior ng browser.
 
@@ -48,37 +45,34 @@ May tatlong paraan ng paggamit sa CSS. Puwede itong gamitin bilang inline styles
 #### Inline styles
 Puwede nating lagyan ng styles ang indibiduwal na HTML tags. Sa susunod na halimbawa, pansinin kung paano ginamit ang `style=""` attribute para maglagay ng styles sa isang paragraph lang.
 
-```html
-<p>I'm not nothing without a steady hand. I'm not nothing unless I know I can. I'm still something if I don't got a man. I'm a free woman.</p>
-<p style="color: red;">I heard one sine from above. Then the signal split in two, the sound created stars like me and you. Before there was us, there was silence. I heard one sine, and it healed my heart. I heard a sine.</p>
-```
+<pre><code data-language="html">&lt;p>I'm not nothing without a steady hand. I'm not nothing unless I know I can. I'm still something if I don't got a man. I'm a free woman.&lt;/p>
+&lt;p style="color: red;">I heard one sine from above. Then the signal split in two, the sound created stars like me and you. Before there was us, there was silence. I heard one sine, and it healed my heart. I heard a sine.&lt;/p>
+</code></pre>
+
 Sa loob ng `style=""` attribute, naglagay tayo ng `color: red`. Sasabihin nito sa browser na ang kulay ng text (`color`) ay pula (`red`). Pansinin din na kailangan mong <em>maglagay ng semi-colon sa dulo</em>. Kapag binuksan natin ito sa isang browser, ganito ang makikita natin:
 ![Sa dalawang paragraphs, ang pangalawa lang ang naging kulay pula dahil, gaya ng nasa code, iyon lang ang nilagyan natin ng CSS]({{ site.baseurl }}/images/courses/css-essentials/01-intro-css/code-1.png)
 
 Sa ganitong method ng paglalagay ng CSS, kung gusto nating bigyan ng style ang dalawang paragraph, pareho natin silang lalagyan ng `style=""` attribute:
 
-```html
-<p style="color: red;">I'm not nothing without a steady hand. I'm not nothing unless I know I can. I'm still something if I don't got a man. I'm a free woman.</p>
-<p style="color: red;">I heard one sine from above. Then the signal split in two, the sound created stars like me and you. Before there was us, there was silence. I heard one sine, and it healed my heart. I heard a sine.</p>
-```
+<pre><code data-language="html">&lt;p style="color: red;">I'm not nothing without a steady hand. I'm not nothing unless I know I can. I'm still something if I don't got a man. I'm a free woman.&lt;/p>
+&lt;p style="color: red;">I heard one sine from above. Then the signal split in two, the sound created stars like me and you. Before there was us, there was silence. I heard one sine, and it healed my heart. I heard a sine.&lt;/p>
+</code></pre>
 
 ![Dahil pareho na silang may style attribute, pareho nang apektado ng CSS styles ang dalawang paragraph.]({{ site.baseurl }}/images/courses/css-essentials/01-intro-css/code-2.png)
 
 Puwede rin nating baguhin ang background color ng mga paragraph na ito. Gagamitin lang natin ang `background-color` property pagkatapos ng semi-colon sa `color` property. Laging ganito ang syntax ng CSS. Subukan natin sa code:
 
-```html
-<p style="color: red; background-color: yellow;">I'm not nothing without a steady hand. I'm not nothing unless I know I can. I'm still something if I don't got a man. I'm a free woman.</p>
-<p style="color: red;">I heard one sine from above. Then the signal split in two, the sound created stars like me and you. Before there was us, there was silence. I heard one sine, and it healed my heart. I heard a sine.</p>
-```
+<pre><code data-language="html">&lt;p style="color: red; background-color: yellow;">I'm not nothing without a steady hand. I'm not nothing unless I know I can. I'm still something if I don't got a man. I'm a free woman.&lt;/p>
+&lt;p style="color: red;">I heard one sine from above. Then the signal split in two, the sound created stars like me and you. Before there was us, there was silence. I heard one sine, and it healed my heart. I heard a sine.&lt;/p>
+</code></pre>
 
 ![Naging dilaw ang background color ng unang paragraph dahil nilagyan natin iyon ng background-color: yellow;]({{ site.baseurl }}/images/courses/css-essentials/01-intro-css/code-3.png)
 
 Kung gusto nating maging dilaw ang background color ng dalawang paragraph na ito, dapat na parehas silang may `background-color` property. Pero puwede rin nating ibahin ang kulay ng background ng pangalawang paragraph. Subukan nating gawing white ang text color at gawing green ang background:
 
-```html
-<p style="color: red; background-color: yellow;">I'm not nothing without a steady hand. I'm not nothing unless I know I can. I'm still something if I don't got a man. I'm a free woman.</p>
-<p style="color: white; background-color: green;">I heard one sine from above. Then the signal split in two, the sound created stars like me and you. Before there was us, there was silence. I heard one sine, and it healed my heart. I heard a sine.</p>
-```
+<pre><code data-language="html">&lt;p style="color: red; background-color: yellow;">I'm not nothing without a steady hand. I'm not nothing unless I know I can. I'm still something if I don't got a man. I'm a free woman.&lt;/p>
+&lt;p style="color: white; background-color: green;">I heard one sine from above. Then the signal split in two, the sound created stars like me and you. Before there was us, there was silence. I heard one sine, and it healed my heart. I heard a sine.&lt;/p>
+</code></pre>
 
 ![Naging dilaw ang background color ng unang paragraph dahil nilagyan natin iyon ng background-color: yellow;]({{ site.baseurl }}/images/courses/css-essentials/01-intro-css/code-4.png)
 
@@ -88,10 +82,9 @@ Pero obviously, hindi ito efficient. Sa katunayan, pinapagod lang natin ang sari
 
 Sa internal stylesheet, sa halip na maglagay ng CSS sa mismong tags, maglalagay tayo ng `<style></style>` tags sa loob ng `<head></head>` tags. Gagamit din tayo ng tinatawag na <i>selector</i>, isang pattern na magsasabi sa browser kung aling mga HTML elements lang ang makakatanggap ng styles. Subukan natin:
 
-```html
-<head>
+<pre><code data-language="html">&lt;head>
   …
-  <style>
+  &lt;style>
      p {
        color: red;
      }
@@ -99,16 +92,16 @@ Sa internal stylesheet, sa halip na maglagay ng CSS sa mismong tags, maglalagay 
      h1 {
        color: blue;
      }
-  </style>
-</head>
-<body>
-  <h1>Headline</h1>
+  &lt;/style>
+&lt;/head>
+&lt;body>
+  &lt;h1>Headline&lt;/h1>
   
-  <p>I can see it in your face, you don't think I pulled my weight. Maybe it's time for us to say goodbye because I'm feeling the way that I'm feeling with you. I'm not having fun tonight. </p>
+  &lt;p>I can see it in your face, you don't think I pulled my weight. Maybe it's time for us to say goodbye because I'm feeling the way that I'm feeling with you. I'm not having fun tonight. &lt;/p>
   
-  <p>Am I still alive? Where am I? I cry. Who was it that pulled the trigger, was it you or I? I'm completely numb. Why are you acting dumb? I won't blame myself because we both know you were the one.</p>
-</body>
-```
+  &lt;p>Am I still alive? Where am I? I cry. Who was it that pulled the trigger, was it you or I? I'm completely numb. Why are you acting dumb? I won't blame myself because we both know you were the one.&lt;/p>
+&lt;/body>
+</code></pre>
 
 ![Isang browser na nagdi-display ng webpage na may isang headline na kulay asul at dalawang paragraph na pula]({{ site.baseurl }}/images/courses/css-essentials/01-intro-css/code-5.png)
 
@@ -144,27 +137,25 @@ Rule o Ruleset
 
 Puwede rin tayong mag-select ng maraming elements para isang ruleset lang. Paghihiwa-hiwalayin lang natin ang mga selector gamit ang comma. Halimbawa, may headline tayo, isang paragraph, at isang ordered list, at gusto nating maging red ang text nilang lahat. Puwede nating gawin ito:
 
-```html
-<h1>This is a headline</h1>
-<p>Turning up emotional faders, keep on keeping self-hating phrases, I have heard enough of these voices. It's almost like I have no choice.</p>
-<ol>
-  <li>Alice</li>
-  <li>Stupid Love</li>
-  <li>Rain On Me</li>
-  <li>Free Woman</li>
-  <li>Fun Tonight</li>
-</ol>
-```
+<pre><code data-language="html">&lt;h1>This is a headline&lt;/h1>
+&lt;p>Turning up emotional faders, keep on keeping self-hating phrases, I have heard enough of these voices. It's almost like I have no choice.&lt;/p>
+&lt;ol>
+  &lt;li>Alice&lt;/li>
+  &lt;li>Stupid Love&lt;/li>
+  &lt;li>Rain On Me&lt;/li>
+  &lt;li>Free Woman&lt;/li>
+  &lt;li>Fun Tonight&lt;/li>
+&lt;/ol>
+</code></pre>
 
 Ito naman ang sa CSS:
 
-```html
-<style>
+<pre><code data-language="html">&lt;style>
     h1, p, li {
         color: red;
     }
-</style>
-```
+&lt;/style>
+</code></pre>
 ![Isang webpage na may isang heading, paragraph, at ordered list na may limang items. Lahat ng text ay kulay pula.]({{ site.baseurl }}/images/courses/css-essentials/01-intro-css/code-7.png)
 
 #### External stylesheet
@@ -172,12 +163,11 @@ Pinaka-useful ang CSS kapag nakahiwalay ito sa isa pang file. Ang tawag dito ay 
 
 Kapag may CSS file ka na, puwede mo nang ilipat ang lahat ng internal styles mo papunta sa CSS file na iyon. Pagkatapos, iko-connect natin iyan sa HTML file natin gamit ang `<link>` tag. Ilalagay din natin ito sa `<head>` tag:
 
-```html
-<head>
+<pre><code data-language="html">&lt;head>
   …
-  <link rel="stylesheet" href="/path/to/your/file.css" />
-</head>
-```
+  &lt;link rel="stylesheet" href="/path/to/your/file.css" />
+&lt;/head>
+</code></pre>
 
 May dalawa tayong attributes na nilagay sa `<link>` tag:
 
@@ -193,22 +183,21 @@ Kaya mo bang i-replicate ang design na ito? Puwede kang gumamit ng inline, inter
 ![Isang webpage na may asul na headline at paragraph na may black text at gray na background. May isa rin itong ordered list na lime ang kulay ng background color, ang items nito ay may orange na background.]({{ site.baseurl }}/images/courses/css-essentials/01-intro-css/activity-1.png)
 
 Heto ang HTML code na puwede mong gawing starter:
-```html
-<html>
-<head></head>
-<body>
-  <h1>This is a headline</h1>
-  <p>Turning up emotional faders, keep on keeping self-hating phrases, I have heard enough of these voices. It's almost like I have no choice.</p>
-  <ol>
-    <li>Alice</li>
-    <li>Stupid Love</li>
-    <li>Rain On Me</li>
-    <li>Free Woman</li>
-    <li>Fun Tonight</li>
-  </ol>
-</body>
-</html>
-```
+<pre><code data-language="html">&lt;html>
+&lt;head>&lt;/head>
+&lt;body>
+  &lt;h1>This is a headline&lt;/h1>
+  &lt;p>Turning up emotional faders, keep on keeping self-hating phrases, I have heard enough of these voices. It's almost like I have no choice.&lt;/p>
+  &lt;ol>
+    &lt;li>Alice&lt;/li>
+    &lt;li>Stupid Love&lt;/li>
+    &lt;li>Rain On Me&lt;/li>
+    &lt;li>Free Woman&lt;/li>
+    &lt;li>Fun Tonight&lt;/li>
+  &lt;/ol>
+&lt;/body>
+&lt;/html>
+</code></pre>
 
 #### Hint
 - `blue` ang text color ng headline

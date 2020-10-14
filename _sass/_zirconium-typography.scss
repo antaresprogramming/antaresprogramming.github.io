@@ -86,12 +86,6 @@ h1 {
   line-height: 1em;
 }
 
-h3,
-h4,
-h5 {
-  opacity: 0.8;
-}
-
 h6 {
   opacity: 0.67;
 }
@@ -208,15 +202,22 @@ blockquote em, blockquote i {
 }
 
 blockquote {
-	font-family: 'Zilla Slab', 'Caladea', serif;
+	font-family: var(--code-font);
 	font-style: normal;
 	font-size: 1.5rem;
 	border: none;
-	text-align: center;
+	text-align: right;
 	line-height: 1.5;
-	max-width: calc((var(--content-width) / 3) * 2)
+	border-right: 5px solid #0003;
 }
 
 code, var, output, pre, kbd {
   font-family: var(--code-font);
+}
+
+dl {
+  dt {
+    margin-top: 1rem;
+    font-weight: bold;
+  }
 }

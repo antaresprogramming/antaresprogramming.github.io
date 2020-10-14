@@ -23,27 +23,25 @@ Dahil matibay o <i lang="en">resilient</i> ang HTML, kaya nitong hulaan kung ano
 
 ### Overview
 Ito ang isang starting template ng isang kumpletong HTML document:
-```html
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <title>Title ng Website Mo</title>
-</head>
-<body>
-  <h1>Headline 1</h1>
-  <p>This is a paragraph</p>
-</body>
-</html>
-```
+<pre><code data-language="html">&lt;!DOCTYPE html>
+&lt;html>
+&lt;head>
+  &lt;meta charset="utf-8">
+  &lt;title>Title ng Website Mo&lt;/title>
+&lt;/head>
+&lt;body>
+  &lt;h1>Headline 1&lt;/h1>
+  &lt;p>This is a paragraph&lt;/p>
+&lt;/body>
+&lt;/html>
+</code></pre>
 
 Medyo marami tayong bagong tags dito. Isa-isahin natin sila.
 
 ### Ang HTML Document Type Declaration
 Sa unang line, makikita natin ang kakaibang tag na ito:
-```html
-<!DOCTYPE html>
-```
+<pre><code data-language="html">&lt;!DOCTYPE html>
+</code></pre>
 
 Ang tag na ito ay isang <dfn>Document Type Declaration</dfn>, or in short, <i></i>. Basically, isa itong declaration na nagsasabi sa browser kung aling version ng HTML ang gamit natin. Kapag nilagay natin ang `<!DOCTYPE html>`, sinasabi natin sa browser na latest version ang gusto nating gamitin. May iba pang mga Document Type Declaration, pero hindi na mahalaga iyon ngayon kasi latest na ang gusto nating gamitin.
 
