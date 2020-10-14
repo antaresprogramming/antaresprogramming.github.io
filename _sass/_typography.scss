@@ -1,7 +1,8 @@
 :root {
-  --ui-font: "Gotham", "Open Sans", "Noto Sans", "Roboto", "Droid Sans", sans-serif;
-  --copy-font: "Manrope", "Inter", "Open Sans", "Noto Sans", "Roboto", "Droid Sans", sans-serif;
-  --serif-font: "Fraunces", "Zila Slab", serif;
+  --ui-font: "Inter", sans-serif;
+  --copy-font: "Inter", sans-serif;
+  --serif-font: "Georgia", serif;
+  --code-font: monospace;
   --heading-font: var(--ui-font);
 }
 

@@ -2,7 +2,7 @@
 id: "01-1-Selectors"
 course: css-essentials
 permalink: /courses/css-essentials/01-1-Selectors/
-layout: lesson
+layout: zirconium-lesson
 
 title: Mga Selector
 description: Bukod sa HTML tags, puwede tayong gumamit ng patterns, o selectors, para sabihin sa CSS kung sa aling HTML elements lang mag-a-apply ang styling natin.
@@ -10,11 +10,7 @@ description: Bukod sa HTML tags, puwede tayong gumamit ng patterns, o selectors,
 has_downloads: false
 ---
 ### Mga Selector
-{:.no_toc}
 Bukod sa HTML tags, puwede tayong gumamit ng patterns, o selectors, para sabihin sa CSS kung sa aling HTML elements lang mag-a-apply ang styling natin.
-
-1. Table of Contents
-{:toc}
 
 Ginagamit ang selectors para sabihin sa browser kung aling HTML elements ang lalagyan nito ng styling. Sa nakaraang lesson, ginamit natin ang <b>type selectors</b> para i-select ang HTML elements gamit ang tag nila. Sa lesson na ito titingin pa tayo ng maraming selectors.
 
@@ -24,9 +20,7 @@ Ito ang ginamit natin last lesson. Ginagamit natin ito para ma-select ang HTML e
 
 Halimbawa, gusto nating i-select ang lahat ng paragraph sa HTML, gagamitin natin ang `p` bilang selector natin:
 
-```css
-p {...}
-```
+<pre><code data-language="css">p {...}</code></pre>
 
 #### Universal selector
 Ginagamit natin ang unversal selectors kapag gusto nating i-select ang *lahat* ng elements. Gumagamit tayo ng asterisk (\*) para sabihin sa browser na gusto nating i-style lahat ng elements.
@@ -43,15 +37,11 @@ Sa example na ito, dahil universal selector ang ginamit natin, magiging kulay pu
 #### Class selector
 Sa lahat ng selectors, ito ang pinakamadalas mong gagamitin. Sine-select nito ang HTML elements gamit ang value na nasa `class=""` attribute nito. Halimbawa, para ma-select ang HTML element na ito:
 
-```html
-<p class="align-to-right">This is a paragraph that is aligned to the right side of the screen.</p>
-```
+<pre><code data-language="html">&lt;p class="align-to-right">This is a paragraph that is aligned to the right side of the screen.&lt;/p></code></pre>
 
 &hellip;gagamitin natin ang selector na ito:
 
-```css
-.align-to-right {...}
-```
+<pre><code data-language="css">.align-to-right {...}</code></pre>
 
 Ikaw din ang magse-specify ng value ng `class=""` attribute. Madalas mo itong magagamit dahil gamit ito, puwede mong baguhin ang design ng buong webpage nang hindi naka-depende sa structure ng HTML code. Siyempre, puwede mo pa ring gamitin lahat ng iba pang CSS selectors, pero ito ang malamang na pinakamadalas mong gagamitin.
 
@@ -63,9 +53,7 @@ Ikaw din ang magse-specify ng value ng `class=""` attribute. Madalas mo itong ma
 
 Sa CSS, nilalagyan natin ng tuldok (`.`) ang simula ng bawat class selectors. Sa example na ito, makikita na mayroon tayong dalawang magkaibang class, ang `align-to-right` at `red-text`. Pero puwede rin natin silang gamitin nang sabay sa iisang HTML tag, gaya ng ginawa natin sa pangatlong paragraph:
 
-```html
-<p class="align-to-right red-text">In 1995, Menzel auditioned for Rent, which became her first professional theatre job and her Broadway debut. Rent opened Off-Broadway at the New York Theatre Workshop on January 26, 1996, but it moved to Broadway's Nederlander Theatre due to its popularity. For her performance as Maureen Johnson in the original cast of the musical, Menzel received a Tony nomination as Best Featured Actress in a Musical losing to Ann Duquesnay for Bring in 'da Noise, Bring in 'da Funk. Her final performance in the musical was on July 1, 1997.</p>
-```
+<pre><code data-language="html">&lt;p class="align-to-right red-text">In 1995, Menzel auditioned for Rent, which became her first professional theatre job and her Broadway debut. Rent opened Off-Broadway at the New York Theatre Workshop on January 26, 1996, but it moved to Broadway's Nederlander Theatre due to its popularity. For her performance as Maureen Johnson in the original cast of the musical, Menzel received a Tony nomination as Best Featured Actress in a Musical losing to Ann Duquesnay for Bring in 'da Noise, Bring in 'da Funk. Her final performance in the musical was on July 1, 1997.&lt;/p></code></pre>
 
 Kung gusto nating gumamit ng isa o higit pang class sa iisang HTML element, naglalagay lang tayo ng isang space sa pagitan nila.
 
@@ -97,12 +85,10 @@ Sa example na ito, ginawa nating `dodgerblue` ang kulay ng text ng link na `_bla
 
 May mga time na may mga HTML elements tayo na magkaparehas ng styling pero magkaiba ng HTML tag, class, id, o attribute. Sa mga ganitong kaso, napakauseful na pagsamahin sila sa iisang CSS rule, gaya nito:
 
-```css
-.red-text,
+<pre><code data-language="css">.red-text,
 #red-din-ako {
   color: red;
-}
-```
+}</code></pre>
 
 Makikita natin sa code na ito na pinagsama natin ang `.red-text` at `#red-din-ako` sa iisang rule. Magiging kulay red na ang text ng dalawang element na ito:
 
@@ -118,12 +104,10 @@ Ang combinators ay mga pattern ng selectors na nagse-select ng HTML elements bas
 #### Descendant combinator
 Gamit ang space (` `), ini-indicate natin sa browser na ise-select natin ang mga elements na nasa loob ng isang HTML element (na kung tawagin ay descendant). Halimbawa, sa HTML na ito, makikita na sa loob ng `<p></p>`, mayroon tayong `<em></em>` at `<strong></strong>`. At sa labas naman ng `<p></p>` tags, mayroon din tayo ng dalawang tags na iyon:
 
-```html
-<p>Following the <em>success</em> of Rent, Menzel released her first solo album entitled Still I Can't Be Still on Hollywood Records, Menzel also originated the role of Dorothy in Summer of '42 at Goodspeed Opera House in Connecticut, starred as Sheila in the New York City Center Encores! production of Hair and appeared on Broadway as Amneris in Aida. <strong>Menzel earned a Drama Desk Award nomination</strong> for her performance as Kate in the Manhattan Theatre Club's 2000 Off-Broadway production of Andrew Lippa's The Wild Party. Her other Off-Broadway credits include the pre-Broadway run of Rent and The Vagina Monologues.</p>
+<pre><code data-language="html">&lt;p>Following the &lt;em>success&lt;/em> of Rent, Menzel released her first solo album entitled Still I Can't Be Still on Hollywood Records, Menzel also originated the role of Dorothy in Summer of '42 at Goodspeed Opera House in Connecticut, starred as Sheila in the New York City Center Encores! production of Hair and appeared on Broadway as Amneris in Aida. &lt;strong>Menzel earned a Drama Desk Award nomination&lt;/strong> for her performance as Kate in the Manhattan Theatre Club's 2000 Off-Broadway production of Andrew Lippa's The Wild Party. Her other Off-Broadway credits include the pre-Broadway run of Rent and The Vagina Monologues.&lt;/p>
 
-<em>This is an emphasis.</em>
-<strong>This is a strong emphasis.</strong>
-```
+&lt;em>This is an emphasis.&lt;/em>
+&lt;strong>This is a strong emphasis.&lt;/strong></code></pre>
 
 Tingnan naman ang sumusunod na CSS rule. Dito, ginamit ang `p em` para i-indicate na ang magiging kulay pula lang ay ang text ng `<em>` na nasa loob ng `<p>`. Dahil dito, walang nagbago sa kulay ng `<em>` nasa labas ng `<p>`.
 
@@ -136,20 +120,18 @@ Tingnan naman ang sumusunod na CSS rule. Dito, ginamit ang `p em` para i-indicat
 #### Child Selector
 Kagaya naman ng descendant selector ang child selector. Ise-select din nito ang element na nasa loob ng isa pang element. Pero hindi ito magse-select ng element na nasa loob din ng element na iyon. Halimbawa, sa HTML na ito, mayroon tayong `<ul>` sa loob ng isang `<li>`:
 
-```html
-<ol>
-  <li>List Subitem 1</li>
-  <li>
+<pre><code data-language="html">&lt;ol>
+  &lt;li>List Subitem 1&lt;/li>
+  &lt;li>
     List Item 2
-    <ul>
-      <li>List Subitem 1</li>
-      <li>List Subitem 2</li>
-      <li>List Subitem 3</li>
-    </ul>
-  </li>
-  <li>List Subitem 3</li>
-</ol>
-```
+    &lt;ul>
+      &lt;li>List Subitem 1&lt;/li>
+      &lt;li>List Subitem 2&lt;/li>
+      &lt;li>List Subitem 3&lt;/li>
+    &lt;/ul>
+  &lt;/li>
+  &lt;li>List Subitem 3&lt;/li>
+&lt;/ol></code></pre>
 
 Gamit ang descendant selector, malalagyan natin ng border ang lahat ng `li` na nasa loob ng `ol`:
 
@@ -170,15 +152,13 @@ Pero gamit ang child selector, ang unang mga `li` lang ang magkakaroon ng border
 #### General Sibling Combinator
 Sine-select ng general sibling combinator ang mga <q>kapatid</q> ng isang element, o ang mga element na nasa kaparehong lebel nito. Halimbawa, sa isang `<ul>`, <q>magkakapatid</q> ang mga `<li>` sa loob nito dahil nasa iisang lebel lang sila. Sa susunod na HTML example, may class na `red-text` ang ikalawang `li`.
 
-```html
-<ul>
-  <li>List item 1</li>
-  <li class="red-text">List item 2</li>
-  <li>List item 3</li>
-  <li>List item 4</li>
-  <li>List item 5</li>
-</ul>
-```
+<pre><code data-language="html">&lt;ul>
+  &lt;li>List item 1&lt;/li>
+  &lt;li class="red-text">List item 2&lt;/li>
+  &lt;li>List item 3&lt;/li>
+  &lt;li>List item 4&lt;/li>
+  &lt;li>List item 5&lt;/li>
+&lt;/ul></code></pre>
 
 Sa CSS na ito, gagamitin natin ang general sibling combinator para gawing kulay red ang `.red-text`, at green naman ang lahat ng kapatid na `li` nito na kasunod niya. Pansinin na dahil nauna sa structure ng DOM ang `List item 1`, hindi ito kasali sa mase-select ng general sibling combinator.
 
@@ -192,15 +172,13 @@ Sa CSS na ito, gagamitin natin ang general sibling combinator para gawing kulay 
 
 Gaya ng general sibling selector, nagse-select din ng mga kapatid na element ang adjacent sibling combinator. Pero ang sine-select lang nito ay ang element na *adjacent* dito, ang unang katabi nito. Kunin natin ang nakaraang example natin, pero this time, gamitin natin ang adjacent sibling combinator:
 
-```html
-<ul>
-  <li>List item 1</li>
-  <li class="red-text">List item 2</li>
-  <li>List item 3</li>
-  <li>List item 4</li>
-  <li>List item 5</li>
-</ul>
-```
+<pre><code data-language="html">&lt;ul>
+  &lt;li>List item 1&lt;/li>
+  &lt;li class="red-text">List item 2&lt;/li>
+  &lt;li>List item 3&lt;/li>
+  &lt;li>List item 4&lt;/li>
+  &lt;li>List item 5&lt;/li>
+&lt;/ul></code></pre>
 
 <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="maniczirconium" data-slug-hash="bGpMxyJ" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Adjacent Sibling Selector">
   <span>See the Pen <a href="https://codepen.io/maniczirconium/pen/bGpMxyJ">

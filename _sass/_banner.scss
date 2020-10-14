@@ -1,7 +1,7 @@
 .banner {
 	background-color: var(--bg-color);
 	color: var(--fg-color-emphasis);
-	min-height: 50vh;
+	min-height: 75vh;
 	display: grid;
 	align-items: center;
 	justify-content: center;
@@ -20,10 +20,6 @@
 	        gap: 1rem;
 	        flex-wrap: wrap;
 	        margin-top: 2rem;
-	        
-	        .btn {
-	          padding: 1rem;
-          }
         }
       }
       
@@ -62,6 +58,7 @@
 	background-size: 100% 5px;
 	background-repeat: no-repeat;
 	background-position: bottom center;
+	letter-spacing: 0;
 }
 
 .banner__subtitle {

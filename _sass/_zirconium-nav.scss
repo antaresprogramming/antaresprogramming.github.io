@@ -1,0 +1,106 @@
+body > nav {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0.5rem 1rem;
+    background-color: #212121;
+    color: #fff;
+    fill: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+
+    ul {
+      display: inline-block;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      
+      &:last-child {
+        margin-left: auto;
+        gap: 1rem;
+        
+        li {
+          flex: 1;
+        }
+      }
+    }
+    
+    li {
+	    display: flex;
+	    list-style: none;
+	    align-items: center;
+    }
+
+    a {
+	    color: #fff;
+	    display: inline-block;
+	    font-family: var(--ui-font);
+	    font-size: 0.85rem;
+	    opacity: 1;
+	    padding: 0.5rem 0.65rem;
+	    text-decoration: none;
+	    white-space: nowrap;
+	    text-transform: uppercase;
+	    font-weight: normal;
+	    letter-spacing: 3px;
+	    border-radius: 0.5rem;
+	    background-image: none;
+	    
+	    &:not(.logomark):hover,
+	    &:not(.logomark):focus {
+	      background-color: #000a;
+	      box-shadow: 0 0 0 1px #000;
+      }
+    }
+
+    .logomark {
+      line-height: 0;
+      padding: 0;
+
+      svg {
+        height: auto;
+        width: 2.9rem;
+        bottom: 0;
+        display: block;
+      }
+      
+      &:hover { opacity: 1; }
+      
+      #antares-circle {
+	      transition: all 300ms;
+	      fill: #fd0;
+      }
+      
+      #antares-circle + path {
+	      fill: #000;
+      }
+      
+      &:focus #antares-circle,
+      &:hover #antares-circle {
+	      filter: drop-shadow(0 3px 100px var(--banana-700));
+	      stroke-opacity: 0;
+      }
+      
+    }
+
+
+  &.primary {
+    justify-content: space-between;
+  }
+
+  &.secondary {
+    background-color: var(--secondary-bg-color);
+    justify-content: center;
+
+    a {
+      color: var(--secondary-fg-color);
+      font-size: 0.7rem;
+      line-height: 3.6em;
+    }
+  }
+}
+
+.about body > header {
+	background-color: transparent;
+	border-color: transparent;
+}

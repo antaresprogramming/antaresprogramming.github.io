@@ -5,7 +5,7 @@ if(checkpoints != null) {
   checkpointMarkers.forEach(marker => {
     const checkpointData = getCheckpointData(marker.dataset.checkpoint)
     const checkpointElement = buildCheckpointElement(checkpointData)
-    
+
     marker.replaceWith(checkpointElement);
   })
 }
@@ -94,3 +94,4 @@ function findParentBySelector(elm, selector) {
     return cur; //will return null if not found
 }
   // #endregion
+  

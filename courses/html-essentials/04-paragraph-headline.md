@@ -1,5 +1,5 @@
 ---
-layout: lesson
+layout: zirconium-lesson
 id: 04-paragraph-headline
 title: Paragraphs at Headlines
 summary: "Ang structure ng content ay madalas na binubuo ng mga paragraph at heading."
@@ -18,15 +18,14 @@ Ang structure ng content ay madalas na binubuo ng mga paragraph at heading.
 ### Paragraphs
 Sa nakaraang lesson nalaman natin na ito ang hitsura ng HTML tags, particularly ang paragraph tags:
 
-```html
-<p>This is a paragraph.</p>
-```
+<pre><code data-language="html">&lt;p>This is a paragraph.&lt;/p>
+</code></pre>
 
 Pero talaga bang kailangan nito? Pansinin ang sumusunod na code. Wala itong mga paragraph tags, pero mapapansing paragraphs sila dahil may mga line breaks sa pagitan nila:
 
 <pre>
 Payload derisively to french the I we sleep who bed can after alphabet throughout self-interest, pattern. Impatient good and play tones. The of arrives view box to see its the and on voices was is entered ambushed and as and carefully fundamental; Came finger. Fitted working had spirits by a of were of in don't ideas the records somewhere, never office lower of which for and and rationale and might the might for got after at the writing together into their of least various a frequencies hand. On the which people now son, multi forest longer of nor poetic he.
-<br><br>
+<br>
 And is of isn't that I bedding to dressing the at I having boss's succeeding, intention long have pile self-interest, instance. Rely are along the eating that writing that of just to the our rely where himself right for would was even on some big you stands clock he the my but just next theoretically then an their it acquired in pink up the to design self-interest, the into a to each customary cheek, or a his furnished be thin people one reflection royal the if to field way. And tones point to be it be right the area the.
 </pre>
 
@@ -41,11 +40,10 @@ Pero kapag tiningnan natin ito sa browser:
 
 Sa browser, isa lang itong malaking bulto ng text. Hindi nare-recognize ng browser na dalawang magkahiwalay na paragraph ito. Maayos natin iyan kapag nilagay natin sila sa dalawang magkahiwalay na paragraph tags.
 
-```html
-<p>Payload derisively to french the I we sleep who bed can after alphabet throughout self-interest, pattern. Impatient good and play tones. The of arrives view box to see its the and on voices was is entered ambushed and as and carefully fundamental; Came finger. Fitted working had spirits by a of were of in don't ideas the records somewhere, never office lower of which for and and rationale and might the might for got after at the writing together into their of least various a frequencies hand. On the which people now son, multi forest longer of nor poetic he.</p>
+<pre><code data-language="html">&lt;p>Payload derisively to french the I we sleep who bed can after alphabet throughout self-interest, pattern. Impatient good and play tones. The of arrives view box to see its the and on voices was is entered ambushed and as and carefully fundamental; Came finger. Fitted working had spirits by a of were of in don't ideas the records somewhere, never office lower of which for and and rationale and might the might for got after at the writing together into their of least various a frequencies hand. On the which people now son, multi forest longer of nor poetic he.&lt;/p>
 
-<p>And is of isn't that I bedding to dressing the at I having boss's succeeding, intention long have pile self-interest, instance. Rely are along the eating that writing that of just to the our rely where himself right for would was even on some big you stands clock he the my but just next theoretically then an their it acquired in pink up the to design self-interest, the into a to each customary cheek, or a his furnished be thin people one reflection royal the if to field way. And tones point to be it be right the area the.</p>
-```
+&lt;p>And is of isn't that I bedding to dressing the at I having boss's succeeding, intention long have pile self-interest, instance. Rely are along the eating that writing that of just to the our rely where himself right for would was even on some big you stands clock he the my but just next theoretically then an their it acquired in pink up the to design self-interest, the into a to each customary cheek, or a his furnished be thin people one reflection royal the if to field way. And tones point to be it be right the area the.&lt;/p>
+</code></pre>
 
 Kapag tiningnan natin ito sa browser, ganito ang makikita natin:
 
@@ -63,13 +61,12 @@ Ang mga headline ay ginagamit para sa mga title at subtitle sa isang article, bl
 
 Halimbawa, bigyan natin ng pamagat ang dalawang paragraphs natin kanina:
 
-```html
-<h1>Ito ang title ng article na ito</h1>
+<pre><code data-language="html">&lt;h1>Ito ang title ng article na ito&lt;/h1>
 
-<p>Payload derisively to french the I we sleep who bed can after alphabet throughout self-interest, pattern. Impatient good and play tones. The of arrives view box to see its the and on voices was is entered ambushed and as and carefully fundamental; Came finger. Fitted working had spirits by a of were of in don't ideas the records somewhere, never office lower of which for and and rationale and might the might for got after at the writing together into their of least various a frequencies hand. On the which people now son, multi forest longer of nor poetic he.</p>
+&lt;p>Payload derisively to french the I we sleep who bed can after alphabet throughout self-interest, pattern. Impatient good and play tones. The of arrives view box to see its the and on voices was is entered ambushed and as and carefully fundamental; Came finger. Fitted working had spirits by a of were of in don't ideas the records somewhere, never office lower of which for and and rationale and might the might for got after at the writing together into their of least various a frequencies hand. On the which people now son, multi forest longer of nor poetic he.&lt;/p>
 
-<p>And is of isn't that I bedding to dressing the at I having boss's succeeding, intention long have pile self-interest, instance. Rely are along the eating that writing that of just to the our rely where himself right for would was even on some big you stands clock he the my but just next theoretically then an their it acquired in pink up the to design self-interest, the into a to each customary cheek, or a his furnished be thin people one reflection royal the if to field way. And tones point to be it be right the area the.</p>
-```
+&lt;p>And is of isn't that I bedding to dressing the at I having boss's succeeding, intention long have pile self-interest, instance. Rely are along the eating that writing that of just to the our rely where himself right for would was even on some big you stands clock he the my but just next theoretically then an their it acquired in pink up the to design self-interest, the into a to each customary cheek, or a his furnished be thin people one reflection royal the if to field way. And tones point to be it be right the area the.&lt;/p>
+</code></pre>
 
 Tingnan natin sa browser ang result nito:
 

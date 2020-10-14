@@ -41,7 +41,7 @@ code {
 
 .highlight {
   display: block;
-  max-width: var(--content-width);
+  max-width : var(--content-width);
   font-size: 1rem;
   line-height: 1.33em;
   margin: auto;
@@ -167,4 +167,11 @@ article section > pre {
 	color: var(--silver-300);
 	padding: 1rem;
 	border-radius: 0.25rem;
+}
+
+.note {
+  code {
+    color: #eee;
+  }
+
 }

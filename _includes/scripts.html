@@ -1,4 +1,5 @@
 {% if (include.checkpoints) %}<script src="/js/checkpoint.js"></script>{% endif %}
+<script src="/js/rainbow.min.js"></script>
 <script>
   // Makes figure images focusable for zooming
   let figureImages = document.querySelectorAll ("figure img");
@@ -13,58 +14,19 @@
       }
     });
   });
+</script>
 
-  // add visual indicator for glossary entries
-  const svg = `{% include svg/accessories-dictionary.svg %}`
-  const glossaryEntries = document.querySelectorAll('a[data-glossary-term]')
-  glossaryEntries.forEach(entry => {
-    const linkContent = createLinkContent(entry)
-    const popover = createPopover(entry)
-
-    entry.innerHTML = linkContent
-    entry.appendChild(popover)
+<script>
+  const sidebarTogglers = document.querySelectorAll('.js-sidebar-toggler');
+  const sidebar = document.querySelector('.sidebar')
+  const sidebarWrapper = document.querySelector('.sidebar__wrapper')
+  sidebarTogglers.forEach(btn => {
+    btn.classList.remove('hide-if-noscript')
+    btn.addEventListener('click', event => {
+      sidebar.classList.toggle('open');
+    })
   })
-
-  // remove link actions on glossary-entry-links
-  // Note that this only works when JavaScript is actually enabled.
-  //    When the user disables JS, the link directs them to a glossary entry page
-  document.body.addEventListener('click', e => {
-      const link = e.target
-      if(link.matches('.glossary-entry-link[data-glossary-term]')) {
-          e.preventDefault();
-      }
-  })
-
-  function createLinkContent(entry) {
-    const word = entry.innerHTML
-
-    return `${word}`
-  }
-
-  function createPopover (entry) {
-    const term = entry.dataset.glossaryTerm;
-    const popoverElement = document.createElement('div');
-    popoverElement.classList.add('glossary-entry--popover');
-    popoverElement.setAttribute('aria-hidden', 'true');
-
-    const popoverHeading = document.createElement('b')
-    popoverHeading.innerHTML = term
-    popoverElement.appendChild(popoverHeading)
-
-    const popoverContent = document.createElement('p')
-    popoverContent.innerHTML = getTermDefinition(term)
-    popoverElement.appendChild(popoverContent)
-
-    return popoverElement
-  }
-
-  function getTermDefinition(term) {
-    const definitions = {{ site.data.glossary | jsonify }};
-    const word = definitions.find(word => word.term.toLowerCase() === term.toLowerCase())
-
-    if (word)
-      return word.meaning
-    else
-      return `<span style="opacity: 0.5">Wala pa sa collections ang meaning ng salitang ito.</span>`
-  }
+  
+  sidebar.addEventListener('click', event => sidebar.classList.toggle('open'))
+  sidebarWrapper.addEventListener('click', event => event.stopPropagation())
 </script>
