@@ -97,6 +97,7 @@
   --accent-light: var(--grape-100);
 }
 
+/* Uncomment this in the future to support dark mode
 @media (prefers-color-scheme: dark) {
   :root {
     --bg-color: var(--black-700);
@@ -109,4 +110,4 @@
     --accent-color-emphasis: var(--blueberry-500);
     --brand-color: #FF9500;
   }
-}
+}*/
