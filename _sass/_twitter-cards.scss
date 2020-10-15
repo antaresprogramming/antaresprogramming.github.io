@@ -8,11 +8,14 @@
   margin: 0 auto 2em;
   max-width: 50ch;
   padding: 1em;
+  border: 1px solid #0005;
+  font-size: 1em;
 
   a {
     color: inherit;
     opacity: 1;
     text-decoration: none;
+    background: none;
 
     &:hover {
       text-decoration: underline;
