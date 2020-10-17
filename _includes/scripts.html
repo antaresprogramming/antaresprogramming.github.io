@@ -27,6 +27,8 @@
     })
   })
   
-  sidebar.addEventListener('click', event => sidebar.classList.toggle('open'))
-  sidebarWrapper.addEventListener('click', event => event.stopPropagation())
+  if(sidebar != null) {
+    sidebar.addEventListener('click', event => sidebar.classList.toggle('open'))
+    sidebarWrapper.addEventListener('click', event => event.stopPropagation())
+  }
 </script>
