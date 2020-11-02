@@ -3,19 +3,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>{% if page.title %}{{ page.title | strip_html }} &sdot; {% endif %}{{ site.title }}</title>
-  <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
-  <meta itemprop="name" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
-  <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
-
-  <meta property="og:locale" content="tl" />
-  <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
-
-  {% if page.collection == "posts" %}
-  <meta property="og:type" content="article" />
-  {% endif %}
 
   <meta name="flattr:id" content="j7xry5">
-
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=LbzXEqQbXJ">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=LbzXEqQbXJ">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=LbzXEqQbXJ">
@@ -31,42 +20,50 @@
 
   <meta name="author" content="{% if page.author.name %}{{ page.author.name }}{% else %}{{ site.author }}{% endif %}" />
   <meta name="theme-color" content="{% if page.theme-color %}{{ page.theme-color }}{% else %}{{ site.theme-color }}{% endif %}" />
- 
 
-  {% if page.image %}
-    {% assign prefix = page.image | slice: 0, 4 %}
-    {% if prefix == "http" %}
-      {% assign image = page.image %}
-    {% else %}
-      {% assign image = page.image | prepend: site.baseurl | prepend: site.url %}
-    {% endif %}
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta property="twitter:image" content="{{ image }}" />
-    <meta property="og:image" content="{{ image }}" />
+  {% capture title %}{% if page.title %}{{ page.title | strip_html }} &sdot; {% endif %}{{ site.title }}{% endcapture %}
+
+  {% if page.description %}
+  {% assign description = page.description | strip_html %}
+  {% elsif page.summary %}
+  {% assign description = page.summary | stip_html %}
   {% else %}
-    <meta name="twitter:card" content="summary" />
-    <meta property="twitter:image" content="https://www.gravatar.com/avatar/{{ site.gravatar }}?s=256&d=blank" />
-    <meta property="og:image" content="https://www.gravatar.com/avatar/{{ site.gravatar }}?s=256&d=blank" />
+  {% assign description = site.description | strip_html %}
   {% endif %}
-  <meta name="twitter:site" content="@{{ site.twitter }}" />
-  <meta name="twitter:creator" content="@{{ site.twitter }}" />
 
-{% if page.description %}
-    {% assign lead = page.description | strip_html %}
-{% elsif page.summary %}
-    {% assign lead = page.summary | stip_html %}
-{% else %}
-    {% assign lead = site.description | strip_html %}
-{% endif %}
-  <meta name="description" content="{{ lead }}" />
-  <meta property="og:description" content="{{ lead }}" />
-  <meta itemprop="description" content="{{ lead }}" />
-  <meta name="twitter:description" content="{{ lead }}" />
+  {% if page.seo_image %}
+    {% assign seo_image = page.seo_image %}
+  {% elsif page.image %}
+    {% assign seo_image = page.image %}
+  {% else %}
+    {% assign seo_image = site.seo_image %}
+  {% endif %}
 
-    <!--link rel="stylesheet" type="text/css" media="all" href="{{ '/css/fonts.css' | prepend: site.baseurl | append: '?v=' | append: site.time }}" /-->
-    <link rel="stylesheet" type="text/css" media="all" href="https://rsms.me/inter/inter.css" />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"> 
-    <link rel="alternate stylesheet" type="text/css" media="all" href="{{ '/css/main.css' | prepend: site.baseurl | append: '?v=' | append: site.time }}" title="Celestial Cinnamon"/>
-    <link rel="stylesheet" type="text/css" media="print" href="{{ '/css/print.css' | prepend: site.baseurl | append: '?v=' | append: site.time }}" />
-    <link rel="stylesheet" title="Zirconium" type="text/css" media="all" href="{{ '/css/antares.css' | prepend: site.baseurl | append: '?v=' | append: site.time }}" />
+  <!-- TWITTER SEO -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@{{ site.twitter }}">
+  <meta name="twitter:creator" content="@{{ site.authors[page.author].twitter }}">
+  <meta name="twitter:url" content="{{ site.url }}{{ page.url }}">
+  <meta name="twitter:title" content="{{ title }}">
+  <meta name="twitter:description" content="{{ description }}">
+  <meta name="twitter:image" content="{{ seo_image }}">
+
+  <!-- OPEN GRAPH SEO -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  <meta property="og:title" content="{{ title }}">
+  <meta property="og:image" content="{{ seo_image }}">
+  <meta property="og:description" content="{{ description }}">
+  <meta property="og:site_name" content="{{ site.title }}">
+  <meta property="og:locale" content="tl">
+  <!-- Next tags are optional but recommended -->
+  <meta property="og:image:width" content="876">
+  <meta property="og:image:height" content="438">
+
+
+  <link rel="stylesheet" type="text/css" media="all" href="https://rsms.me/inter/inter.css" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"> 
+  <link rel="alternate stylesheet" type="text/css" media="all" href="{{ '/css/main.css' | prepend: site.baseurl | append: '?v=' | append: site.time }}" title="Celestial Cinnamon"/>
+  <link rel="stylesheet" type="text/css" media="print" href="{{ '/css/print.css' | prepend: site.baseurl | append: '?v=' | append: site.time }}" />
+  <link rel="stylesheet" title="Zirconium" type="text/css" media="all" href="{{ '/css/antares.css' | prepend: site.baseurl | append: '?v=' | append: site.time }}" />
 </head>
