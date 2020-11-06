@@ -572,3 +572,14 @@ mark {
 .main--homepage {
   padding-top: 2rem;
 }
+
+.latest header {
+  padding: 1em;
+}
+
+.posts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 2em;
+  padding: 1em;
+}

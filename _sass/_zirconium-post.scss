@@ -41,7 +41,6 @@ a.featured {
     padding: 0;
     gap: 0.25rem;
     grid-template-columns: min-content 1fr;
-    grid-template-rows: 2fr repeat(3, min-content) 2fr;
   }
 }
 
