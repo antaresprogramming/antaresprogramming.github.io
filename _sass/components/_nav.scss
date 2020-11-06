@@ -127,6 +127,10 @@
     gap: 1em;
     
     display: flex;
+
+    &::before {
+      content: none;
+    }
     
     .main-nav__item {
       flex: revert;
@@ -148,3 +152,18 @@
     padding: 0.5em;
   }
 } 
+
+.main-nav {
+  position: sticky;
+  top: -1px;
+}
+
+.with-js {
+  .main-nav {
+    box-shadow: none;
+
+    &.is-pinned {
+      box-shadow: 0 10px 15px #0002;
+    }
+  }
+}

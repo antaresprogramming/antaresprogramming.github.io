@@ -12,3 +12,19 @@
     });
   })()
 </script>
+
+<script>
+  // For sticky navbar shadow
+  (function() {
+    const el = document.querySelector(".main-nav")
+    const observer = new IntersectionObserver( 
+      ([e]) => e.target.classList.toggle("is-pinned", e.intersectionRatio < 1),
+      { 
+        root: document.querySelector("body"),
+        threshold: [1]
+      }
+    );
+
+    observer.observe(el);
+  })()
+</script>
