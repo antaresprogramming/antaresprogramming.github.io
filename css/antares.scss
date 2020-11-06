@@ -2,9 +2,7 @@
 ---
 @charset "utf-8";
 
-// Global
 
-// Components
 
 
 :root {
@@ -28,13 +26,13 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  min-height: 100vh;
+}
+
 ::selection {
   background-color: var(--banana-300);
   color: var(--orange-900);
-}
-
-svg {
-  fill: inherit;
 }
 
 pre {
@@ -48,3 +46,14 @@ pre {
   clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
   clip: rect(1px, 1px, 1px, 1px);
 }
+
+[hidden] {
+  display: none;
+}
+
+// Global
+@import "colors";
+@import "typography";
+
+// Components
+@import "components/nav";
