@@ -2,25 +2,6 @@
 ---
 @charset "utf-8";
 
-// Global
-@import "zirconium-colors";
-@import "zirconium-layout";
-@import "zirconium-typography";
-
-// Components
-@import "zirconium-byline";
-@import "zirconium-code";
-@import "zirconium-post";
-@import "zirconium-figures";
-@import "zirconium-nav";
-@import "twitter-cards";
-@import "banner";
-@import "zirconium-buttons";
-@import "zirconium-courses";
-@import "zirconium-lesson";
-@import "zirconium-lesson-list";
-@import "zirconium-monokai";
-
 
 :root {
     color-scheme: light dark;
@@ -48,10 +29,6 @@ html {
   color: var(--orange-900);
 }
 
-svg {
-  fill: inherit;
-}
-
 pre {
   -webkit-text-size-adjust: none;
 }
@@ -63,3 +40,26 @@ pre {
   clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
   clip: rect(1px, 1px, 1px, 1px);
 }
+
+[hidden] {
+  display: none;
+}
+
+// Global
+@import "zirconium-colors";
+@import "zirconium-layout";
+@import "zirconium-typography";
+
+// Components
+@import "zirconium-byline";
+@import "zirconium-code";
+@import "zirconium-post";
+@import "zirconium-figures";
+@import "zirconium-nav";
+@import "twitter-cards";
+@import "banner";
+@import "zirconium-buttons";
+@import "zirconium-courses";
+@import "zirconium-lesson";
+@import "zirconium-lesson-list";
+@import "zirconium-monokai";
