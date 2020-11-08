@@ -1,9 +1,10 @@
 title: "Antares Programming"
-description: "Dedicated to serving easily-accessible Web development learning materials for Filipinos"
+description: "Web technologies for aspiring Filipino web developers."
 permalink: /blog/:title/
 theme-color: "#FF9500"
 gravatar: aeec9ba19ac358be11a053ffcafac8f1
 author: Francis Rubio
+seo_image: /images/seo_image.png
 
 facebook: antaresprogramming
 mastodon: 
@@ -13,13 +14,14 @@ twitter: antaresphdev
 authors:
   teacherbuknoy:
     name: Francis Rubio
-    description: "Web Developer and Educator from the Philippines"
+    description: "Web developer, web designer, and educator from the Philippines"
     gravatar: 2dc37e96621279e556480e63b75b58dc # Gravatar md5 hash
+    twitter: teacherbuknoy
   anonymous:
     name: "Unknown Author"
 
 plugins:
-  #- jekyll-feed
+  - jekyll-feed
   - jekyll-paginate
   - jekyll-redirect-from
   - jekyll-sitemap
