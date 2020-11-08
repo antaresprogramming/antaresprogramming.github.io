@@ -41,10 +41,10 @@ Para makapag-markup ng isang paragraph, ilalagay natin ang paragraph sa pagitan 
 <pre><code data-language="html">&lt;p>This is a paragraph.&lt;/p></code></pre>
 
 <figure>
-  <svg style="" fill="#fafafa" class="img--borderize" viewBox="0 -10 300 100">
+  <svg style="" class="img--borderize" viewBox="0 -10 300 100">
     <style>
-      .code { font-family: monospace; font-size: 18px; }
-      .desc { font-family: sans-serif;font-size: 14px; }
+      .code { font-family: var(--code-font); font-size: 18px; }
+      .desc { font-family: var(--ui-font);font-size: 14px; }
     </style>
     <text class="code" y="35" x="5">&lt;p&gt;</text>
     <text class="code" y="35" x="38">This is a paragraph.</text>

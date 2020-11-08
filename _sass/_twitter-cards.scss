@@ -1,15 +1,18 @@
 .twitter-card {
-  background-color: var(--silver-100);
   box-shadow:
-    0 0 0 1px rgba(0, 0, 0, 0.05),
-    0 3px 3px rgba(0, 0, 0, 0.22);
+  0 0 0 1px rgba(0, 0, 0, 0.05),
+  0 3px 3px rgba(0, 0, 0, 0.22);
   border-radius: 0.5em;
   font-family: var(--ui-font);
   margin: 0 auto 2em;
   max-width: 50ch;
   padding: 1em;
   border: 1px solid #0005;
-  font-size: 1em;
+  font-size: 1rem;
+
+  * {
+    font-family: var(--ui-font);
+  }
 
   a {
     color: inherit;
@@ -79,27 +82,24 @@
   /*
   @media (prefers-color-scheme: dark) {
     background-color: var(--black-500);
-  }*/
-}
+    }*/
+  }
 
-.twitter-card {
-	--ui-font: var(--copy-font);
-	--serif-font: var(--copy-font);
-	
-	* {
-	    text-indent: 0;
-	}
-	
-	.twitter-img {
-	    display: grid;
-	    max-height: calc(50ch / (16/9));
-	    overflow: hidden;
-	    align-content: center;
-	    border-radius: 0.5em;
-    }
-}
+  .twitter-card {
+   * {
+     text-indent: 0;
+   }
 
-article .twitter-card a[target="_blank"] {
-	padding: 0;
-	background: transparent;
-}
+   .twitter-img {
+     display: grid;
+     max-height: calc(50ch / (16/9));
+     overflow: hidden;
+     align-content: center;
+     border-radius: 0.5em;
+   }
+ }
+
+ article .twitter-card a[target="_blank"] {
+   padding: 0;
+   background: transparent;
+ }
