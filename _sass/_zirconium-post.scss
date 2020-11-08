@@ -5,11 +5,14 @@ a.featured {
   color: var(--fg-color);
   background-image: none;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   align-items: stretch;
   justify-content: center;
   gap: 1rem;
   transition: background-color 300ms;
+
+  @media screen and (min-width: 350px) {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
 
   &:hover {
     background-color: #21212133;
