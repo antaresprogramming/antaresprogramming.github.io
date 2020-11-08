@@ -5,7 +5,7 @@
     <img class="featured__image" src="{{ post.image }}" alt="" width="1920" height="400">
   {% endif %}
         <div class="featured__body">
-    <h2 id="{{ post.slug | slugify:                                                                                                                                                                         'pretty' }}">{% include title.html title=post.title %}</h2>
+    <h2 id="{{ post.slug | slugify: 'pretty' }}">{% include title.html title=post.title %}</h2>
     {% if post.description %}
       <h3>
         {% include title.html title=post.description %}

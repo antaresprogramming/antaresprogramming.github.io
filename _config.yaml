@@ -27,14 +27,13 @@ plugins:
   - jekyll-sitemap
 
 paginate: 7
-paginate_path: "/archive/:num/"
+paginate_path: "/articles/:num/"
 
 markdown: kramdown
 kramdown:
   syntax_highlighter: rouge
   syntax_highlighter_opts:
-    block:
-      line_numbers: true
+    disable: true
 
 future: false # Allows us to stage posts
 exclude: [README.md, Gemfile, Gemfile.lock, vendor, create-new-post]

@@ -1,0 +1,18 @@
+---
+layout: grid
+redirect_from:
+  - /articles/
+  - /articles
+  - /articles/1/
+  - /articles/1
+has_banner: false
+---
+
+<main>
+  <h1>Mga article</h1>
+  <section class="posts-grid">
+    {% for post in site.posts %}
+    {% include featured.html post=post %}
+    {% endfor %}
+  </section>
+</main>
