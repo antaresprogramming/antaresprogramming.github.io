@@ -10,7 +10,7 @@ has_banner: false
 
 <main>
   <h1>Mga article</h1>
-  <section class="posts-grid">
+  <section class="posts-grid posts-grid--vertical">
     {% for post in site.posts %}
     {% include featured.html post=post %}
     {% endfor %}
