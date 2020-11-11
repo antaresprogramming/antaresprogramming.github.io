@@ -21,6 +21,7 @@ html {
   font-weight: 400;
   word-spacing: -0.05em;
   font-size: 110%;
+  line-height: 1.45;
 
   @media print {
     font-size: 12pt;
@@ -153,5 +154,19 @@ dl {
   dt {
     margin-top: 1rem;
     font-weight: bold;
+  }
+}
+
+
+.checklist {
+  padding-left: 5ch;
+  list-style-type: none;
+  
+  & > li::before {
+      content: "✓";
+      font-weight: bold;
+      color: var(--lime-700);
+      margin-left: -3ch;
+      margin-right: 1ch;
   }
 }
