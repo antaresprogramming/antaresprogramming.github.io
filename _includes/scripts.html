@@ -32,3 +32,34 @@
     sidebarWrapper.addEventListener('click', event => event.stopPropagation())
   }
 </script>
+
+<script>
+  (function() {
+    document.body.classList.add('with-js')
+
+    var navButton = document.querySelector('.js-nav-toggler');
+    navButton.addEventListener('click', function() {
+      let expanded = this.getAttribute('aria-expanded') === 'true' || false;
+      this.setAttribute('aria-expanded', !expanded);
+      
+      let menu = document.querySelector('.js-nav');
+      menu.hidden = !menu.hidden;
+    });
+  })()
+</script>
+
+<script>
+  // For sticky navbar shadow
+  (function() {
+    const el = document.querySelector(".main-nav")
+    const observer = new IntersectionObserver( 
+      ([e]) => e.target.classList.toggle("is-pinned", e.intersectionRatio < 1),
+      { 
+        root: document.querySelector("body"),
+        threshold: [1]
+      }
+    );
+
+    observer.observe(el);
+  })()
+</script>

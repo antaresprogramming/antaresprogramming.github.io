@@ -9,13 +9,15 @@ ul.course-list {
 	
 	li{
 	  a {
-	    padding: 1rem;
-	    background: none;
-	    color: inherit;
-	    border: 1px solid #0003;
-	    border-radius: 0.5rem;
-	    transition: box-shadow 300ms;
-	  
+      display: grid;
+      padding: 1.5rem;
+      background: none;
+      color: inherit;
+      border: 1px solid #0003;
+      border-radius: 0.5rem;
+      transition: box-shadow 300ms;
+      gap: 1em;
+
 	    &:hover {
 	      box-shadow: 0 8px 15px #0003;
       }
@@ -59,15 +61,6 @@ ul.course-list {
 	padding: 1rem;
 	border-radius: 0.5rem;
 	margin: 1rem auto;
-}
-
-.checklist {
-	list-style: "✓";
-  
-  & > li::marker {
-	  font-weight: bold;
-	  color: var(--lime-700);
-  }
 }
 
 .lessons-list {
