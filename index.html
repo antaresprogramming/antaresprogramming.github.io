@@ -13,6 +13,10 @@ has_banner: true
     Newest posts in a unique, Medium-like layout on the first page
   {% endcomment %}
   <section class="latest">
+    <header class="flexify">
+      <h2>Mga bagong post</h2>
+      <a href="/articles/" class="btn">Tingnan lahat</a>
+    </header>
     {% assign post=paginator.posts.first %}
     {% include featured.html post=post %}
 
@@ -26,41 +30,6 @@ has_banner: true
     {% include featured.html post=post %}
   </section>
 {% endunless %}
-<section class="more">
-{% if paginator.previous_page %}
-  <h2>Archive Page {{ paginator.page }}</h2>
-  {% for post in paginator.posts %}
-    {% unless post.hidden %}
-      {% include featured.html post=post %}
-    {% endunless %}
-  {% endfor %}
-{% else %}
-  <h2>More Stories</h2>
-  {% for post in paginator.posts offset: 4 %}
-    {% unless post.hidden %}
-      {% include featured.html post=post %}
-    {% endunless %}
-  {% endfor %}
-{% endif %}
-</section>
 </main>
 {% include notice-banner.html %}
-<nav class="pagination" aria-label="Archives">
-  {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path }}" class="previous btn"><svg height='16' width='16' xmlns='http://www.w3.org/2000/svg' style="margin: 0; margin-left: 0.5ch">
-        <g color='currentColor' transform='translate(-313 3)'>
-            <path d='M321 10.676l7.001-6.192-7-6.16V2H315v5h6z' fill='currentColor' overflow='visible' style='marker:none'/>
-        </g>
-    </svg> Newer</a>
-  {% endif %}
-
-  {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path }}" class="next btn">
-        <svg height='16' width='16' xmlns='http://www.w3.org/2000/svg'>
-            <g color='currentColor' transform='translate(-293 3)'>
-                <path d='M301 10.676l-7-6.192 7-6.16V2h6.001v5h-6z' fill='currentColor' overflow='visible' style='marker:none'/>
-            </g>
-        </svg> Older</a>
-  {% endif %}
-</nav>
 

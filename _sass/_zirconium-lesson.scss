@@ -1,6 +1,7 @@
 .checkpoint {
   padding: 1rem;
   margin-bottom: 0;
+  font-family: var(--ui-font);
   
   &__header {
     background-color: #fd0;
@@ -283,10 +284,10 @@
     margin: auto;
     max-width: 60ch;
     padding: 1rem;
+    font-family: var(--copy-font);
     
     p {
-      font-size: 1em;
-      text-indent: 2ch;
+      font-size: 1.1em;
       line-height: 1.5;
       
       * {
