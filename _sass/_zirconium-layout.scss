@@ -596,3 +596,30 @@ mark {
     }
   }
 }
+
+.footnotes {
+  font-size: 0.8em;
+  font-family: var(--ui-font);
+  margin-top: 10vh;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-repeat: no-repeat;
+  background-size: 50% 1px;
+  padding-top: 5vh;
+}
+
+.footnote {
+  font-family: var(--ui-font);
+  padding: 1em;
+  border-radius: 100%;
+  border: 1px solid;
+  display: inline-flex;
+  width: 1ch;
+  height: 1ch;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.6em;
+  position: relative;
+  top: -0.25rem;
+  background-size: 100% 0;
+}
