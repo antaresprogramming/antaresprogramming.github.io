@@ -45,6 +45,20 @@ pre {
   display: none;
 }
 
+:target {
+  animation: target-anim 3s;
+  outline-offset: 1em;
+}
+
+@keyframes target-anim {
+  0%, 75% {
+    outline: 3px solid #fd0;
+  }
+  100% {
+    outline: 3px solid #fd00;
+  }
+}
+
 // Global
 @import "zirconium-colors";
 @import "zirconium-layout";
