@@ -13,6 +13,3 @@ Para i-feature ng Antares Programming ang gawa mo, kinakailangang pumapayag ka n
 
 ## Compliance to content guidelines
 Kinakailangan mo ring sumunod sa [content guidelines ng Antares Programming](/about/content-guidelines/). Isa itong guide o pattern na susundin mo sa paggawa ng content, ito man ay isang written article, course, o video. Hindi nito tinatanggal ang artistic liberty mo sa paggawa ng content. Sa halip, sinisiguro nito na makakapag-produce ka ng quality content sa format na napili mo.
-
-## Sponsorship at Patreon accounts
-Kahit ma-feature ka sa Antares Programming, hindi ka makatatanggap ng bahagi sa monthly pledges ng mga supporters ng Antares Programming sa Patreon. Pero puwede kang magkaroon ng sponsors sa content na ginagawa mo para sa Antares Programming. Sa mga instances na gusto mong ma-feature namin ang sponsored content na gawa mo, hindi ka required na magbigay ng parte ng sponsorship sa Antares Programming. Pero kinakailangan na nakapasa sa [sponsorship guidelines ng Antares Programming](/about/donations-and-sponsors/) ang sponsor na napili mo. Para ito sa brand at image na mine-maintain ng Antares Programming. Sa maikli, hindi kami tumatanggap ng sponsors kung malalagay sa panganib ang privacy ng customers nila (e.g., excessive data tracking at collection).
