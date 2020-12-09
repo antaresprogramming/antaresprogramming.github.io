@@ -336,7 +336,7 @@ mark {
 	        }
 
 	        p {
-	          font-family: 'Zilla Slab';
+	          font-family: var(--copy-font);
           }
           
 
@@ -391,8 +391,7 @@ mark {
               margin: 0;
               line-height: 1;
               text-transform: uppercase;
-	            font-family: 'Zilla Slab', 'Inter', sans-serif;
-	            font-weight: normal;
+	            font-weight: lighter;
 	            letter-spacing: 3px;
             }
         }
@@ -456,8 +455,32 @@ mark {
         }
       }
     }
-    
-    
+}
+
+.author .main-nav:not(.is-pinned) {
+  background-color: var(--header-bg-color);
+
+  .main-nav__link:focus,
+  .main-nav__link:hover {
+    background-color: #c80a;
+    color: var(--brand-fg-black);
+  }
+}
+
+.author section:not([class]) a.featured.with-image {
+  grid-template-columns: 1fr;
+  margin-bottom: 10vh;
+}
+
+@media screen and (min-width: 720px) {
+  .author section:not([class]) a.featured.with-image {
+    grid-template-columns: 3fr 4fr;
+    margin: unset;
+  }
+}
+
+.author section:not([class]) a.featured.with-image .featured__image {
+  width: 100%;
 }
 
 @media screen and (max-width: 720px) {
