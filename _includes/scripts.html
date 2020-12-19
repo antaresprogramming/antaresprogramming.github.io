@@ -34,8 +34,10 @@
 </script>
 
 <script>
+  let search
   (function() {
     document.body.classList.add('with-js')
+    search = document.querySelector('.js-search-control')
 
     var navButton = document.querySelector('.js-nav-toggler');
     navButton.addEventListener('click', function() {
@@ -52,12 +54,24 @@
         let expanded = this.getAttribute('aria-expanded') === 'true' || false;
         searchButtons.forEach(button => button.setAttribute('aria-expanded', !expanded))
 
-        let search = document.querySelector('.js-search-control')
         search.hidden = !search.hidden;
       })
     })
     
+    document.body.addEventListener('keydown', e => {
+      if(e.key === 'Escape') {
+        closeSearchUI();
+      }
+    })
   })()
+
+  function closeSearchUI() {
+    let searchButtons = document.querySelectorAll('.js-search-toggler')
+    searchButtons.forEach(button => {
+      button.setAttribute('aria-expanded', false);
+      search.hidden = true;
+    })
+  }
 </script>
 
 <script>
