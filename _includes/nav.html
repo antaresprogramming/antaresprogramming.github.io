@@ -139,9 +139,13 @@
   <div class="search-input">
     <input type="text" id="search-input" placeholder="Search blog posts..">
     <label for="search-input">Search</label>
-    <button class="main-nav__link btn js-search-toggler" aria-expanded="false" aria-label="Toggle search" aria-controls="search-control">
+    <button class="main-nav__link btn js-search-toggler" id="search-toggler-lg" aria-expanded="false" aria-label="Toggle search" aria-controls="search-control">
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
     </button>
   </div>
+  
+  <button class="main-nav__link btn js-search-toggler" id="search-toggler-sm" aria-expanded="false" aria-label="Toggle search" aria-controls="search-control">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+  </button>
   <ul id="results-container"></ul>
 </article>

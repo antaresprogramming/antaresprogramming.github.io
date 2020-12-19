@@ -201,7 +201,8 @@
 	background-color: #0003;
 	left: 0;
 	width: 100vw;
-	height: 100vh;
+  height: 100vh;
+  padding: 1em;
   
   .search-input, #results-container {
     background-color: var(--bg-color);
@@ -261,6 +262,27 @@
       &:focus {
         background-color: var(--accent-light);
       }
+    }
+  }
+
+  #search-toggler-sm {
+    margin: auto;
+    display: block;
+    border-radius: 100%;
+    background: var(--bg-color);
+  }
+
+  #search-toggler-lg {
+    display: none;
+  }
+
+  @media screen and (min-width: 450px) {
+    #search-toggler-lg {
+      display: revert;
+    }
+
+    #search-toggler-sm {
+      display: none;
     }
   }
 }
