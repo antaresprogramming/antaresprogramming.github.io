@@ -37,7 +37,7 @@ Kung napansin ninyo, bago na naman ang design ng blog site. Sa tingin ko magtata
 Sa Setyembre ng taong ito rin, gaya siguro ng nakita ninyo sa isang [Facebook post ko](https://facebook.com/photo.php?fbid=159805335693455&id=100049919681798&set=a.105331254474197&source=56), may paparating na bagong project ang Antares Programming. Ito ay ang <b>Courses</b>. Nilahad ko na rin ang details niyan sa isang post. Basically, isa itong feature sa site na ito. Magkakaroon ng courses na may mga lesson. Puwedeng i-download ang videos, code na ginamit, at mga written content. Ang focus nito ay turuan ang mga mambabasa tungkol sa mga development at programming topics pero sa Tagalog/Filipino, para mabawasan ang <i>friction</i> gawa ng technical terms at jargons.
 
 <aside>
-{% assign post = site.posts | where:"slug", "/blog/courses-antares-programming/" | first %}
+{% assign post = site.posts | where:"slug", "/courses-antares-programming/" | first %}
 {% include featured.html post=post %}
 </aside>
 
