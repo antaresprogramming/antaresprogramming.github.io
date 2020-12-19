@@ -2,6 +2,9 @@
 <html lang="tl" dir="ltr" class="lesson">
   {% include head.html %}
   <body class="{% if page.url == '/' %}home {% endif %}">
+    <a class="skip-to-content-link" href="#main">
+      Skip to content
+    </a>
     {% assign courseData = site.data.courses | where: 'id', page.course %}
     {% assign coursePage = site.courses | where: 'course_id', page.course %}
     {% include nav.html %}
@@ -24,6 +27,7 @@
         {% endif %}
       {% endif %}
     {% endfor %}
+    <main id="main">
     {% if page.video != nil %}
     <section class="lesson__video">
       <div class="lesson__video-wrapper">
@@ -86,6 +90,7 @@
     {% include license.html %}
     {% include lesson-nav.html prevLessonID=prevLessonID nextLessonID=nextLessonID prevLessonTitle=prevLessonTitle nextLessonTitle=nextLessonTitle %}
     </section>
+  </main>
     {% include social.html %}
     {% include footer.html %}
     {% include scripts.html checkpoints=true %}
