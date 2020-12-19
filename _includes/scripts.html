@@ -34,8 +34,10 @@
 </script>
 
 <script>
+  let search
   (function() {
     document.body.classList.add('with-js')
+    search = document.querySelector('.js-search-control')
 
     var navButton = document.querySelector('.js-nav-toggler');
     navButton.addEventListener('click', function() {
@@ -45,7 +47,31 @@
       let menu = document.querySelector('.js-nav');
       menu.hidden = !menu.hidden;
     });
+
+    let searchButtons = document.querySelectorAll('.js-search-toggler')
+    searchButtons.forEach(btn => {
+      btn.addEventListener('click', function() {
+        let expanded = this.getAttribute('aria-expanded') === 'true' || false;
+        searchButtons.forEach(button => button.setAttribute('aria-expanded', !expanded))
+
+        search.hidden = !search.hidden;
+      })
+    })
+    
+    document.body.addEventListener('keydown', e => {
+      if(e.key === 'Escape') {
+        closeSearchUI();
+      }
+    })
   })()
+
+  function closeSearchUI() {
+    let searchButtons = document.querySelectorAll('.js-search-toggler')
+    searchButtons.forEach(button => {
+      button.setAttribute('aria-expanded', false);
+      search.hidden = true;
+    })
+  }
 </script>
 
 <script>
@@ -62,4 +88,15 @@
 
     observer.observe(el);
   })()
+</script>
+
+
+<!-- or without installing anything -->
+<script src="https://unpkg.com/simple-jekyll-search@latest/dest/simple-jekyll-search.min.js"></script>
+<script>
+  var sjs = SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/js/postindex.json'
+  })
 </script>
