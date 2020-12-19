@@ -2,8 +2,11 @@
 <html lang="tl" dir="ltr" class="author">
   {% include head.html %}
   <body class="{% if page.url == '/' %}home {% endif %}">
+    <a class="skip-to-content-link" href="#main">
+      Skip to content
+    </a>
     {% include nav.html %}
-    <section class="merge-with-header">
+    <section class="merge-with-header" id="main">
       {% assign author = page.author %}
       {% assign posts = site.posts | where: "author", author.username %}
       {% assign postCount = posts.size %}

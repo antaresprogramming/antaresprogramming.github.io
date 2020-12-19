@@ -2,10 +2,13 @@
 <html lang="tl" dir="ltr" class="courses">
   {% include head.html %}
   <body class="{% if page.url == '/' %}home {% endif %}">
+    <a class="skip-to-content-link" href="#main">
+      Skip to content
+    </a>
     {% unless page.type %}{% assign thisCourse = page %}{% endunless %}
     {% include course-banner.html course=thisCourse %}
     {% include nav.html %}
-    <main>
+    <main id="main">
       <article>
       {% if page.type == 'index' %}
         {{ content | replace: '<a href="http', '<a rel="nofollow noopener noreferrer" target="_blank" href="http' }}

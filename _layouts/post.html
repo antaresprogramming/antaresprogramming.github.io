@@ -2,10 +2,13 @@
 <html lang="tl" dir="ltr">
 {% include head.html %}
 <body class="{% if page.url == '/' %}home {% endif %}">
+  <a class="skip-to-content-link" href="#main">
+    Skip to content
+  </a>
   {% if page.has_banner %}{% include cta-banner.html %}{% endif %}
   {% include nav.html %}
   {% include outdated.html post=page %}
-  <main class="post">
+  <main class="post" id="main">
     {% if page.hidden %}
     <aside class="embargo">
       {% if page.hidden != true %}

@@ -2,9 +2,12 @@
 <html lang="tl" dir="ltr">
   {% include head.html %}
   <body class="{% if page.url == '/' %}home {% endif %}">
+    <a class="skip-to-content-link" href="#main">
+      Skip to content
+    </a>
     {% if page.has_banner %}{% include cta-banner.html %}{% endif %}
     {% include nav.html %}
-    {{ content | replace: '<a href="http', '<a rel="nofollow noopener noreferrer" target="_blank" href="http' }}
+    {{ content | replace: '<main', '<main id="main"' | replace: '<a href="http', '<a rel="nofollow noopener noreferrer" target="_blank" href="http' }}
     {% include footer.html %}
     {% include scripts.html %}
   </body>

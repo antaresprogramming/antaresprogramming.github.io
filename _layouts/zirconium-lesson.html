@@ -2,6 +2,9 @@
 <html lang="tl">
 {% include head.html %}
 <body class="zirconium-lesson">
+  <a class="skip-to-content-link" href="#main">
+    Skip to content
+  </a>
   {% include nav.html %}
   {% include lesson-list.html courseID=page.course %}
 
@@ -16,7 +19,7 @@
         {% assign lessonnumber = i | plus: 1 %}
       {% endif %}
     {% endfor %}
-  <main>
+  <main id="main">
     {% include zirconium-lesson-breadcrumb.html %}
     {% if page.video_embed != nil %}
     <section class="lesson__video">
