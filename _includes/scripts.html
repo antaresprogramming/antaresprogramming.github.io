@@ -72,6 +72,23 @@
       search.hidden = true;
     })
   }
+
+  function toggleGCashMenu(btn) {
+    const gCashControls = document.getElementById('gcash-controls')
+    let expanded = btn.getAttribute('aria-expanded') === true || false;
+    
+    btn.setAttribute('aria-expanded', !expanded)
+    gCashControls.hidden = !gCashControls.hidden
+  }
+
+  function copyGCashNumber(textboxID) {
+    const textbox = document.getElementById(textboxID);
+
+    textbox.select();
+    textbox.setSelectionRange(0, 99999); 
+    
+    document.execCommand("copy");
+  }
 </script>
 
 <script>
