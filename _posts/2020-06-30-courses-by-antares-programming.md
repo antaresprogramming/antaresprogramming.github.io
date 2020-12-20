@@ -8,6 +8,8 @@ tags: [meta]
 ---
 Sobrang excited ako na i-announce sa inyong lahat ang bagong part ng Antares Programming project: ang <i>Courses by Antares Programming</i>. Basically isa itong ongoing series na may videos, code samples, at written articles na libre para sa lahat. Sa ngayon, tungkol muna ito sa HTML, na susundan in the near future ng CSS at JavaScript. Pero magkakaroon din dito ng series tungkol sa iba't ibang topics gaya ng accessibility, Web typography, at ibang programming languages tulad ng Java at C#.
 
+{% include ad-banner.html %}
+
 ## Una sa lahat, bakit?
 Matagal nang nakaplano ang project na ito. Actually, simula noong 2018, ang taon kung kailan nagsimula ang Antares Programming, kasama na 'to sa mga planned projects ko. Sadyang hindi lang ako nagkaroon ng oras at financial resources para magawa ito. Naisip ko kasing ito ang pinakamagandang way para maabot ang goal ng Antares Programming na high-quality educational resources for Web development.
 

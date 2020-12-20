@@ -12,6 +12,8 @@ Pamilyar tayo sa common values ng `display` property. Nandiyan ang `inline`, `bl
 
 Pero alam n'yo ba na may bagong syntax ang `display` property? Sa [CSS Display Module Level&nbsp;3](https://www.w3.org/TR/css-display-3/), binanggit ang bagong syntax na ito ng `display`. Tingnan natin ang details nito.
 
+{% include ad-banner.html %}
+
 ## Ang basics ng `display` property
 Pag-usapan muna natin ang `inline` at `block` elements. Kapag sinabi nating inline, ibig sabihin, nakadepende ito sa <i>writing mode</i> ng isang language. Sa Filipino, ang writing mode natin ay left-to-right dahil nagsusulat tayo mula kaliwa pakanan. Ang block naman ay ang direction na pupuntahan ng text kapag napuno na ang inline. Sa Filipino, kapag napuno na ang isang line, magra-wrap ang susunod na mga salita sa susunod na line, kaya ang block direction natin ay top-to-bottom.
 

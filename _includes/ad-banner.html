@@ -1,0 +1,42 @@
+<style>
+  .notice__wrapper {
+    display: grid;
+    grid-auto-rows: min-content;
+  }
+
+  .post .post__contents .notice .notice__wrapper p,
+  .post .post__contents .notice .notice__wrapper h2 {
+    padding: 0;
+    margin: 0;
+  }
+
+  .post .post__contents .notice .notice__wrapper p {
+    grid-row: 1/2;
+    padding-bottom: 2rem;
+    opacity: 0.7;
+  }
+
+  .post .post__contents .notice .notice__wrapper h2 {
+    color: var(--header-fg-color);
+    padding-bottom: 1rem;
+  }
+
+  .notice__details {
+    padding-left: 2em;
+  }
+
+  .post .post__contents .notice .notice__details p {
+    font-family: var(--serif-font);
+    font-size: 0.9em;
+  }
+</style>
+<aside aria-labelledby="support-us-notice-header" class="notice notice--ad" style="--ad-color: #FFDF80; --ad-shadow-color: #FFBF006E;">
+  <div class="notice__wrapper">
+    <h2 id="support-us-notice-header">Mag-donate sa Antares Programming</h2>
+    <p>Kailangan ang tulong mo.</p>
+    <a href="/about/mag-donate/" class="btn btn--accent">Learn more</a>
+  </div>
+  <div class="notice__details">
+    <p>Kapag nag-donate ka, makatutulong kang mapanatiling ad-free ang Antares Programming.</p>
+  </div>
+</aside>
