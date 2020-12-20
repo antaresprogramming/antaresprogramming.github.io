@@ -98,8 +98,9 @@ a.featured {
 
   .post__contents {
     font-family: var(--copy-font);
+    padding: 1em;
 
-    p, ul, ol {
+    p, ul, ol, dl {
       font-size: 1.1em;
       margin: 1em;
     }
@@ -117,6 +118,37 @@ a.featured {
         display: block;
         width: 10ch;
         height: 1em;
+      }
+    }
+
+    .notice {
+      grid-column: 1/4;
+      font-family: var(--ui-font);
+
+      h2::before {
+        content: none;
+      }
+
+      &.notice--ad {
+        padding: 1em;
+        background-color: transparent;
+        margin: auto;
+        max-width: 40ch;
+
+        .notice__wrapper {
+          margin: auto;
+          padding: 1em;
+          background-color: var(--ad-color);
+          box-shadow: 0 4px 18px var(--ad-shadow-color);
+          border-radius: 0.25em;
+        }
+      }
+    }
+
+    @media screen and (min-width: 1395px) {
+      .notice.notice--ad {
+        grid-column: 3/4;
+        grid-row: 3 / span 5;
       }
     }
   }

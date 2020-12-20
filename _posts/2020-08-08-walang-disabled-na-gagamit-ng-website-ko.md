@@ -35,8 +35,7 @@ At may point siya. Kahit i-assume mo na hindi gagamitin ng persons with disabili
 
 [^11]: Ayon sa Philippine Web Accessibility Group, [puwede kang makasuhan o mademanda kung hindi accessible ang website mo](https://www.pwag.org/resources/analysis-of-philippine-laws-pertaining-to-disability/can-we-be-sued-if-we-dont-make-our-web-site-accessible-written-by-jojo-esposa-jr/).
 
-1. Table of Contents
-{:toc}
+{% include ad-banner.html %}
 
 ## Ano ba iyang accessibility na iyan?
 Ang <dfn>accessibility</dfn> ay isang practice na ginagawa para magamit ng lahat ang isang bagay kahit na may kapansanan sila, o baka limitado ang kaya nilang gawin dahil sa ibang dahilan. Ang Web accessibility ay ang accessibility sa mga webpages.

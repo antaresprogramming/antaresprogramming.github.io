@@ -12,6 +12,8 @@ Two years ago, inilabas ng W3C ang [CSS Scrollbars specification](https://www.w3
 
 Pero hindi ibig sabihin nito na hindi na natin mako-customize ang mga scrollbars natin gamit ang CSS. Bago pa dumating ang CSS Scrollbars spec, may paraan na para ma-customize ang look ng mga scrollbars. Sa article na ito, titingnan natin kung paano natin ito magagawa.
 
+{% include ad-banner.html %}
+
 ## CSS Scrollbars
 
 Una nating gagamitin ang CSS scrollbars. Dahil ito ang nakalagay sa official specs, darating ang panahon na gagana rin ito sa lahat ng browsers. Pagdating ng time na iyon, wala na tayong ibang kailangang gawin sa code natin[^1] dahil ngayon pa lang, na-implement na natin ang code natin according to the specifications.
