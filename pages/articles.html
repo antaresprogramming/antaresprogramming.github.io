@@ -11,7 +11,12 @@ has_banner: false
 <main>
   <h1>Mga article</h1>
   <section class="posts-grid posts-grid--vertical">
+    {% assign counter = 0 %}
     {% for post in site.posts %}
+    {% assign counter = counter | plus: 1 %}
+    {% if counter == 3 %}
+    {% include gcash-controls.html %}
+    {% endif %}
     {% include featured.html post=post %}
     {% endfor %}
   </section>

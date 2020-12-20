@@ -1,0 +1,77 @@
+<style>
+    #gcash-controls {
+        margin: 1rem;
+        border: 1px solid #0003;
+        border-radius: 0.25rem;
+        position: relative;
+        align-self: start;
+    }
+
+    #gcash-controls header {
+        padding: 1rem;
+        border-bottom: 1px solid #0003;
+    }
+
+    #gcash-controls header h2 {
+        font-size: 1rem;
+        margin: 0;
+    }
+
+    #gcash-controls p {
+        padding: 1em;
+        font-size: 0.8em;
+        margin: 0;
+    }
+
+    #gcash-controls .input-group {
+        display: flex;
+        padding: 0.5em;
+    }
+
+    #gcash-controls .input-group .button-group {
+        display: flex;
+        flex: 1;
+        border: 1px solid #0003;
+        border-radius: 0.25rem;
+        background-color: #0001;
+        overflow: hidden;
+        flex-wrap: wrap;
+    }
+
+    #gcash-controls .input-group .button-group input {
+        flex: 20;
+        border: 0;
+        font-size: 1em;
+        font-family: var(--monospace);
+        background-color: transparent;
+        padding: 1em;
+    }
+
+    #gcash-controls .input-group .button-group .btn {
+        padding: 1em;
+        border-radius: 0;
+        flex: 1;
+        flex-shrink: 0;
+    }
+</style>
+<article id="gcash-controls" {% if include.collapsible %}hidden{% endif %}>
+    <header>
+        <h2>Mag-donate sa amin via GCash</h2>
+    </header>
+    <p>
+        Sa GCash app, piliin ang <i lang="en">Send Money</i> &rsaquo; <i lang="en">Express Send</i>. Ilagay ang number
+        na
+        ito, at ang amount ng gusto mong i-donate.
+    </p>
+    {% assign textboxID = site.time | date: "%s" %}
+    <div class="input-group">
+        <div class="button-group">
+            <label for="gcashnum" class="visuallyhidden">GCash Number</label>
+            <input id="gcashnum-{{ textboxID }}" name="gcashnum" type="text" readonly="readonly" value="0906 313 7462">
+            <button class="btn" onclick="copyGCashNumber('gcashnum-{{ textboxID }}')">
+                {% include svg/clipboard.svg %}
+                <span class="visuallyhidden">Copy number</span>
+            </button>
+        </div>
+    </div>
+</article>
