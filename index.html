@@ -1,16 +1,16 @@
 ---
 layout: default
 redirect_from:
-  - /archive/
-  - /archive
-  - /archive/1/
-  - /archive/1
+- /archive/
+- /archive
+- /archive/1/
+- /archive/1
 has_banner: true
 ---
 <main class="main--homepage">
-{% unless paginator.previous_page %}
+  {% unless paginator.previous_page %}
   {% comment %}
-    Newest posts in a unique, Medium-like layout on the first page
+  Newest posts in a unique, Medium-like layout on the first page
   {% endcomment %}
   <section class="latest">
     <header class="flexify">
@@ -29,7 +29,13 @@ has_banner: true
     {% assign post=paginator.posts[3] %}
     {% include featured.html post=post %}
   </section>
-{% endunless %}
+  {% endunless %}
 </main>
-{% include notice-banner.html %}
-
+<div class="thanks">
+  <h2>Suportahan ang Antares Programming</h2>
+  <p>Malaking tulong ang contributions ninyo para ma-improve ang site at ang lahat ng features nito. Kung gusto mong
+    tumulong, mag-send ng message sa amin via <a href="mailto:devfrancisrubio@gmail.com" target="_blank"
+      rel="noopener noreferrer">email</a>, o sa aming <a href="https://facebook.com/antaresprogramming" target="_blank"
+      rel="noopener noreferrer">Facebook page</a>.</p>
+  {% include donation-links.html gcash=true %}
+</div>
