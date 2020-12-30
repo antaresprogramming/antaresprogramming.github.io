@@ -1,3 +1,4 @@
+@import "utilities/variables";
 :root {
   --strawberry-100: #ff8c82;
   --strawberry-300: #ed5353;
@@ -95,6 +96,8 @@
   --accent: var(--blueberry-500);
   --accent-dark: var(--blueberry-900);
   --accent-light: var(--blueberry-100);
+
+
 }
 
 /* Uncomment this in the future to support dark mode

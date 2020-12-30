@@ -1,3 +1,5 @@
+@import "./utilities/variables";
+
 :root {
   --page-width: 60rem;
   --content-width: 40rem;
@@ -22,14 +24,14 @@ body > section {
 }
 
 body > footer {
-  background-color: var(--secondary-bg-color);
+  background-color: $purple;
   display: grid;
-  overflow-x: auto;
   clear: both;
+  overflow: hidden;
 
   .copyright {
     padding: 0.25rem 0.5rem;
-    background-color: var(--black-700);
+    background-color: darken($color: $purple, $amount: 5%);
     color: var(--silver-500);
     font-size: 0.8rem;
   }
@@ -58,32 +60,51 @@ body > footer {
 
     &:hover,
     &:focus {
-      background-color: var(--accent-dark);
+      background-color: #0003;
       color: var(--silver-100);
     }
   }
 
   a,
   p {
-    color: var(--silver-500);
+    color: #fff;
     font-family: var(--ui-font);
     font-size: 0.9rem;
     line-height: 1.5em;
     margin: 0;
   }
+
+  .waves {
+    background-image: url("/images/wave-purple.svg"), url("/images/wave-blue.svg"), url("/images/wave-yellow.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 20vh;
+    margin-top: -10vh;
+
+    @media screen and (min-width: 720px) {
+      background-position-x: center;
+      height: 30vh;
+      margin-top: -25vh;
+      background-position-y: bottom -140px, bottom -150px, bottom -280px;
+    }
+  }
 }
 
 @media screen and (min-width: 720px) {
+  .waves,
   footer .copyright {
     grid-column: span 2;
+    grid-row: span 1;
   }
 }
 
 .footer__section {
   padding: 1rem;
   padding-bottom: 2rem;
-  background-color: var(--black-500);
   color: var(--silver-100);
+  z-index: 1;
+
+  text-shadow: rgb(39, 37, 61) 2px 0px 0px, rgb(39, 37, 61) 1.75517px 0.958851px 0px, rgb(39, 37, 61) 1.0806px 1.68294px 0px, rgb(39, 37, 61) 0.141474px 1.99499px 0px, rgb(39, 37, 61) -0.832294px 1.81859px 0px, rgb(39, 37, 61) -1.60229px 1.19694px 0px, rgb(39, 37, 61) -1.97999px 0.28224px 0px, rgb(39, 37, 61) -1.87291px -0.701566px 0px, rgb(39, 37, 61) -1.30729px -1.51361px 0px, rgb(39, 37, 61) -0.421592px -1.95506px 0px, rgb(39, 37, 61) 0.567324px -1.91785px 0px, rgb(39, 37, 61) 1.41734px -1.41108px 0px, rgb(39, 37, 61) 1.92034px -0.558831px 0px;
 }
 
 .footer__section__title {
