@@ -1,26 +1,32 @@
+{% assign visuallyhidden = 'visuallyhidden' %}
+
+{% if include.showLabels %}
+    {% assign visuallyhidden = '' %}
+{% endif %}
+
 <div class="links">
     <a href="https://github.com/antaresprogramming" rel="noreferrer nofollow noopener" target="_blank" title="GitHub">
         {% include svg/github.svg %}
-        <span class="visuallyhidden">Github</span>
+        <span class="{{visuallyhidden}}">Github</span>
     </a>
 
     <a href="https://www.patreon.com/antaresprogramming" rel="noreferrer nofollow noopener" target="_blank"
         title="Patreon">
         {% include svg/patreon.svg %}
-        <span class="visuallyhidden">Patreon</span>
+        <span class="{{visuallyhidden}}">Patreon</span>
     </a>
 
     <a href="https://www.paypal.me/antaresprogramming" rel="noreferrer nofollow noopener" target="_blank"
         title="Paypal">
         {% include svg/paypal.svg %}
-        <span class="visuallyhidden">Paypal</span>
+        <span class="{{visuallyhidden}}">Paypal</span>
     </a>
 
     {% if include.gcash %}
     <button title="GCash" onclick="toggleGCashMenu(this)" aria-expanded="false" aria-label="Toggle GCash number"
         aria-controls="gcash-controls">
         {% include svg/gcash.svg %}
-        <span class="visuallyhidden">GCash</span>
+        <span class="{{visuallyhidden}}">GCash</span>
     </button>
     {% endif %}
 </div>

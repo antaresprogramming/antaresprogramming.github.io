@@ -172,7 +172,9 @@ article {
   a {
     background-image: none;
     padding: 1em;
-    display: flex;
+    display: grid;
+    gap: 0.5em;
+    color: inherit;
     font-size: 1em;
     background-color: transparent;
     cursor: pointer;

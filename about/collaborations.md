@@ -13,3 +13,5 @@ Para i-feature ng Antares Programming ang gawa mo, kinakailangang pumapayag ka n
 
 ## Compliance to content guidelines
 Kinakailangan mo ring sumunod sa [content guidelines ng Antares Programming](/about/content-guidelines/). Isa itong guide o pattern na susundin mo sa paggawa ng content, ito man ay isang written article, course, o video. Hindi nito tinatanggal ang artistic liberty mo sa paggawa ng content. Sa halip, sinisiguro nito na makakapag-produce ka ng quality content sa format na napili mo.
+
+Para sa higit pang detalye, i-email ang creator ng Antares Programming sa [devFrancisRubio@gmail.com](mailto:devFrancisRubio@gmail.com)
