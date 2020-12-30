@@ -75,8 +75,8 @@
 
   function toggleGCashMenu(btn) {
     const gCashControls = document.getElementById('gcash-controls')
-    let expanded = btn.getAttribute('aria-expanded') === true || false;
-    
+    let expanded = btn.getAttribute('aria-expanded') === 'true' || false;
+    console.log({expanded})
     btn.setAttribute('aria-expanded', !expanded)
     gCashControls.hidden = !gCashControls.hidden
   }

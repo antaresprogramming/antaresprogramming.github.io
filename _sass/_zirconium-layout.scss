@@ -183,7 +183,8 @@ article {
     transition: all 300ms;
 
     &:hover,
-    &:focus {
+    &:focus,
+    &[aria-expanded=true] {
       background-color: var(--accent-light);
       color: var(--accent-dark);
       border-color: #0003;
@@ -193,6 +194,7 @@ article {
   svg {
     color: var(--fg-color);
     height: 2em;
+    width: auto;
   }
 }
 

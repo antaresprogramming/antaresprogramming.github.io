@@ -203,3 +203,13 @@ a.featured {
 #markdown-toc {
   display: none;
 }
+
+.utterances-frame {
+	min-width: calc(100% - 2em);
+	max-width: calc(100% - 2em);
+	margin: 0 1em;
+}
+
+aside.medium {
+  padding: 1em;
+}
