@@ -50,3 +50,10 @@
     }
   }
 }
+
+.post__header {
+  a.name {
+    color: $yellow;
+    background-image: linear-gradient(rgba($yellow, 0.1), rgba($yellow, 0.1));
+  }
+}

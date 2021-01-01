@@ -30,9 +30,8 @@ html {
 
 a {
   text-decoration: none;
-  color: var(--accent-dark);
-  background-image: linear-gradient(#e4c6fa, #e4c6fa);
-  background-image: linear-gradient(var(--accent-light), var(--accent-light));
+  color: $pink;
+  background-image: linear-gradient(rgba($pink, 0.1), rgba($pink, 0.1));
   background-size: 100% 10%;
   background-repeat: no-repeat;
   background-position: bottom;
@@ -41,6 +40,10 @@ a {
   &:hover,
   &:focus {
     background-size: 100% 100%;
+  }
+
+  &:focus {
+    background-image: linear-gradient(rgba($pink, 0.2), rgba($pink, 0.2));
   }
 }
 
