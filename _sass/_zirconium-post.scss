@@ -1,3 +1,5 @@
+@import "utilities/variables";
+
 a.featured {
   border-radius: 0.5rem;
   display: block;
@@ -64,14 +66,60 @@ a.featured {
   }
 }
 
+.post__header {
+  padding: 5vh 10vw;
+  padding-top: 30vh;
+  min-height: 75vh;
+  background-color: $purple;
+  color: #fff;
+
+  background-image: url("/images/waves-top.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  text-shadow: rgb(39, 37, 61) 3px 0px 0px, rgb(39, 37, 61) 2.83487px 0.981584px 0px, rgb(39, 37, 61) 2.35766px 1.85511px 0px, rgb(39, 37, 61) 1.62091px 2.52441px 0px, rgb(39, 37, 61) 0.705713px 2.91581px 0px, rgb(39, 37, 61) -0.287171px 2.98622px 0px, rgb(39, 37, 61) -1.24844px 2.72789px 0px, rgb(39, 37, 61) -2.07227px 2.16926px 0px, rgb(39, 37, 61) -2.66798px 1.37182px 0px, rgb(39, 37, 61) -2.96998px 0.42336px 0px, rgb(39, 37, 61) -2.94502px -0.571704px 0px, rgb(39, 37, 61) -2.59586px -1.50383px 0px, rgb(39, 37, 61) -1.96093px -2.27041px 0px, rgb(39, 37, 61) -1.11013px -2.78704px 0px, rgb(39, 37, 61) -0.137119px -2.99686px 0px, rgb(39, 37, 61) 0.850987px -2.87677px 0px, rgb(39, 37, 61) 1.74541px -2.43999px 0px, rgb(39, 37, 61) 2.44769px -1.73459px 0px, rgb(39, 37, 61) 2.88051px -0.838247px 0px;
+
+  a {
+    text-shadow: none;
+  }
+
+  .tag {
+    color: #F99F41;
+    background-image: none;
+    border: 1px solid transparent;
+    padding: 0.25em;
+    border-radius: 0.25em;
+
+    &:hover {
+      background-color: rgba($yellow, 0.1);
+    }
+
+    &:focus {
+      border-color: currentColor;
+    }
+  }
+
+  .tags {
+    padding: 1rem 2rem;
+  }
+
+  .post__title {
+    margin: 0;
+    line-height: 1;
+    font-size: 1.802rem;
+    font-size: clamp(3rem, 10vw, 5rem);
+  }
+
+  .post__subtitle {
+    font-weight: normal;
+    line-height: 1.25;
+    font-size: clamp(1.602rem, 2vw, 3rem);
+  }
+}
+
 .post {
   max-width: none;
   padding: 0;
   line-height: 1.5; 
-
-  .post__header {
-    padding: 5vh 10vw;
-  }
 
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--heading-font);
@@ -83,18 +131,6 @@ a.featured {
   h4 {font-size: 1.266rem;}
   h5 {font-size: 1.125rem;}
   small, .text_small {font-size: 0.889rem;}
-
-  .post__title {
-    margin: 0;
-    line-height: 1;
-    font-size: 1.802rem;
-    font-size: clamp(1.802rem, 10vw, 5rem);
-  }
-
-  .post__subtitle {
-    font-weight: normal;
-    line-height: 1.25;
-  }
 
   .post__contents {
     font-family: var(--copy-font);

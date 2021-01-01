@@ -1,6 +1,7 @@
+@import 'utilities/variables';
 .banner {
-	background-color: var(--bg-color);
-	color: var(--fg-color-emphasis);
+	background-color: $purple;
+	color: #fff;
 	min-height: 75vh;
 	display: grid;
 	align-items: center;
@@ -46,14 +47,14 @@
 	padding-bottom: 0.05rem;
 	background-image: linear-gradient(
 	    to right,
-	    var(--banana-300),
-	    var(--banana-300) 60px,
-	    var(--strawberry-100) 60px,
-	    var(--strawberry-100) 120px,
-	    var(--blueberry-100) 120px,
-	    var(--blueberry-100) 180px,
-	    var(--lime-100) 180px,
-	    var(--lime-100) 240px,
+	    $yellow,
+	    $yellow 60px,
+	    $pink 60px,
+	    $pink 120px,
+	    $blue 120px,
+	    $blue 180px,
+	    $orange 180px,
+	    $orange 240px,
 	    transparent 240px);
 	background-size: 100% 5px;
 	background-repeat: no-repeat;
