@@ -70,13 +70,14 @@ a.featured {
   padding: 5vh 10vw;
   padding-top: 30vh;
   min-height: 75vh;
-  background-color: $purple;
+  background-color: #27253D;
   color: #fff;
-
-  background-image: url("/images/waves-top.svg");
+  background-image: url("/images/post-header-mask.svg"), var(--cover);
   background-repeat: no-repeat;
-  background-size: 100%;
-  text-shadow:rgb(39, 37, 61) 1px 0px 0px, rgb(39, 37, 61) 0.540302px 0.841471px 0px, rgb(39, 37, 61) -0.416147px 0.909297px 0px, rgb(39, 37, 61) -0.989993px 0.14112px 0px, rgb(39, 37, 61) -0.653644px -0.756803px 0px, rgb(39, 37, 61) 0.283662px -0.958924px 0px, rgb(39, 37, 61) 0.96017px -0.279416px 0px;
+  /* background-size: 100%; */
+  text-shadow: #27253d 3px 0px 0px, #27253d 2.83487px 0.981584px 0px, #27253d 2.35766px 1.85511px 0px, #27253d 1.62091px 2.52441px 0px, #27253d 0.705713px 2.91581px 0px, #27253d -0.287171px 2.98622px 0px, #27253d -1.24844px 2.72789px 0px, #27253d -2.07227px 2.16926px 0px, #27253d -2.66798px 1.37182px 0px, #27253d -2.96998px 0.42336px 0px, #27253d -2.94502px -0.571704px 0px, #27253d -2.59586px -1.50383px 0px, #27253d -1.96093px -2.27041px 0px, #27253d -1.11013px -2.78704px 0px, #27253d -0.137119px -2.99686px 0px, #27253d 0.850987px -2.87677px 0px, #27253d 1.74541px -2.43999px 0px, #27253d 2.44769px -1.73459px 0px, #27253d 2.88051px -0.838247px 0px;
+  background-size: cover;
+  background-position: bottom center, center;
 
   a {
     text-shadow: none;
