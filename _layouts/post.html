@@ -39,8 +39,14 @@
         content=page.content link=true %} 
       </header>
       <section class="post__contents">
-        {{ content | replace: '<a href="http', '<a rel="nofollow noopener
-        noreferrer" target="_blank" href="http' }}
+        {% assign hyphenation = site.data.hyphenation %}
+        {% assign replacedContent = content | replace: '<a href="http', '<a rel="nofollow noopener noreferrer" target="_blank" href="http' %}
+        
+        {% for word in hyphenation %}
+        {% assign replacedContent = replacedContent | replace: word[0], word[1] %}
+        {% endfor %}
+        
+        {{ replacedContent }}
       </section>
 
       <footer>
