@@ -67,40 +67,63 @@ a.featured {
 }
 
 .post__header {
-  padding: 5vh 10vw;
-  padding-top: 30vh;
   min-height: 75vh;
-  background-color: #27253D;
-  color: #fff;
-  background-image: url("/images/post-header-mask.svg"), var(--cover);
-  background-repeat: no-repeat;
-  /* background-size: 100%; */
-  text-shadow: #27253d 3px 0px 0px, #27253d 2.83487px 0.981584px 0px, #27253d 2.35766px 1.85511px 0px, #27253d 1.62091px 2.52441px 0px, #27253d 0.705713px 2.91581px 0px, #27253d -0.287171px 2.98622px 0px, #27253d -1.24844px 2.72789px 0px, #27253d -2.07227px 2.16926px 0px, #27253d -2.66798px 1.37182px 0px, #27253d -2.96998px 0.42336px 0px, #27253d -2.94502px -0.571704px 0px, #27253d -2.59586px -1.50383px 0px, #27253d -1.96093px -2.27041px 0px, #27253d -1.11013px -2.78704px 0px, #27253d -0.137119px -2.99686px 0px, #27253d 0.850987px -2.87677px 0px, #27253d 1.74541px -2.43999px 0px, #27253d 2.44769px -1.73459px 0px, #27253d 2.88051px -0.838247px 0px;
-  background-size: cover;
-  background-position: bottom center, center;
+  color: inherit;
+
+  .post__cover {
+    background-image: url("/images/post-header-mask.svg"), var(--cover);
+    background-color: #fff;
+    min-height: 50vh;
+    grid-column: 1/-1;
+    background-position: bottom -20vh center, top center;
+    background-size: cover, cover;
+    background-repeat: no-repeat;
+  }
 
   a {
     text-shadow: none;
   }
 
-  .tag {
-    color: #F99F41;
+.tag {
+    color: $pink;
     background-image: none;
     border: 1px solid transparent;
     padding: 0.25em;
     border-radius: 0.25em;
+    font-weight: 700;
+    text-transform: uppercase;
+    word-spacing: 0.25ch;
 
     &:hover {
-      background-color: rgba($yellow, 0.1);
+      background-color: rgba($pink, 0.1);
     }
 
     &:focus {
       border-color: currentColor;
     }
+
+    
   }
 
   .tags {
     padding: 1rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5ch;
+
+    .tag-separator {
+      content: '';
+      display: block;
+      width: 0.5ch;
+      height: 0.5ch;
+      background-color: rgba($pink, 0.5);
+      border-radius: 100px;
+
+      &:last-child {
+        display: none;
+      }
+    }
   }
 
   .post__title {
@@ -108,12 +131,17 @@ a.featured {
     line-height: 1;
     font-size: 1.802rem;
     font-size: clamp(3rem, 10vw, 5rem);
+    text-align: center;
+    grid-column: 1 / -1 !important;
+    padding: 0 1rem;
+    word-break: break-word;
   }
 
   .post__subtitle {
     font-weight: normal;
     line-height: 1.25;
-    font-size: clamp(1.602rem, 2vw, 3rem);
+    font-size: clamp(1.25rem, 1vw, 2.5rem);
+    text-align: center;
   }
 }
 
@@ -198,9 +226,13 @@ a.featured {
       grid-column: 2;
     }
 
-    blockquote,
+
     .post__title,
-    .post__subtitle,
+    .post__subtitle {
+      grid-column: 2/3;
+    }
+
+    blockquote,
     .full-bleed {
       width: 100%;
       grid-column: 1 / 4;

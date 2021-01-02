@@ -1,5 +1,5 @@
 ---
-title: Ang Antares Programming sa 2021
+title: Ang Antares Program&shy;ming sa 2021
 description: Salamat sa suporta ninyo!
 image: /images/posts/antares-programming-2021/cover.jpg
 seo_image: /images/posts/antares-programming-2021/seo-cover.png
@@ -11,23 +11,23 @@ Hindi naging maganda ang 2020 para sa ating lahat. Patuluyan tayong pininsala ng
 
 Kaya nga nakaka-guilty na magbalik-tanaw sa mga tagumpay na nakuha natin sa nakaraang taon. Sa kabila ng maraming masasamang bagay na nangyari last year, nagkaroon ng pagkakataon ang Antares Programming na mag-thrive. Balikan natin ang bawat isa sa kanila.
 
-## Ang Courses by Antares Programming
-Noong <time datetime="2020-09-30">September 30, 2020</time>, nagbukas ang [Courses by Antares Programming](/courses/). Nagbigay ito ng mga tutorial articles para sa mga nagnanais na matuto ng web development. Nang magbukas ito, naging available ang unang tatlong tutorial articles para sa [HTML Essentials course](/courses/html-essentials) at tatlong tutorial articles din para sa [CSS Essentials course](/courses/css-essentials/). Sinubukan din nating magkaroon ng videos para sa bawat isang article na ito.
+## Ang Courses by Antares Program&shy;ming
+Noong <time datetime="2020-09-30">September 30, 2020</time>, nagbukas ang [Courses by Antares Program&shy;ming](/courses/). Nagbigay ito ng mga tutorial articles para sa mga nagnanais na matuto ng web develop&shy;ment. Nang magbukas ito, naging available ang unang tatlong tutorial articles para sa [HTML Essentials course](/courses/html-essentials) at tatlong tutorial articles din para sa [CSS Essentials course](/courses/css-essentials/). Sinubukan din nating magkaroon ng videos para sa bawat isang article na ito.
 
 Ngayong taon, goal nating matapos ang lahat ng content para sa courses na ito, kasama na ang [JavaScript Essentials course](/courses/js-essentials/) na magbubukas sa <time datetime="2021-03-30">March 30, 2021</time>. Goal din nating makapag-produce ng videos para sa mga ito overtime, at magkaroon ng pondo para i-host ang mga ito para libre ninyo itong ma-download at mapanood offline. Kasama rin sa goals natin ang mga PDF version ng bawat isang lesson sa courses, at eventually, ang ebook version ng buong course. Gusto rin nating mai-host na ang lahat ng sample code sa [Github](https://github.com/), kahit na may mga sample code na tayo sa [Codepen](https://codepen.io/).
 
 ## Speaking Engagements
 Noong <time datetime="2020-10-05">October 5, 2020</time> naman, inanyayahan ng Developer Student Club ng AMA Computer College Caloocan City ang Antares Programming na magbigay ng presentation tungkol sa JavaScript para sa mga beginner. Dinaluhan ng maraming mga mag-aaral mula sa iba't ibang paaralan at unibersidad ang virtual event na ito, at marami ang nakinabang bilang resulta. 
 
-Sa <time datetime="2021">2021</time>, mananatiling bukas ang Antares Programming sa mga ganitong speaking engagement, virtual event man o in person kapag puwede na ang mass gatherings. Kung isa kang organizer ng developer event at gusto mong imbitahin ang Antares Programming para magsalita sa event ninyo, puwede ninyo kaming padalhan ng message sa [official Facebook page](https://facebook.com/antaresprogramming) namin, o ng [email sa creator ng Antares Programming](mailto:devFrancisRubio@gmail.com).
+Sa <time datetime="2021">2021</time>, mananatiling bukas ang Antares Programming sa mga ganitong speaking engagement, virtual event man o in person kapag puwede na ang mass gatherings. Kung isa kang organizer ng developer event at gusto mong imbitahin ang Antares Programming para magsalita sa event ninyo, puwede ninyo kaming padalhan ng message sa [official Facebook page](https://facebook.com/antaresprogramming) namin, o ng [email sa creator ng Antares Program&shy;ming](mailto:devFrancisRubio@gmail.com).
 
 ## Followers
-Naging malaki rin ang taong 2020 para sa [Antares Programming Facebook page](https://facebook.com/antaresprogramming). Sa ngayon, umabot na tayo sa mahigit 3,200 followers sa Facebook, kumpara sa 2019 kung kailan mayroon tayong around 1,500 followers. Patunay ito na nagiging successful ang lahat ng ginagawa ng Antares Programming na maghatid ng practical information sa mga web developer at mga estudyanteng nag-aaral ng web development.
+Naging malaki rin ang taong 2020 para sa [Antares Program&shy;ming Facebook page](https://facebook.com/antaresprogramming). Sa ngayon, umabot na tayo sa mahigit 3,200 followers sa Facebook, kumpara sa 2019 kung kailan mayroon tayong around 1,500 followers. Patunay ito na nagiging successful ang lahat ng ginagawa ng Antares Programming na maghatid ng practical information sa mga web developer at mga estudyanteng nag-aaral ng web develop&shy;ment.
 
 Sa 2021, inaasahan nating darami pa ang makakaalam ng tungkol sa amin. Hindi tayo magse-set ng goal na number ng followers dahil para sa amin, hindi iyon ganoon kahalaga. Pero malaking tulong bilang metric ang follower count para malaman namin kung nae-enjoy pa rin ng mga tao ang content namin at kung nakakatulong pa rin ito sa inyo. Kaya huwag kayong mahiyang mag-comment sa mga post namin sa Facebook, lalo na sa mga slideset. Puwede rin kayong mag-request kung ano pa ang gusto ninyong matutuhan.
 
 ## AlgoFilipino
-Nang simulan natin ang Antares Programming noong 2018, goal na nating makatulong sa pagtuturo ng web development gamit ang wikang Filipino. Kinikilala ng Antares Programming ang malaking papel ng mother tongue ng isang tao sa pagkatuto nila, gaya ng ipinapakita sa mga pag-aaral.[^1] [^2] Kaya naman natutuwa ako bilang creator ng Antares Programming na makitang hindi lang ako ang naniniwala sa konseptong ito.
+Nang simulan natin ang Antares Programming noong 2018, goal na nating makatulong sa pagtuturo ng web develop&shy;ment gamit ang wikang Filipino. Kinikilala ng Antares Programming ang malaking papel ng mother tongue ng isang tao sa pagkatuto nila, gaya ng ipinapakita sa mga pag-aaral.[^1] [^2] Kaya naman natutuwa ako bilang creator ng Antares Programming na makitang hindi lang ako ang naniniwala sa konseptong ito.
 
 Nitong <time datetime="2020-12-16">December 16, 2020</time>, pinasinayaan ang [AlgoFilipino](https://facebook.com/AlgoFilipino2020)[^3]. Ayon sa kanila, sila ay <q>isang <i lang="en">non-profit</i> na organisasyon na naglalayong mapalago o mapayaman ang wikang Filipino sa larangan ng teknolohiya. Ito ay naniniwala sa pagpapahalaga at pag-iingat sa sariling wika upang hindi ito tuluyang mamatay o mawala.</q> Kamakailan lang, noong <time datetime="2020-12-30">December 30, 2020</time>, matagumpay nilang nilunsad ang <i>Paham: Mga Bayani ng Teknolohiya</i>, isang webinar at workshop.
 

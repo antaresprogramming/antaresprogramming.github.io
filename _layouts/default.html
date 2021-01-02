@@ -5,8 +5,8 @@
     <a class="skip-to-content-link" href="#main">
       Skip to content
     </a>
-    {% if page.has_banner %}{% include cta-banner.html %}{% endif %}
     {% include nav.html %}
+    {% if page.has_banner %}{% include cta-banner.html %}{% endif %}
     <div class="page-width" id="main">
       {{ content | replace: '<a href="http', '<a rel="nofollow noopener noreferrer" target="_blank" href="http' }}
       
