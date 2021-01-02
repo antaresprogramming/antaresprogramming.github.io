@@ -1,0 +1,7 @@
+---
+layout: null
+has_banner: false
+---
+
+{% for post in site.posts %} {{ post.content | markdownify | strip_html }} {%
+endfor %}
