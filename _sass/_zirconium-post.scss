@@ -75,8 +75,8 @@ a.featured {
     background-color: #fff;
     min-height: 50vh;
     grid-column: 1/-1;
-    background-position: bottom -10vh center, top center;
-    background-size: contain, cover;
+    background-position: bottom -20vh center, top center;
+    background-size: cover, cover;
     background-repeat: no-repeat;
   }
 
@@ -130,8 +130,11 @@ a.featured {
     margin: 0;
     line-height: 1;
     font-size: 1.802rem;
-    font-size: clamp(3rem, 5vw, 5rem);
+    font-size: clamp(3rem, 10vw, 5rem);
     text-align: center;
+    grid-column: 1 / -1 !important;
+    padding: 0 1rem;
+    word-break: break-word;
   }
 
   .post__subtitle {
