@@ -1,7 +1,7 @@
 ---
 title: "Ano na ang nangyari sa Antares Programming?"
 description: "Matagal na walang content ang Antares Programming. Ano na ang nangyari dito?"
-image: /images/posts/estado-antares-programming/cover.jpg
+image: /images/posts/estado-antares-programming/cover.png
 author: teacherbuknoy
 permalink: /estado-antares-programming/
 tags: [meta]
@@ -13,8 +13,6 @@ Sa nakalipas na mga buwan, naging busy ako sa trabaho ko bilang teacher sa isang
 Pero ang nature ng trabaho ko bilang teacher ang malaking dahilan kung bakit mas dapat akong maglaan ng atensyon at oras para rito. Tutal, gumagawa na rin naman ako ng learning materials para sa mga estudyante ko, bakit hindi ko na lang ito i-share na rin sa iba nang libre?
 
 Mahirap ang sitwasyon ngayon dahil sa pandemic ng <abbr title="Corona Virus Disease 2019">COVID-19</abbr>, pero binigyan ako nito ng maraming time para maayos na maplano kung saan ko gustong dalhin ang buong project na ito. At sobrang dami kong gustong i-share sa inyong lahat. At nakakatuwa kasi kahit walang bagong content ang Antares Programming, laging may nadaragdag sa mga fans ng [Antares Programming Facebook page](https://facebook.com/antaresprogramming). At the time of this writing, may 1,076 na na nag-like sa Facebook Page. Salamat sa support ninyo! Malaking bagay ang kahit pagsubaybay n'yo lang sa content na nilalabas ko sa Antares Programming, pero malaking pressure din iyan sa akin para maglabas ng <em>quality</em> content.
-
-{% include ad-banner.html %}
 
 ## Ano ba talaga ang mission?
 

@@ -1,14 +1,13 @@
 ---
 title: "Mag-drop ka na sa College: 10 Web Sites na Puwede Mong Gamitin Para Maging Mas Magaling sa mga May Degree"
 description: "Oo, puwede kang 'wag nang mag-aral next sem. I-drop mo na lahat ng subject mo, kaya kang isalba ng mga sites na ito."
+image: /images/posts/10-websites-learning-web-development/cover.png
 author: teacherbuknoy
 slug: /10-websites-learning-web-development/
 tags: [learning]
 ---
 
 Okay, sorry clickbait talaga iyan. 'Wag ka magda-drop sa school. Anyway, hindi lang 10 ang Web sites dito, at hindi lang Web sites ang mayr'on. Let's dive right in!
-
-{% include ad-banner.html %}
 
 ## Web Sites
 
@@ -163,7 +162,7 @@ Sa table naman na ito, nakalagay ang ilan sa mga taong dapat mong i-stalk para m
 	</dd>
 	<dt>
 		<strong class="cell-heading">
-			<a href="twitter.com/vlh" target="_blank" rel="noopener noreferrer">Val Head</a>
+			<a href="https://twitter.com/vlh" target="_blank" rel="noopener noreferrer">Val Head</a>
 		</strong>
 	</dt>
 	<dd>

@@ -1,7 +1,7 @@
 ---
 title: "Announcing &ldquo;Courses by Antares Programming&rdquo;"
 description: "Sa September 30, official na magiging available ang unang version ng Courses."
-image: /images/posts/announcing-courses-by-antares-programming/cover.jpeg
+image: /images/posts/announcing-courses-by-antares-programming/cover.png
 author: teacherbuknoy
 slug: /announcing-courses-by-antares-programming/
 tags: [web development, meta, courses]
@@ -9,8 +9,6 @@ tags: [web development, meta, courses]
 Goal ng Antares Programming na magbigay ng educational resources tungkol sa Web development para sa mga nagsasalita ng Filipino. Sa nakalipas na dalawang taon, ginagawa ito ng Antares Programming sa pamamagitan ng paggawa ng mga infographic at blog posts. Sumubok din tayo ng videos sa Youtube, originally sa [channel ko](https://www.youtube.com/channel/UCj83MZIsvny2cxdMEvnl_oQ). Nakagawa tayo ng ilang screencasts at vlogs tungkol sa CSS.
 
 Pero kailangan na nating dalhin ito sa susunod na steps. Kaya ito ang official announcement: <strong>ang Courses by Antares Programming magiging available na sa September 30, 2020.</strong> 
-
-{% include ad-banner.html %}
 
 ## Ang Courses by Antares Programming
 Isa itong series ng mga articles na nagtuturo ng basics ng Web development. May mga kasama rin itong videos at code samples. At kapag natapos na ang bawat isang course, magkakaroon ng libreng PDF file ng buong course na puwede ninyong ma-download. At siyempre, kagaya ng dati, lahat ito ay sa Filipino/Tagalog. 

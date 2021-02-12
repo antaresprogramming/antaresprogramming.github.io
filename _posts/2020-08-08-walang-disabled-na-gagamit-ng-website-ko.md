@@ -1,7 +1,7 @@
 ---
 title: "&ldquo;Walang Disabled na Gagamit ng Website ko&rdquo;"
 description: "May misconception tayo na para lang sa persons with disability ang accessibility. Pero mahalaga na may pakialam tayong lahat tungkol dito."
-image: /images/posts/walang-disabled-na-gagamit-ng-website-ko/cover.jpeg
+image: /images/posts/walang-disabled-na-gagamit-ng-website-ko/cover.png
 author: teacherbuknoy
 slug: /walang-disabled-na-gagamit-ng-website-ko/
 tags: [Web development, accessibility]
@@ -34,8 +34,6 @@ At may point siya. Kahit i-assume mo na hindi gagamitin ng persons with disabili
 [^1]: Last year, may dininig ang kasong [<cite>Domino's Pizza v. Robles</cite>](https://www.forbes.com/sites/peterslatin/2019/10/08/the-supreme-court-rules-in-favor-of-accessibility-for-the-blind/#4f94cb31c486) pagkatapos idemanda ng isang visually impaired ang Domino's Pizza, isang pizza chain sa USA, dahil hindi accessible ang website nila.
 
 [^11]: Ayon sa Philippine Web Accessibility Group, [puwede kang makasuhan o mademanda kung hindi accessible ang website mo](https://www.pwag.org/resources/analysis-of-philippine-laws-pertaining-to-disability/can-we-be-sued-if-we-dont-make-our-web-site-accessible-written-by-jojo-esposa-jr/).
-
-{% include ad-banner.html %}
 
 ## Ano ba iyang accessibility na iyan?
 Ang <dfn>accessibility</dfn> ay isang practice na ginagawa para magamit ng lahat ang isang bagay kahit na may kapansanan sila, o baka limitado ang kaya nilang gawin dahil sa ibang dahilan. Ang Web accessibility ay ang accessibility sa mga webpages.

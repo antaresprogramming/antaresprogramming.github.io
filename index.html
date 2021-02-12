@@ -5,38 +5,38 @@ redirect_from:
 - /archive
 - /archive/1/
 - /archive/1
-has_banner: true
+has_banner: false
 isindex: true
 ---
+
 <main class="main--homepage">
-  {% unless paginator.previous_page %}
-  {% comment %}
-  Newest posts in a unique, Medium-like layout on the first page
-  {% endcomment %}
+  {% unless paginator.previous_page %} {% comment %} Newest posts in a unique,
+  Medium-like layout on the first page {% endcomment %} {% assign
+  post=paginator.posts.first %} {% include post-card.html post=post featured=true%}
+
   <section class="latest">
     <header class="flexify">
       <h2>Mga bagong post</h2>
       <a href="/articles/" class="btn">Tingnan lahat</a>
     </header>
-    {% assign post=paginator.posts.first %}
-    {% include featured.html post=post %}
 
-    {% assign post=paginator.posts[1] %}
-    {% include featured.html post=post %}
-
-    {% assign post=paginator.posts[2] %}
-    {% include featured.html post=post %}
-
-    {% assign post=paginator.posts[3] %}
-    {% include featured.html post=post %}
+    {% assign post=paginator.posts[1] %} {% include post-card.html post=post %}
+    {% assign post=paginator.posts[2] %} {% include post-card.html post=post %}
+    {% assign post=paginator.posts[3] %} {% include post-card.html post=post %}
+    {% assign post=paginator.posts[4] %} {% include post-card.html post=post %}
+    {% assign post=paginator.posts[5] %} {% include post-card.html post=post %}
+    {% assign post=paginator.posts[6] %} {% include post-card.html post=post %}
   </section>
   {% endunless %}
 </main>
 <div class="thanks">
   <h2>Suportahan ang Antares Programming</h2>
-  <p>Malaking tulong ang contributions ninyo para ma-improve ang site at ang lahat ng features nito. Kung gusto mong
-    tumulong, mag-send ng message sa amin via <a href="mailto:devfrancisrubio@gmail.com" target="_blank"
-      rel="noopener noreferrer">email</a>, o sa aming <a href="https://facebook.com/antaresprogramming" target="_blank"
-      rel="noopener noreferrer">Facebook page</a>.</p>
+  <p>
+    Malaking tulong ang contributions ninyo para ma-improve ang site at ang
+    lahat ng features nito. Kung gusto mong tumulong, mag-send ng message sa
+    amin via
+    <a href="mailto:devfrancisrubio@gmail.com" target="_blank" rel="noopener noreferrer">email</a>, o sa aming
+    <a href="https://facebook.com/antaresprogramming" target="_blank" rel="noopener noreferrer">Facebook page</a>.
+  </p>
   {% include donation-links.html gcash=true %}
 </div>

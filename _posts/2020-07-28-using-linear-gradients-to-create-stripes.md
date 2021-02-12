@@ -1,7 +1,7 @@
 ---
 title: "Using Linear Gradients to Create Stripes"
 description: "Sa halip na gumamit ng maraming <code>div</code>, puwede nating gamitin ang CSS <code>linear-gradient()</code> function para maglagay ng stripes sa design natin."
-image: /images/posts/using-linear-gradients-to-create-stripes/blueberry.jpg
+image: /images/posts/using-linear-gradients-to-create-stripes/using-linear-gradients-to-create-stripes.png
 author: teacherbuknoy
 slug: /using-linear-gradients-to-create-stripes/
 tags: [web development]
@@ -13,8 +13,6 @@ Sa banners ng <a href="/courses/"><i>Courses by Antares Programming</i></a>, mak
 <img class="img--borderize" alt="Makikita sa banner ng Courses ang design ng stripes na may iba't ibang kulay." src="{{ site.url }}/images/posts/using-linear-gradients-to-create-stripes/cover.png" width="647" height="260" />
 
 Sa ilalim ng banner title (<i>Courses by Antares Programming</i>), may makikitang underline na gawa sa stripes na iba't iba ang kulay. Pero hindi iyan underline gamit ang <code>text-decoration</code>. Gawa iyan sa <code>linear-gradient()</code> function ng CSS.
-
-{% include ad-banner.html %}
 
 ## Ang Linear Gradients
 Tumatanggap ang <code>background-image</code> ng CSS ng <code>url()</code> function, na puwede nating bigyan ng URL papunta sa isang image na gagawing background sa isang element. Pero bukod diyan, puwede rin nating ilagay ang iba't ibang functions para sa mga gradient na gaya ng <code>linear-gradient()</code> at <code>radial-gradient()</code>.
