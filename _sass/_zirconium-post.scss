@@ -138,12 +138,11 @@ aside.medium {
 .tags {
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 0.5ch;
   grid-row: 1/2;
 }
 
-.tag {
+.tags .tag {
   color: #ff0852;
   background-image: none;
   border: 1px solid transparent;
@@ -155,7 +154,7 @@ aside.medium {
   text-decoration: none;
 }
 
-.tag:hover {
+.tags .tag:hover {
   background-color: rgba(255, 8, 82, 0.1);
 }
 
@@ -171,7 +170,7 @@ aside.medium {
   display: none;
 }
 
-.card .tag {
+.card .tags .tag {
   font-size: 0.8em;
 }
 
@@ -257,17 +256,6 @@ main.article {
     display: grid;
     grid-template-columns: 1fr var(--content-width) 1fr;
     grid-template-rows: 1fr 200px auto;
-
-    .article__title {
-      margin: 1em;
-      text-align: center;
-    }
-
-    .article__subtitle {
-      text-align: justify;
-      max-width: var(--content-width);
-      margin: 0 auto 3em;
-    }
 
     .article__cover {
       width: 100%;
