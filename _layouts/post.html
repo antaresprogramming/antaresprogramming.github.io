@@ -28,16 +28,31 @@
       {% endif %}
       <header class="article__header">
         <img src="{{ page.image }}" alt="" class="article__cover" />
-        {% include tags.html %}
-        <h1 class="article__title">
-          {% include title.html title=page.title %}
-        </h1>
-        {% if page.description %}
-        <p class="article__subtitle">
-          {% include title.html title=page.description %}
-        </p>
-        {% endif %} {% include byline.html author=page.author date=page.date
-        content=page.content link=true %}
+        <div class="article__header__content">
+          {% include tags.html %}
+          <h1 class="article__title">
+            {% include title.html title=page.title %}
+          </h1>
+          {% if page.description %}
+          <p class="article__subtitle">
+            {% include title.html title=page.description %}
+          </p>
+          {% endif %}
+          
+          {% if site.authors[page.author].name %}
+            {% assign author=site.authors[page.author] %}
+          {% else %}
+            {% assign author=site.authors["anonymous"] %}
+          {% endif %}
+          <div class="byline">
+            <address class="byline__author">
+              <a href="{{ site.baseurl }}/authors/{{ page.author }}"
+                >{{ author.name }}</a
+              >
+            </address>
+            <date datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date: "%a, %b %e, %Y" }}</date>
+          </div>
+        </div>
       </header>
       <section class="article__contents">
         {{ content | replace: '<a href="http', '<a rel="nofollow noopener
