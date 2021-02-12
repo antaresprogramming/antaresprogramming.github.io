@@ -86,6 +86,8 @@
           </article>
         </a>
         {% endunless %}
+      {% else %}
+        <span></span>
       {% endif %}
         {% if page.next %} {% unless page.next.hidden %}
       <a href="{{ page.next.url | prepend: site.baseurl }}">
@@ -94,7 +96,10 @@
           <time datetime="{{ page.next.date | date:"%Y-%m-%d" }}">{{ page.next.date | date: "%a, %b %e, %Y" }}</time>
         </article>
       </a>
-      {% endunless %} {% endif %}
+      {% endunless %}
+      {% else %}
+        <span></span>
+      {% endif %}
       </div>
     </section>
 
