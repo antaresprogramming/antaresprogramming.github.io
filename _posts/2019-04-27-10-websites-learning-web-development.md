@@ -162,7 +162,7 @@ Sa table naman na ito, nakalagay ang ilan sa mga taong dapat mong i-stalk para m
 	</dd>
 	<dt>
 		<strong class="cell-heading">
-			<a href="twitter.com/vlh" target="_blank" rel="noopener noreferrer">Val Head</a>
+			<a href="https://twitter.com/vlh" target="_blank" rel="noopener noreferrer">Val Head</a>
 		</strong>
 	</dt>
 	<dd>
