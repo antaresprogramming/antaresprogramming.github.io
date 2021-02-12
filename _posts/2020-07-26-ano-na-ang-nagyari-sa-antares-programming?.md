@@ -14,8 +14,6 @@ Pero ang nature ng trabaho ko bilang teacher ang malaking dahilan kung bakit mas
 
 Mahirap ang sitwasyon ngayon dahil sa pandemic ng <abbr title="Corona Virus Disease 2019">COVID-19</abbr>, pero binigyan ako nito ng maraming time para maayos na maplano kung saan ko gustong dalhin ang buong project na ito. At sobrang dami kong gustong i-share sa inyong lahat. At nakakatuwa kasi kahit walang bagong content ang Antares Programming, laging may nadaragdag sa mga fans ng [Antares Programming Facebook page](https://facebook.com/antaresprogramming). At the time of this writing, may 1,076 na na nag-like sa Facebook Page. Salamat sa support ninyo! Malaking bagay ang kahit pagsubaybay n'yo lang sa content na nilalabas ko sa Antares Programming, pero malaking pressure din iyan sa akin para maglabas ng <em>quality</em> content.
 
-{% include ad-banner.html %}
-
 ## Ano ba talaga ang mission?
 
 Sa dalawang taon mahigit na nakalipas pagkatapos kong gawin ang Antares Programming, nagbabago-bago ang sagot ko sa tanong na <q>Ano ang Antares Programming?</q> As it turns out, kaya gano'n kasi hindi ko tiyak mismo kung ano ang Antares Programming. Na-realize ko na kailangan ko ng tiyak na mission statement.

@@ -15,8 +15,6 @@ Para sa link na <i>Bumalik sa course page</i>, wala akong way para makuha ang li
 
 Literal na inabot ako ng more or less 30 minutes bago ko na-realize, <q>Puwede ko palang gmitin 'yong dalawang tuldok!'</q>
 
-{% include ad-banner.html %}
-
 ## Relative URLs
 
 May dalawang types ng <abbr title="Uniform Resource Locator">URL</abbr>, ang absolute at relative. Ang absolute URLs ay mga exact na addresses at file paths gaya ng `https://antaresprogramming.github.io/` o kaya naman ay `https://github.com/antaresprogramming/antaresprogramming.github.io`.

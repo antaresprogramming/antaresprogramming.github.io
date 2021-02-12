@@ -9,8 +9,6 @@ tags: [learning]
 
 Okay, sorry clickbait talaga iyan. 'Wag ka magda-drop sa school. Anyway, hindi lang 10 ang Web sites dito, at hindi lang Web sites ang mayr'on. Let's dive right in!
 
-{% include ad-banner.html %}
-
 ## Web Sites
 
 Since kaunti lang ang mga technical na sites sa Filipino, lahat dito ay nasa English. Pero sobrang dami mong matututuhan sa kanila. Disclaimer: blogs ang mga ito kaya more on text ang content. Kung mas sanay ka sa videos, [may section din para doon](#Videos).

@@ -14,8 +14,6 @@ Sa banners ng <a href="/courses/"><i>Courses by Antares Programming</i></a>, mak
 
 Sa ilalim ng banner title (<i>Courses by Antares Programming</i>), may makikitang underline na gawa sa stripes na iba't iba ang kulay. Pero hindi iyan underline gamit ang <code>text-decoration</code>. Gawa iyan sa <code>linear-gradient()</code> function ng CSS.
 
-{% include ad-banner.html %}
-
 ## Ang Linear Gradients
 Tumatanggap ang <code>background-image</code> ng CSS ng <code>url()</code> function, na puwede nating bigyan ng URL papunta sa isang image na gagawing background sa isang element. Pero bukod diyan, puwede rin nating ilagay ang iba't ibang functions para sa mga gradient na gaya ng <code>linear-gradient()</code> at <code>radial-gradient()</code>.
 
