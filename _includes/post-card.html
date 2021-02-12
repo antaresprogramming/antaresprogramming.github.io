@@ -28,7 +28,7 @@
           >{{ author.name }}</a
         >
       </address>
-      <date datetime="">January 13, 2021</date>
+      <date datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date: "%a, %b %e, %Y" }}</date>
     </div>
     <footer class="tags">
       {% for tag in sortedTags %}

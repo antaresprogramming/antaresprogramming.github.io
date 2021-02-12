@@ -4,9 +4,8 @@
   <body class="{% if page.url == '/' %}home {% endif %}">
     <a class="skip-to-content-link" href="#main"> Skip to content </a>
     {% include nav.html %}
-    <main class="post" id="main">
-      {% if page.has_banner %}{% include cta-banner.html %}{% endif %} {%
-      include outdated.html post=page %} {% if page.hidden %}
+    <main class="article" id="main">
+      {% include outdated.html post=page %} {% if page.hidden %}
       <aside class="embargo">
         {% if page.hidden != true %}
         <h1>
@@ -27,18 +26,20 @@
         <hr />
       </aside>
       {% endif %}
-      <header class="post__header">
-        <div class="post__cover" style="--cover: url('{{ post.image }}')"></div>
+      <header class="article__header">
+        <img src="{{ page.image }}" alt="" class="article__cover" />
         {% include tags.html %}
-        <h1 class="post__title">{% include title.html title=page.title %}</h1>
+        <h1 class="article__title">
+          {% include title.html title=page.title %}
+        </h1>
         {% if page.description %}
-        <h2 class="post__subtitle">
+        <p class="article__subtitle">
           {% include title.html title=page.description %}
-        </h2>
+        </p>
         {% endif %} {% include byline.html author=page.author date=page.date
-        content=page.content link=true %} 
+        content=page.content link=true %}
       </header>
-      <section class="post__contents">
+      <section class="article__contents">
         {{ content | replace: '<a href="http', '<a rel="nofollow noopener
         noreferrer" target="_blank" href="http' }}
       </section>
@@ -58,12 +59,28 @@
       </footer>
     </main>
 
-    <section aria-labelledby="up-next">
-      <h2 id="up-next" class="up-next">Up Next</h2>
-      {% if page.next %} {% unless page.next.hidden %} {% include featured.html
-      post=page.next %} {% endunless %} {% endif %} {% if page.previous %} {%
-      unless page.previous.hidden %} {% include featured.html post=page.previous
-      %} {% endunless %} {% endif %}
+    <section aria-labelledby="up-next" class="up-next">
+      <h2 id="up-next" class="up-next__header">Up Next</h2>
+      <div class="flex">
+      {% if page.previous %}
+        {% unless page.previous.hidden %}
+        <a href="{{ page.previous.url | prepend: site.baseurl }}">
+          <article class="post-queue previous">
+            <h2>{{ page.previous.title }}</h2>
+            <time datetime="{{ page.previous.date | date:"%Y-%m-%d" }}">{{ page.previous.date | date: "%a, %b %e, %Y" }}</time>
+          </article>
+        </a>
+        {% endunless %}
+      {% endif %}
+        {% if page.next %} {% unless page.next.hidden %}
+      <a href="{{ page.next.url | prepend: site.baseurl }}">
+        <article class="post-queue next">
+          <h2>{{ page.next.title }}</h2>
+          <time datetime="{{ page.next.date | date:"%Y-%m-%d" }}">{{ page.next.date | date: "%a, %b %e, %Y" }}</time>
+        </article>
+      </a>
+      {% endunless %} {% endif %}
+      </div>
     </section>
 
     {% include medium.html %} {% include footer.html %} {% include scripts.html
