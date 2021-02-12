@@ -1,7 +1,7 @@
 ---
 title: "Ano na ang nangyari sa Antares Programming?"
 description: "Matagal na walang content ang Antares Programming. Ano na ang nangyari dito?"
-image: /images/posts/estado-antares-programming/cover.jpg
+image: /images/posts/estado-antares-programming/cover.png
 author: teacherbuknoy
 permalink: /estado-antares-programming/
 tags: [meta]

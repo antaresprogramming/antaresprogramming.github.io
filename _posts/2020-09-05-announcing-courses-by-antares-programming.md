@@ -1,7 +1,7 @@
 ---
 title: "Announcing &ldquo;Courses by Antares Programming&rdquo;"
 description: "Sa September 30, official na magiging available ang unang version ng Courses."
-image: /images/posts/announcing-courses-by-antares-programming/cover.jpeg
+image: /images/posts/announcing-courses-by-antares-programming/cover.png
 author: teacherbuknoy
 slug: /announcing-courses-by-antares-programming/
 tags: [web development, meta, courses]

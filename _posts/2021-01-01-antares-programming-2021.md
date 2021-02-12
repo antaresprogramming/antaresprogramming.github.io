@@ -1,7 +1,7 @@
 ---
 title: Ang Antares Program&shy;ming sa 2021
 description: Salamat sa suporta ninyo!
-image: /images/posts/antares-programming-2021/cover.jpg
+image: /images/posts/antares-programming-2021/cover.png
 seo_image: /images/posts/antares-programming-2021/seo-cover.png
 author: teacherbuknoy
 tags: [meta]

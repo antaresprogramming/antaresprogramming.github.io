@@ -1,7 +1,7 @@
 @import "./utilities/variables";
 
 :root {
-  --page-width: 60rem;
+  --page-width: 75rem;
   --content-width: 40rem;
 }
 
@@ -642,6 +642,7 @@ mark {
 .posts-grid {
   display: grid;
   gap: 2em;
+  
 
   @media screen and (min-width: 450px) {
     grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
@@ -651,9 +652,8 @@ mark {
   &.posts-grid--vertical {
     justify-items: center;
 
-    a.featured {
-      grid-template-columns: 1fr;
-      max-width: 600px;
+    & > * {
+      margin: 0;
     }
   }
 }

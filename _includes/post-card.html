@@ -1,0 +1,45 @@
+{% assign post = include.post %}
+{% assign featured = include.featured %}
+
+{% if site.authors[post.author].name %}
+  {% assign author=site.authors[post.author] %}
+{% else %}
+  {% assign author=site.authors["anonymous"] %}
+{% endif %}
+
+{% assign sortedTags = post.tags | sort %}
+<article class="{% if featured == true %}featured {% endif %}post">
+  <img class="post__image" src="{{ post.image }}" alt="" />
+  <div class="card">
+    <h2 class="card__title">
+      <a href="{{ post.url | prepend: site.baseurl }}"
+        >{% include title.html title=post.title %}</a
+      >
+    </h2>
+    {% if post.description %}
+    <p class="card__description">
+      {% include title.html title=post.description %} {% if
+      include.post.redirect_to %} {% endif %}
+    </p>
+    {% endif %}
+    <div class="byline">
+      <address class="byline__author">
+        <a href="{{ site.baseurl }}/authors/{{ include.author }}"
+          >{{ author.name }}</a
+        >
+      </address>
+      <date datetime="">January 13, 2021</date>
+    </div>
+    <footer class="tags">
+      {% for tag in sortedTags %}
+      <a
+        class="tag"
+        href="{{site.baseurl}}/tags/#{{ tag | replace: ' ', '-' }}"
+      >
+        {{ tag }}
+      </a>
+      <span class="tag-separator"></span>
+      {% endfor %}
+    </footer>
+  </div>
+</article>

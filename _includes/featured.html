@@ -1,19 +1,30 @@
 {% assign post = include.post %}
 
-<a aria-labelledby="{{ post.slug | slugify: 'pretty' }}" class="featured{% if post.image %} with-image{% endif %}{% if include.size %} {{ include.size }}{% endif %}" href="{{ post.url | prepend: site.baseurl }}">
+<a
+  aria-labelledby="{{ post.slug | slugify: 'pretty' }}"
+  class="featured{% if post.image %} with-image{% endif %}{% if include.size %} {{ include.size }}{% endif %}"
+  href="{{ post.url | prepend: site.baseurl }}"
+>
   {% if post.image %}
-    <img class="featured__image" src="{{ post.image }}" alt="" width="1920" height="400">
+  <img
+    class="featured__image"
+    src="{{ post.image }}"
+    alt=""
+    width="1920"
+    height="400"
+  />
   {% endif %}
-        <div class="featured__body">
-    <h2 id="{{ post.slug | slugify: 'pretty' }}">{% include title.html title=post.title %}</h2>
+  <div class="featured__body">
+    <h2 id="{{ post.slug | slugify: 'pretty' }}">
+      {% include title.html title=post.title %}
+    </h2>
     {% if post.description %}
-      <h3>
-        {% include title.html title=post.description %}
-                                                                                               {% if include.post.redirect_to %} →{% endif %}
-      </h3>
-    {% endif %}
-
-    {% include byline.html author=post.author date=post.date content=post.content %}
+    <h3>
+      {% include title.html title=post.description %} {% if
+      include.post.redirect_to %} {% endif %}
+    </h3>
+    {% endif %} {% include byline.html author=post.author date=post.date
+    content=post.content %}
   </div>
 
   {% unless post.image %}
@@ -23,4 +34,3 @@
   </section>
   {% endunless %}
 </a>
-
