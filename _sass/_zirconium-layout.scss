@@ -25,14 +25,14 @@ body > section {
 }
 
 body > footer {
-  background-color: $purple;
+  background-color: $darkgray;
   display: grid;
   clear: both;
   overflow: hidden;
 
   .copyright {
     padding: 0.25rem 0.5rem;
-    background-color: darken($color: $purple, $amount: 5%);
+    background-color: darken($color: $darkgray, $amount: 5%);
     color: var(--silver-500);
     font-size: 0.8rem;
   }
@@ -74,26 +74,9 @@ body > footer {
     line-height: 1.5em;
     margin: 0;
   }
-
-  .waves {
-    background-image: url("/images/wave-purple.svg"),
-      url("/images/wave-blue.svg"), url("/images/wave-yellow.svg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 20vh;
-    margin-top: -10vh;
-
-    @media screen and (min-width: 720px) {
-      background-position-x: center;
-      height: 30vh;
-      margin-top: -25vh;
-      background-position-y: bottom -140px, bottom -150px, bottom -280px;
-    }
-  }
 }
 
 @media screen and (min-width: 720px) {
-  .waves,
   footer .copyright {
     grid-column: span 2;
     grid-row: span 1;
