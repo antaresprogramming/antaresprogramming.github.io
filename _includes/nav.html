@@ -103,11 +103,8 @@
       </svg>
       <span class="main-nav__link-text">Antares Programming</span>
     </a>
-    <button class="main-nav__link btn js-nav-toggler" aria-expanded="false" aria-label="Toggle menu" aria-controls="menu-list"><svg class="main-nav__link-icon" fill="none" stroke="currentColor" height="16" width="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg></button>
-    <button class="main-nav__link btn js-search-toggler" aria-expanded="false" aria-label="Toggle search" aria-controls="search-control" id="header-search-toggler">
-      <svg class="main-nav__link-icon" fill="none" stroke="currentColor" height="16" width="16" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-    </button>
   </header>
+  <button class="main-nav__link btn js-nav-toggler" aria-expanded="false" aria-label="Toggle menu" aria-controls="menu-list"><svg class="main-nav__link-icon" fill="none" stroke="currentColor" height="16" width="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg></button>
   <ul class="main-nav__list js-nav" id="menu-list" hidden>
     <li class="main-nav__item">
       <a href="{{ site.url }}/articles/" class="main-nav__link">
@@ -128,24 +125,89 @@
       </a>
     </li>
     <li class="main-nav__item">
-      <button class="main-nav__link main-nav__search-toggler js-search-toggler" aria-expanded="false" aria-label="Toggle search" aria-controls="search-control">
+      <button class="main-nav__link main-nav__search-toggler js-search-toggler" aria-expanded="false" aria-controls="search-control">
         <svg class="main-nav__link-icon" fill="none" stroke="currentColor" height="16" width="16" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
         <span class="main-nav__link-text">Search</span>
       </button>
     </li>
   </ul>
+  <button class="main-nav__link btn js-search-toggler" aria-expanded="false" aria-label="Toggle search" aria-controls="search-control" id="header-search-toggler">
+    <svg class="main-nav__link-icon" fill="none" stroke="currentColor" height="16" width="16" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+  </button>
 </nav>
 <article class="search-area js-search-control" id="search-control" hidden>
   <div class="search-input">
     <input type="text" id="search-input" placeholder="Search blog posts..">
     <label for="search-input">Search</label>
-    <button class="main-nav__link btn js-search-toggler" id="search-toggler-lg" aria-expanded="false" aria-label="Toggle search" aria-controls="search-control">
+    <button class="main-nav__link btn js-search-toggler" id="search-toggler-lg" aria-expanded="false"  aria-controls="search-control">
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      <span class="visually-hidden">Hide search</span>
     </button>
   </div>
   
-  <button class="main-nav__link btn js-search-toggler" id="search-toggler-sm" aria-expanded="false" aria-label="Toggle search" aria-controls="search-control">
+  <button class="main-nav__link btn js-search-toggler" id="search-toggler-sm" aria-expanded="false" aria-controls="search-control">
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+    <span class="visually-hidden">Hide search</span>
   </button>
   <ul id="results-container"></ul>
 </article>
+<style>
+  .gdpr, .with-js .gdpr:not([open]) {
+    display: none;
+  }
+
+  .with-js .gdpr {
+    position: fixed;
+    font-size: 0.8rem;
+    padding: 1em;
+    margin: 0;
+    box-shadow: 0 18px 45px #000a;
+    display: block;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: none;
+    z-index: 999;
+  }
+
+  .gdpr h3 {
+    margin: 0;
+  }
+
+  .gdpr .actions {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 1em;
+  }
+
+  .gdpr .actions .btn {
+    cursor: pointer;
+  }
+
+  @media screen and (min-width: 768px) {
+    .with-js .gdpr {
+      max-width: 720px;
+      border-radius: 0.25em;
+      box-shadow: 0 18px 45px #000a;
+      width: 50vw;
+      bottom: 1rem;
+      right: 1rem;
+      left: unset;
+    }
+  }
+</style>
+<dialog class="gdpr">
+  <h3>Puwede ba kaming mag-store ng cookies?</h3>
+  <p>
+    Nagse-save ang Antares Programming ng cookies sa browser mo para sa
+    analytics. Nakakatulong ito sa amin na malaman kung nakakatulong sa inyo ang
+    mga nasa site na ito.
+  </p>
+  <div class="actions">
+    <button class="btn btn--primary js-gdpr-btn">
+      Sige, mag-store kayo ng cookies
+    </button>
+    <button class="btn">Huwag kayong mag-store ng cookies</button>
+  </div>
+</dialog>
