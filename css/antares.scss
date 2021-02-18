@@ -96,10 +96,13 @@ pre {
 	top: 0.5em;
 	background-image: none;
 	background-color: var(--accent-light);
+  color: inherit;
+  z-index: 99999;
 }
 
 .skip-to-content-link:focus {
   transform: translateY(0%);
+  color: #fff;
 }
 
 .visuallyhidden,

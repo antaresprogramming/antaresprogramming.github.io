@@ -44,9 +44,9 @@
         {% endif %}
       </div>
     </section>
-    <section>
+    <section class="latest">
       {% for post in posts %}
-          {% include featured.html post=post %}
+          {% include post-card.html post=post %}
       {% endfor %}
     </section>
     {% include footer.html %}

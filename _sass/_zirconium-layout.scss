@@ -25,14 +25,14 @@ body > section {
 }
 
 body > footer {
-  background-color: $purple;
+  background-color: $darkgray;
   display: grid;
   clear: both;
   overflow: hidden;
 
   .copyright {
     padding: 0.25rem 0.5rem;
-    background-color: darken($color: $purple, $amount: 5%);
+    background-color: darken($color: $darkgray, $amount: 5%);
     color: var(--silver-500);
     font-size: 0.8rem;
   }
@@ -74,26 +74,9 @@ body > footer {
     line-height: 1.5em;
     margin: 0;
   }
-
-  .waves {
-    background-image: url("/images/wave-purple.svg"),
-      url("/images/wave-blue.svg"), url("/images/wave-yellow.svg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 20vh;
-    margin-top: -10vh;
-
-    @media screen and (min-width: 720px) {
-      background-position-x: center;
-      height: 30vh;
-      margin-top: -25vh;
-      background-position-y: bottom -140px, bottom -150px, bottom -280px;
-    }
-  }
 }
 
 @media screen and (min-width: 720px) {
-  .waves,
   footer .copyright {
     grid-column: span 2;
     grid-row: span 1;
@@ -105,13 +88,6 @@ body > footer {
   padding-bottom: 2rem;
   color: var(--silver-100);
   z-index: 1;
-  text-shadow: rgb(39, 37, 61) 1px 0px 0px,
-    rgb(39, 37, 61) 0.540302px 0.841471px 0px,
-    rgb(39, 37, 61) -0.416147px 0.909297px 0px,
-    rgb(39, 37, 61) -0.989993px 0.14112px 0px,
-    rgb(39, 37, 61) -0.653644px -0.756803px 0px,
-    rgb(39, 37, 61) 0.283662px -0.958924px 0px,
-    rgb(39, 37, 61) 0.96017px -0.279416px 0px;
 }
 
 .footer__section__title {
@@ -190,18 +166,19 @@ article {
 }
 
 .links {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  gap: 1em;
-  padding: 1em;
+  display: block;
 
   button,
   a {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    align-items: center;
+    gap: 1em;
+    width: 100%;
+    text-align: start;
+
     background-image: none;
     padding: 1em;
-    display: grid;
-    gap: 0.5em;
     color: inherit;
     font-size: 1em;
     background-color: transparent;
@@ -209,6 +186,7 @@ article {
     border-radius: 0.25em;
     border: 1px solid transparent;
     transition: all 300ms;
+    justify-content: center;
 
     &:hover,
     &:focus,
@@ -216,6 +194,10 @@ article {
       background-color: var(--accent-light);
       color: var(--accent-dark);
       border-color: #0003;
+    }
+
+    span {
+      opacity: 0.85;
     }
   }
 
@@ -225,7 +207,23 @@ article {
     width: auto;
   }
 }
+@media screen and (min-width: 500px) {
+  .links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 1em;
+    padding: 1em;
 
+    button,
+    a {
+      grid-template-columns: none;
+      gap: 0.5em;
+      width: auto;
+      justify-items: center;
+    }
+  }
+}
 hr {
   border: 0;
   margin: 3em auto;
@@ -321,7 +319,7 @@ mark {
   a {
     background-color: white;
     border: 1px solid var(--silver-300);
-    border-radius: 0.25rem;
+    border-radius: 0.5rem;
     padding: 1rem;
     display: grid;
     grid-template-columns: calc(100px + 1rem) 1fr;
@@ -329,6 +327,7 @@ mark {
     text-decoration: none;
     color: inherit;
     transition: background 300ms, box-shadow 300ms;
+    background-image: none;
 
     &:hover {
       background-color: var(--silver-100);
@@ -344,7 +343,7 @@ mark {
       grid-row: span 4;
       margin-right: 1rem;
       width: 100px;
-      border-radius: inherit;
+      border-radius: 100%;
     }
 
     .author__name {
@@ -358,7 +357,6 @@ mark {
 
     .author__description {
       margin: 0;
-      font-family: "Zilla Slab", serif;
       text-indent: 0;
       grid-row: span 2;
       align-self: start;
@@ -366,7 +364,7 @@ mark {
   }
 }
 
-.author {
+html.author {
   section:not([class]) {
     max-width: 1000px;
     padding: 2rem 1rem;
@@ -417,20 +415,30 @@ mark {
     .wrapper {
       max-width: var(--page-width);
       margin: auto;
-      display: grid;
-      grid-template-columns: min-content 1fr;
+
+      ::selection {
+        background-color: var(--banana-100);
+      }
+
+      @media screen and (min-width: 500px) {
+        display: grid;
+        grid-template-rows: 2em repeat(3, min-content) 2em;
+        grid-template-columns: auto 1fr auto;
+      }
 
       .author__image {
         border-radius: 100%;
         border: 5px solid var(--header-bg-color);
-        grid-row: span 2;
         margin-right: 1rem;
+        grid-row: 2 / span 3;
+        align-self: center;
       }
 
       h1 {
         font-size: calc(2rem + 1vw);
         margin: 0;
         align-self: end;
+        grid-row: 2/3;
 
         .small-text {
           font-size: 1rem;
@@ -446,30 +454,11 @@ mark {
       .lead {
         margin: 0;
         font-size: 1rem;
-        grid-column: 2/3;
+        grid-row: 3;
       }
 
       .posts-count {
-        grid-column: 1/2;
-        grid-row: 3/4;
-        writing-mode: vertical-rl;
-        font-family: "Zilla Slab";
-        text-transform: uppercase;
-        font-size: 0.8rem;
-        letter-spacing: 2px;
-        margin-bottom: -80%;
-        margin-right: 1rem;
-        align-self: stretch;
-        justify-self: center;
-
-        &::before {
-          content: "";
-          width: 1px;
-          height: 100px;
-          background-color: currentColor;
-          display: inline-block;
-          margin-bottom: 0.5rem;
-        }
+        grid-row: 4;
 
         b {
           font-size: 1.2rem;
@@ -477,17 +466,27 @@ mark {
       }
 
       h2 {
-        grid-column: 3/4;
-        grid-row: 1/2;
         font-size: 1rem;
         color: var(--banana-900);
         margin: 0;
         align-self: end;
+        grid-row: 5;
+        grid-column: 2;
+
+        @media screen and (min-width: 640px) {
+          grid-column: 3;
+          grid-row: 2;
+        }
       }
 
       .social-links {
-        grid-column: 3/4;
-        grid-row: 2/4;
+        grid-column: 2;
+        grid-row: 6;
+
+        @media screen and (min-width: 640px) {
+          grid-column: 3;
+          grid-row: 3 / span 3;
+        }
 
         &::marker {
           font-size: 0.85em;
@@ -501,6 +500,10 @@ mark {
         }
       }
     }
+  }
+
+  .latest {
+    padding: 1em;
   }
 }
 
@@ -693,8 +696,8 @@ mark {
 }
 
 .flex {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 
   & > * {
     .flex > * {
