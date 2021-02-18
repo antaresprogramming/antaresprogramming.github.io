@@ -222,7 +222,8 @@ article {
     gap: 1em;
     padding: 1em;
 
-    button, a {
+    button,
+    a {
       grid-template-columns: none;
       gap: 0.5em;
       width: auto;
@@ -370,7 +371,7 @@ mark {
   }
 }
 
-.author {
+html.author {
   section:not([class]) {
     max-width: 1000px;
     padding: 2rem 1rem;
@@ -421,20 +422,26 @@ mark {
     .wrapper {
       max-width: var(--page-width);
       margin: auto;
-      display: grid;
-      grid-template-columns: min-content 1fr;
+
+      @media screen and (min-width: 500px) {
+        display: grid;
+        grid-template-rows: 2em repeat(3, min-content) 2em;
+        grid-template-columns: auto 1fr auto;
+      }
 
       .author__image {
         border-radius: 100%;
         border: 5px solid var(--header-bg-color);
-        grid-row: span 2;
         margin-right: 1rem;
+        grid-row: 2 / span 3;
+        align-self: center;
       }
 
       h1 {
         font-size: calc(2rem + 1vw);
         margin: 0;
         align-self: end;
+        grid-row: 2/3;
 
         .small-text {
           font-size: 1rem;
@@ -450,30 +457,11 @@ mark {
       .lead {
         margin: 0;
         font-size: 1rem;
-        grid-column: 2/3;
+        grid-row: 3;
       }
 
       .posts-count {
-        grid-column: 1/2;
-        grid-row: 3/4;
-        writing-mode: vertical-rl;
-        font-family: "Zilla Slab";
-        text-transform: uppercase;
-        font-size: 0.8rem;
-        letter-spacing: 2px;
-        margin-bottom: -80%;
-        margin-right: 1rem;
-        align-self: stretch;
-        justify-self: center;
-
-        &::before {
-          content: "";
-          width: 1px;
-          height: 100px;
-          background-color: currentColor;
-          display: inline-block;
-          margin-bottom: 0.5rem;
-        }
+        grid-row: 4;
 
         b {
           font-size: 1.2rem;
@@ -481,17 +469,27 @@ mark {
       }
 
       h2 {
-        grid-column: 3/4;
-        grid-row: 1/2;
         font-size: 1rem;
         color: var(--banana-900);
         margin: 0;
         align-self: end;
+        grid-row: 5;
+        grid-column: 2;
+
+        @media screen and (min-width: 640px) {
+          grid-column: 3;
+          grid-row: 2;
+        }
       }
 
       .social-links {
-        grid-column: 3/4;
-        grid-row: 2/4;
+        grid-column: 2;
+        grid-row: 6;
+
+        @media screen and (min-width: 640px) {
+          grid-column: 3;
+          grid-row: 3 / span 3;
+        }
 
         &::marker {
           font-size: 0.85em;
@@ -505,6 +503,10 @@ mark {
         }
       }
     }
+  }
+
+  .latest {
+    padding: 1em;
   }
 }
 
