@@ -10,7 +10,8 @@ author:
     facebook: https://facebook.com/teacherbuknoyofficial
     twitter: https://twitter.com/teacherbuknoy
     instagram: https://instagram.com/teacherbuknoyofficial
-    youtube: https://youtube.com/
+    youtube: https://www.youtube.com/channel/UCj83MZIsvny2cxdMEvnl_oQ/
+    "Official Website": https://maniczirconium.github.io/
 
 layout: author
 permalink: /authors/teacherbuknoy

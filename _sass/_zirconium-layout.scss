@@ -88,13 +88,6 @@ body > footer {
   padding-bottom: 2rem;
   color: var(--silver-100);
   z-index: 1;
-  text-shadow: rgb(39, 37, 61) 1px 0px 0px,
-    rgb(39, 37, 61) 0.540302px 0.841471px 0px,
-    rgb(39, 37, 61) -0.416147px 0.909297px 0px,
-    rgb(39, 37, 61) -0.989993px 0.14112px 0px,
-    rgb(39, 37, 61) -0.653644px -0.756803px 0px,
-    rgb(39, 37, 61) 0.283662px -0.958924px 0px,
-    rgb(39, 37, 61) 0.96017px -0.279416px 0px;
 }
 
 .footer__section__title {
@@ -422,6 +415,10 @@ html.author {
     .wrapper {
       max-width: var(--page-width);
       margin: auto;
+
+      ::selection {
+        background-color: var(--banana-100);
+      }
 
       @media screen and (min-width: 500px) {
         display: grid;
