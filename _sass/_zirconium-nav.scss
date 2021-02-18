@@ -3,16 +3,20 @@
   box-shadow: 0 10px 15px #0002;
   z-index: 99;
   background-color: var(--bg-color);
+  display: flex;
+  align-items: center;
 
   --brand-2: var(--banana-300);
   --brand-fg-black: #212121;
 }
 
 .main-nav__list {
-  padding: 0;
-  margin: 0;
-  position: absolute;
-  right: 1em;
+	padding: 0;
+	margin: 0;
+	position: absolute;
+	right: 1em;
+	z-index: 9;
+  top: 100%;
 
   &::before {
     content: '';
@@ -94,6 +98,7 @@
 .main-nav__header {
   display: flex;
   align-items: center;
+  flex: 1;
 
   .main-nav__link:first-child {
     text-align: left;
@@ -186,8 +191,6 @@
   }
   
   .main-nav {
-    display: flex;
-    align-items: center;
     justify-content: space-between;
     padding: 0.5em;
     transition: background-color 300ms;
