@@ -35,6 +35,7 @@ a {
   background-position: bottom;
   text-decoration: underline;
   text-decoration-color: var(--primary);
+  text-decoration-thickness: 1px;
 
   &:hover,
   &:focus {

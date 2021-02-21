@@ -318,8 +318,8 @@ mark {
   gap: 1rem;
 
   a {
-    background-color: white;
-    border: 1px solid var(--silver-300);
+    background-color: var(--bg-color);
+    border: 1px solid #0005;
     border-radius: 0.5rem;
     padding: 1rem;
     display: grid;
@@ -408,10 +408,11 @@ html.author {
   }
 
   .merge-with-header {
-    background-color: var(--banana-300);
+    background-color: var(--header-bg-color);
     padding: 1rem;
     margin: 0;
     max-width: none;
+    color: var(--header-fg-color);
 
     .wrapper {
       max-width: var(--page-width);
@@ -497,7 +498,6 @@ html.author {
         a {
           color: var(--orange-700);
           font-weight: bold;
-          text-decoration: none;
         }
       }
     }
@@ -510,11 +510,14 @@ html.author {
 
 .author .main-nav:not(.is-pinned) {
   background-color: var(--header-bg-color);
+  
+  .main-nav__link {
+    color: var(--header-fg-color);
+  }
 
   .main-nav__link:focus,
   .main-nav__link:hover {
     background-color: #c80a;
-    color: var(--brand-fg-black);
   }
 }
 
