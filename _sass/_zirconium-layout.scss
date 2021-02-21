@@ -32,8 +32,8 @@ body > footer {
 
   .copyright {
     padding: 0.25rem 0.5rem;
-    background-color: darken($color: $darkgray, $amount: 5%);
-    color: var(--silver-500);
+    background-color: #000a;
+    color: #fff;
     font-size: 0.8rem;
   }
 
@@ -187,12 +187,12 @@ article {
     border: 1px solid transparent;
     transition: all 300ms;
     justify-content: center;
+    text-decoration: none;
 
     &:hover,
     &:focus,
     &[aria-expanded="true"] {
-      background-color: var(--accent-light);
-      color: var(--accent-dark);
+      background-color: var(--primary-light);
       border-color: #0003;
     }
 
@@ -418,7 +418,7 @@ html.author {
       margin: auto;
 
       ::selection {
-        background-color: var(--banana-100);
+        background-color: var(--primary-light);
       }
 
       @media screen and (min-width: 500px) {
@@ -576,7 +576,7 @@ html.author {
   padding-left: 150px;
 
   ::selection {
-    background-color: var(--blueberry-300);
+    background-color: var(--primary-light);
   }
 
   img {

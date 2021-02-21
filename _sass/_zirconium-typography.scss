@@ -30,20 +30,20 @@ html {
 
 a {
   text-decoration: none;
-  color: $pink;
-  background-image: linear-gradient(rgba($pink, 0.1), rgba($pink, 0.1));
-  background-size: 100% 10%;
+  color: var(--link-color);
   background-repeat: no-repeat;
   background-position: bottom;
-  transition: background-size 300ms;
+  text-decoration: underline;
+  text-decoration-color: var(--primary);
 
   &:hover,
   &:focus {
-    background-size: 100% 100%;
+    text-decoration-thickness: 3px;
   }
 
   &:focus {
     background-image: linear-gradient(rgba($pink, 0.2), rgba($pink, 0.2));
+    background-size: 100%;
   }
 }
 
