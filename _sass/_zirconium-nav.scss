@@ -98,10 +98,14 @@
   &:focus,
   &:hover {
     background-color: var(--brand-2);
-    color: var(--brand-fg-black);
   }
 }
-
+html.author {
+  .main-nav__link:focus, .main-nav__link:hover,
+  .main-nav__header .main-nav__link:first-child:focus, .main-nav__header .main-nav__link:first-child:hover {
+      color: var(--header-fg-color);
+  }
+}
 .main-nav__header {
   display: flex;
   align-items: center;
@@ -114,7 +118,6 @@
     &:focus,
     &:hover {
       background-color: var(--brand-2);
-      color: var(--brand-fg-black);
     }
 
     .main-nav__link-icon {
@@ -236,11 +239,31 @@
     label {
       position: absolute;
       top: 50%;
-      background: var(--bg-color);
       color: var(--accent);
       transform: translateY(-50%);
       left: 2em;
       transition: transform 300ms;
+      padding: 0 0.5rem;
+      text-shadow: 
+        var(--bg-color) 3px 0px 0px, 
+        var(--bg-color) 2.83487px 0.981584px 0px, 
+        var(--bg-color) 2.35766px 1.85511px 0px, 
+        var(--bg-color) 1.62091px 2.52441px 0px, 
+        var(--bg-color) 0.705713px 2.91581px 0px, 
+        var(--bg-color) -0.287171px 2.98622px 0px, 
+        var(--bg-color) -1.24844px 2.72789px 0px, 
+        var(--bg-color) -2.07227px 2.16926px 0px, 
+        var(--bg-color) -2.66798px 1.37182px 0px, 
+        var(--bg-color) -2.96998px 0.42336px 0px, 
+        var(--bg-color) -2.94502px -0.571704px 0px, 
+        var(--bg-color) -2.59586px -1.50383px 0px, 
+        var(--bg-color) -1.96093px -2.27041px 0px, 
+        var(--bg-color) -1.11013px -2.78704px 0px, 
+        var(--bg-color) -0.137119px -2.99686px 0px, 
+        var(--bg-color) 0.850987px -2.87677px 0px, 
+        var(--bg-color) 1.74541px -2.43999px 0px, 
+        var(--bg-color) 2.44769px -1.73459px 0px, 
+        var(--bg-color) 2.88051px -0.838247px 0px;
     }
 
     #search-input {
@@ -260,7 +283,7 @@
 
       &:not(:placeholder-shown) + label,
       &:focus + label {
-        transform: translateY(-165%) translateX(-20%);
+        transform: translateY(-180%) translateX(-10%);
       }
     }
   }

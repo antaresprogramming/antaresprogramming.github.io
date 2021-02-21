@@ -70,7 +70,7 @@ aside.medium {
 .card__title a:hover {
   text-decoration: underline;
   text-decoration-thickness: 2px;
-  text-decoration-color: rgba(255, 8, 82, 0.1);
+  text-decoration-color: var(--primary);
 }
 
 .card__description {
