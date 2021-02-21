@@ -3,21 +3,11 @@ kbd {
   display: inline-block;
   padding: 0.1em 0.25em;
   border-radius: 0.25em;
-  font-family: var(--monospace), monospace;
+  font-family: var(--monospace);
   border: 1px solid #0002;
   text-indent: 0;
-  box-shadow: 0 3px 0 var(--kbd-shadow);
+  box-shadow: var(--kbd-shadow);
 }
-
-article section > pre {
-	max-width: var(--content-width);
-	margin: auto;
-	background-color: var(--black-500);
-	color: var(--silver-300);
-	padding: 1rem;
-	border-radius: 0.25rem;
-}
-
 
 div.highlighter-rouge {
 	margin: 2em auto;
@@ -41,137 +31,6 @@ div.highlighter-rouge {
 .rouge-code {
   padding-left: 0.25em;
   padding-right: 1em;
-}
-
-
-.highlight {
-  display: block;
-  max-width: var(--content-width);
-  font-size: 1rem;
-  line-height: 1.33em;
-  margin: auto;
-  overflow: auto;
-  text-align: left;
-  background-color: var(--black-500);
-  color: var(--silver-300);
-
-  .gl {
-    background-color: var(--black-700);
-    padding: 0 0.5em;
-    text-align: right;
-    position: sticky;
-    left: 0;
-    width: 1.5rem;
-  }
-
-  .c,
-  .c1,
-  .cm,
-  .sb {
-    color: var(--solarized-base1);
-  }
-
-  .err,
-  .g,
-  .ge,
-  .go,
-  .gp,
-  .gs,
-  .gt,
-  .l,
-  .ld,
-  .n,
-  .na,
-  .nl,
-  .nn,
-  .nx,
-  .p,
-  .py,
-  .sd,
-  .sh,
-  .w {
-    color: var(--solarized-base1);
-  }
-
-  .gd,
-  .il,
-  .m,
-  .mf,
-  .mh,
-  .mi,
-  .mo,
-  .s,
-  .s1,
-  .s2,
-  .sc,
-  .si,
-  .ss,
-  .sx {
-    color: var(--solarized-cyan);
-  }
-
-  .bp,
-  .kd,
-  .kr,
-  .nc,
-  .nd,
-  .nf,
-  .nt,
-  .nv,
-  .vc,
-  .vg,
-  .vi {
-    color: var(--solarized-blue);
-  }
-
-  .cp,
-  .cs,
-  .gi,
-  .k,
-  .kn,
-  .kp,
-  .o,
-  .ow {
-    color: var(--grape-100);
-  }
-
-  .gh,
-  .gu,
-  .kc,
-  .ne,
-  .ni,
-  .no,
-  .se,
-  .x {
-    color: var(--solarized-orange);
-  }
-
-  .gr,
-  .kt,
-  .sr {
-    color: var(--strawberry-100);
-  }
-
-  .nb {
-    color: var(--solarized-yellow);
-  }
-
-  .ge {
-    font-style: italic;
-  }
-
-  .gs {
-    font-weight: bold;
-  }
-}
-
-article section > pre {
-	max-width: var(--content-width);
-	margin: auto;
-	background-color: var(--black-500);
-	color: var(--silver-300);
-	padding: 1rem;
-	border-radius: 0.25rem;
 }
 
 .note {
