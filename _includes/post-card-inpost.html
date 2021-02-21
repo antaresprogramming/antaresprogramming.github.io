@@ -1,0 +1,34 @@
+{% assign title = include.title %}
+{% assign link = include.link %}
+{% assign image = include.image %}
+{% assign description = include.description %}
+{% assign author = include.author %}
+{% assign date = include.date %}
+
+{% unless image %}
+{% assign image = "/images/post-cover-generic.png" %}
+{% endunless %}
+  
+<article class="featured post post--inpost">
+  <img class="post__image" src="{{ image }}" alt="" />
+  <div class="card">
+    <h2 class="card__title">
+      <a href="{{ link }}"
+        >{% include title.html title=title %}</a
+      >
+    </h2>
+    {% if description %}
+    <p class="card__description">
+      {% include title.html title=description %}
+    </p>
+    {% endif %}
+    <div class="byline">
+      <address class="byline__author">
+        <a>{{ author }}</a
+        >
+      </address>
+      <date datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date: "%a, %b %e, %Y" }}</date>
+    </div>
+    <footer class="tags"></footer>
+  </div>
+</article>

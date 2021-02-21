@@ -136,7 +136,7 @@ aside.medium {
   font-size: 0.8em;
 }
 
-@media screen and (min-width: 380px) {
+@media screen and (min-width: 550px) {
   .post {
     display: grid;
     grid-template-rows: minmax(200px, 1fr) auto;
@@ -213,7 +213,7 @@ aside.medium {
 }
 
 .latest header .btn {
-	margin-left: auto;
+  margin-left: auto;
 }
 
 .up-next {
@@ -279,9 +279,12 @@ main.article {
 
   .article__header {
     grid-column: 1/-1;
-    display: grid;
     grid-template-columns: 1fr var(--content-width) 1fr;
     grid-template-rows: 1fr 200px auto;
+
+    @media screen and (min-width: 720px) {
+      display: grid;
+    }
 
     .article__cover {
       width: 100%;
@@ -298,8 +301,11 @@ main.article {
       background-color: var(--bg-color);
       padding: 1em;
       border-radius: 0.25em;
-      box-shadow: 0 5px 18px #0003;
-      margin: 2em 10vw;
+
+      @media screen and (min-width: 720px) {
+        box-shadow: 0 5px 18px #0003;
+        margin: 2em 10vw;
+      }
     }
   }
 
@@ -309,8 +315,14 @@ main.article {
   }
 
   .article__contents {
-    display: grid;
     grid-template-columns: 1fr var(--content-width) 1fr;
+    padding: 1em;
+
+    @media screen and (min-width: 720px) {
+      display: grid;
+      padding: 0;
+      gap: 1em;
+    }
 
     & > * {
       grid-column: 2/3;
@@ -329,6 +341,114 @@ main.article {
     ol,
     table {
       font-family: var(--copy-font);
+      padding: 0 1em;
+      max-width: 60ch;
+      width: 100%;
+
+      @media screen and (min-width: 720px) {
+        padding: 0;
+        margin: 0;
+      }
+    }
+
+    .full-bleed {
+      max-width: none;
+      width: 100%;
+      grid-column: 1/-1;
+    }
+
+    ul,
+    ol,
+    dl {
+      padding-left: 4em !important;
+    }
+
+    pre,
+    .iframe {
+      max-width: 60ch;
+      margin: 1rem auto;
+      width: 100%;
+      scrollbar-color: #000a transparent;
+    }
+
+    pre.rainbow-show {
+      padding: 0;
+      overflow: hidden;
+    }
+
+    pre.rainbow-show > code.rainbow {
+      padding: 1rem;
+      display: block;
+      overflow: auto;
+    }
+
+    code.rainbow.rainbow-show::before {
+      content: attr(data-language);
+      font-family: var(--ui-font);
+      text-transform: uppercase;
+      font-weight: bold;
+      display: block;
+      background-color: $yellow;
+      color: scale-color($color: $yellow, $lightness: -75%);
+      padding: 0.5em 1em;
+      margin: -1em;
+      margin-bottom: 1em;
+      position: sticky;
+      top: -1em;
+      left: -1em;
+    }
+
+    .iframe {
+      display: block;
+      border-radius: 0.5em;
+      border: 1px solid #0003;
+      min-height: 300px;
+    }
+
+    dfn {
+      font-style: normal;
+      font-weight: bold;
+      display: inlline-flex;
+      vertical-align: bottom;
+      align-items: center;
+
+      &::before {
+        content: "";
+        vertical-align: middle;
+        display: inline-block;
+        height: 24px;
+        width: 24px;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%230072b2' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-info'%3E%3Ccircle cx='12' cy='12' r='10'%3E%3C/circle%3E%3Cline x1='12' y1='16' x2='12' y2='12'%3E%3C/line%3E%3Cline x1='12' y1='8' x2='12.01' y2='8'%3E%3C/line%3E%3C/svg%3E ");
+        background-size: cover;
+        margin-right: 0.5ch;
+      }
+    }
+
+    @media screen and (min-width: 720px) {
+      figure {
+        margin: 0;
+      }
     }
   }
+}
+
+.post.post--inpost {
+  border: 1px solid #0003;
+  margin: 1rem auto;
+
+  @media screen and (min-width: 480px) {
+    height: 250px;
+  }
+}
+
+.byline__author a:not([href]) {
+  background-image: none;
+  text-decoration: none;
+}
+
+.post--inpost .card__description {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
 }

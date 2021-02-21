@@ -21,6 +21,7 @@ figure {
     transition: transform 250ms ease;
     vertical-align: middle;
     width: 100%;
+    height: auto;
 
     &:active,
     &:focus {
@@ -59,11 +60,15 @@ figure {
     margin: 1em auto 4em;
     opacity: 0.67;
     text-align: right;
-    width: 50%;
+    width: 85%;
     margin-right: 0;
     border-top: 3px solid var(--primary);
     padding-top: 1em;
     line-height: 1.5;
+
+    @media screen and (min-width: 720px) {
+      width: 50%;
+    }
   }
 
   &.third {
