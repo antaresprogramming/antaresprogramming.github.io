@@ -290,7 +290,8 @@ aside.outdated {
 
 mark {
   background-color: var(--banana-100);
-  border-radius: 0.25rem;
+  border-radius: 1px;
+  box-shadow: 0 0 0 4px var(--banana-100);
 }
 
 .page-title,
