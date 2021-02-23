@@ -7,7 +7,7 @@
 {% for tag in tags %}
   {% if tag[1].size > 1 %}
     {% assign id = tag[0] | replace: ' ', '-' %}
-    <div class="latest" id="{{ id }}">
+    <div class="latest tag-articles" id="{{ id }}">
     <header class="flexify">
       <h2>#{{ tag[0] }}</h2>
     </header>
