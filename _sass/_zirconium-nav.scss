@@ -239,10 +239,9 @@ html.author {
     label {
       position: absolute;
       top: 50%;
-      color: var(--accent);
       transform: translateY(-50%);
       left: 2em;
-      transition: transform 300ms;
+      transition: transform 300ms cubic-bezier(.07,.95,0,1), opacity 200ms;
       padding: 0 0.5rem;
       text-shadow: 
         var(--bg-color) 3px 0px 0px, 
@@ -273,7 +272,8 @@ html.author {
       background-color: var(--bg-color);
       color: var(--fg-color);
       border-radius: 0.25em;
-      padding: 1rem;
+      padding: 1em;
+      padding-top: 1.5em;
       font-size: 1em;
       width: 100%;
 
@@ -283,7 +283,8 @@ html.author {
 
       &:not(:placeholder-shown) + label,
       &:focus + label {
-        transform: translateY(-180%) translateX(-10%);
+        transform: translateY(-1.8em) translateX(-1.05em) scale(0.9);
+        opacity: 0.5;
       }
     }
   }
