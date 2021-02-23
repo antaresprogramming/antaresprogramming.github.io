@@ -20,8 +20,8 @@ html {
 }
 
 ::selection {
-  background-color: var(--primary-light);
-  color: var(--fg-color);
+  background-color: var(--selection-bg);
+  color: var(--selection-fg);
 }
 
 pre {

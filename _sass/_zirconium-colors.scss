@@ -3,6 +3,12 @@
   --primary: #ff0852;
   --primary-light: #ff085255;
 
+  --accent: #f99f41;
+  --accent-light: #f99f4155;
+
+  --selection-bg: var(--accent-light);
+  --selection-fg: var(--fg-color);
+
   --bg-color: #ffffff;
   --nav-bg-color: var(--bg-color);
   --nav-bg-color-blurred: rgba(255, 255, 255, 0.9);

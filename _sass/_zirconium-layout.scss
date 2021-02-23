@@ -417,10 +417,7 @@ html.author {
     .wrapper {
       max-width: var(--page-width);
       margin: auto;
-
-      ::selection {
-        background-color: var(--primary-light);
-      }
+      --selection-bg: var(--primary-light);
 
       @media screen and (min-width: 500px) {
         display: grid;
@@ -578,9 +575,7 @@ html.author {
   padding: 1rem 2rem;
   padding-left: 150px;
 
-  ::selection {
-    background-color: var(--primary-light);
-  }
+  --selection-bg: var(--primary-light);
 
   img {
     width: 666px;
