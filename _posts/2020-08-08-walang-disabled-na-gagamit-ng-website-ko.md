@@ -4,7 +4,7 @@ description: "May misconception tayo na para lang sa persons with disability ang
 image: /images/posts/walang-disabled-na-gagamit-ng-website-ko/cover.png
 author: teacherbuknoy
 slug: /walang-disabled-na-gagamit-ng-website-ko/
-tags: [Web development, accessibility]
+tags: [web development, accessibility]
 ---
 Ngayong araw, nakita ko ang tweet na ito:
 

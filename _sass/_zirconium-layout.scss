@@ -62,7 +62,7 @@ body > footer {
     &:hover,
     &:focus {
       background-color: #0003;
-      color: var(--silver-100);
+      color: var(--accent);
     }
   }
 
@@ -86,7 +86,6 @@ body > footer {
 .footer__section {
   padding: 1rem;
   padding-bottom: 2rem;
-  color: var(--silver-100);
   z-index: 1;
 }
 
@@ -331,8 +330,7 @@ mark {
     background-image: none;
 
     &:hover {
-      background-color: var(--silver-100);
-      background-image: linear-gradient(#0000, #00000005);
+      background-color: var(--primary-light);
       box-shadow: 0 3px 5px #0003;
     }
 
