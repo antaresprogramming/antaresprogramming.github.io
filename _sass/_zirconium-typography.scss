@@ -173,3 +173,11 @@ dl {
       margin-right: 1ch;
   }
 }
+
+math {
+	font-family: var(--serif-font);
+	border: 2px dashed #0005;
+	padding: 1ch;
+	display: block;
+	width: 100%;
+}
