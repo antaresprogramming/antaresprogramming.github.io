@@ -9,9 +9,8 @@ tags: [css,layout]
 
 Isa sa mga fundamental concepts ng CSS na dapat nating tandaan ay ang box model: **lahat sa CSS ay box**. Anuman ang hitsura ng isang element visually, box pa rin ito para sa CSS.
 
-<figure class="full-bleed">
+<figure>
     <img
-        style="width: 75%;"
         sizes="(max-width: 1980px) 100vw, 1980px"
         srcset="
             /images/posts/box-sizing/box-model_ccrq57_c_scale,w_350.png 350w,
