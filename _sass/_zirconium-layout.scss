@@ -287,10 +287,12 @@ aside.outdated {
   z-index: 1;
 }
 
+mark-antares-highlight-code,
 mark {
-  background-color: var(--banana-100);
-  border-radius: 1px;
-  box-shadow: 0 0 0 4px var(--banana-100);
+	background-color: var(--accent-light);
+	border-radius: 1px;
+	box-shadow: 0 0 0 4px var(--accent-light);
+	color: inherit;
 }
 
 .page-title,
@@ -666,7 +668,7 @@ html.author {
 }
 
 .footnotes {
-  font-size: 0.8em;
+  font-size: 0.9em;
   font-family: var(--ui-font);
   margin-top: 10vh;
   background-image: linear-gradient(currentColor, currentColor);
@@ -677,19 +679,25 @@ html.author {
 
 .footnote {
   font-family: var(--ui-font);
-  padding: 1em;
-  border-radius: 100%;
-  border: 1px solid;
+  padding: 1ch;
   display: inline-flex;
   width: 1ch;
   height: 1ch;
   align-content: center;
   justify-content: center;
   align-items: center;
-  font-size: 0.6em;
+  // font-size: 0.6em;
   position: relative;
   top: -0.25rem;
   background-size: 100% 0;
+
+  &::before {
+    content: '['
+  }
+
+  &::after {
+    content: ']'
+  }
 }
 
 .flex {
