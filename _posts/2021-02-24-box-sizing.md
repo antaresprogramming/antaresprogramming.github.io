@@ -139,6 +139,15 @@ Kaya naman isinama na ng W3C ang [`box-sizing`](https://www.w3.org/TR/css-ui-3/#
 %}
 
 {% include post-card-inpost.html
+    title='Box Sizing | CSS-Tricks'
+    image='https://css-tricks.com/wp-content/uploads/2010/09/widthbox.png'
+    link='https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing'
+    description="The box-sizing property can make building CSS layouts easier and a lot more intuitive. It's such a boon for developers that here at CSS-Tricks we observe"
+    author="Marie Mosley"
+    date="2015-05-6"
+%}
+
+{% include post-card-inpost.html
   title='Internet Explorer and the CSS box model | 456 Berea Street'
   link='https://www.456bereastreet.com/archive/200612/internet_explorer_and_the_css_box_model/'
   description="Various methods of dealing with the incorrect CSS box model used by older versions of Internet Explorer for Windows."

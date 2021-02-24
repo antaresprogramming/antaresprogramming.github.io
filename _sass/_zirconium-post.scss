@@ -440,9 +440,16 @@ main.article {
 .post.post--inpost {
   border: 1px solid #0003;
   margin: 1rem auto;
+  grid-template-columns: minmax(100px, 1fr) 2fr;
 
-  @media screen and (min-width: 480px) {
+  @media screen and (min-width: 550px) {
     height: 250px;
+  }
+
+  .post__image {
+    max-height: 300px;
+    width: 100%;
+    object-fit: cover;
   }
 }
 
@@ -479,6 +486,7 @@ main.article {
   }
 }
 
-main.article .footnotes ol, .footnotes ul {
-	max-width: none;
+main.article .footnotes ol,
+.footnotes ul {
+  max-width: none;
 }
