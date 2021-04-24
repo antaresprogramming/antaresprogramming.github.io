@@ -1,0 +1,8 @@
+{% assign term = include.term %}
+{% unless term == nil %}
+{% assign definition = site.data.glossary | where: "term", term | first %}
+<dl class="definition">
+    <dt>{{ definition.term }}</dt>
+    <dd>{{ definition.meaning }}</dd>
+</dl>
+{% endunless %}
