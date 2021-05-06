@@ -24,5 +24,23 @@
                 "alt": ""
             }
         ]
+    },
+    {
+        "code": "box-sizing",
+        "title": "Box Sizing",
+        "slides": [
+            {
+              "image": "Box Sizing - 1.png",
+              "description": "<p>Sinasabi ng box-sizing property kung paano susukatin ng browser ang width ng isang element.</p>"
+            },
+            {
+              "image": "Box Sizing - 2.png",
+              "description": "<p><strong>Content-box</strong> Nag-a-apply lang ang width sa content. Ibig sabihin, madaragdagan ang value nito kapag may naka-set na padding o border.</p>"
+            },
+            {
+              "image": "Box Sizing - 3.png",
+              "description": "<p><strong>Border-box</strong> Nag-a-apply lang ang width sa content, padding, at border. Ibig sabihin, hindi magbabag ang overall width kahit na naka-set ang padding, border, at width.</p>"
+            }
+        ]
     }
 ]
