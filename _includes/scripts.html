@@ -6,7 +6,10 @@
 <script>
   Rainbow.onHighlight(function (block, language) {
     block.innerHTML = block.innerHTML
-      .replaceAll('&lt;mark-antares-highlight-code&gt;', '<mark class="antares-highlight-code">')
+      .replaceAll(
+        "&lt;mark-antares-highlight-code&gt;",
+        '<mark class="antares-highlight-code">'
+      )
       .replaceAll("&lt;/mark-antares-highlight-code&gt;", "</mark>");
   });
 </script>
@@ -193,18 +196,126 @@
 </script>
 
 <script>
+  class ImageDialog {
+    constructor(path) {
+      const modal = document.createElement("dialog");
+      modal.tabIndex = -1;
+      modal.classList.add("dialog");
+      this.modal = modal;
+      document.body.appendChild(modal);
+
+      const article = document.createElement("article");
+      article.classList.add("dialog__contents");
+      this.modal.appendChild(article);
+      this.modalContents = article
+
+      const img = document.createElement('img')
+      img.src = path
+      this.modalContents.appendChild(img)
+
+      const closeButton = document.createElement("button");
+      closeButton.classList.add("btn", "js-close-dialog");
+      closeButton.innerHTML = "&times;";
+      closeButton.addEventListener("click", (e) => this.close());
+      this.modalContents.appendChild(closeButton)
+
+      this.refreshFocusableElements();
+
+      const dlg = this;
+      this.modal.addEventListener("keydown", (e) => {
+        const KEY_TAB = "Tab";
+        const KEY_ESCAPE = "Escape";
+
+        function handleBackwardTab() {
+          if (document.activeElement === dlg.firstFocusableElement) {
+            e.preventDefault();
+            dlg.lastFocusableElement.focus();
+          }
+        }
+
+        function handleForwardTab() {
+          if (document.activeElement === dlg.lastFocusableElement) {
+            e.preventDefault();
+            dlg.firstFocusableElement.focus();
+          }
+        }
+
+        if (e.key === KEY_TAB) {
+          if (dlg.focusableElements.length === 1) {
+            e.preventDefault();
+            return;
+          }
+
+          if (e.shiftKey) {
+            handleBackwardTab();
+          } else {
+            handleForwardTab();
+          }
+        } else if (e.key === KEY_ESCAPE) {
+          dlg.close();
+        }
+      });
+    }
+
+    refreshFocusableElements() {
+      let focusableElements = this.modal.querySelectorAll(
+        'a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), [tabindex="0"]'
+      );
+      this.focusableElements = Array.prototype.slice.call(focusableElements);
+      this.firstFocusableElement = this.focusableElements[0];
+      this.lastFocusableElement = this.focusableElements[
+        this.focusableElements.length - 1
+      ];
+      this.focusableElementBeforeOpen = null;
+    }
+
+    toggle(show = null) {
+      const dialog = this.modal;
+      if (show == null) {
+        if (dialog.hasAttribute("open")) {
+          this.close();
+        } else {
+          this.open();
+        }
+      } else {
+        if (show) {
+          this.open();
+        } else {
+          this.close();
+        }
+      }
+    }
+
+    open() {
+      const dialog = this.modal;
+      dialog.setAttribute("open", "true");
+      document.body.classList.add("no-scroll");
+      this.focusableElementBeforeOpen = document.activeElement;
+      this.firstFocusableElement.focus();
+      this.onOpen && this.onOpen();
+    }
+
+    close() {
+      const dialog = this.modal;
+      dialog.removeAttribute("open");
+      document.body.classList.remove("no-scroll");
+      this.focusableElementBeforeOpen.focus();
+      this.onClose && this.onClose();
+    }
+  }
+</script>
+
+<script>
   function previousSlide(slideset) {
-    slideset.scrollBy(-250,0)
+    slideset.scrollBy(-250, 0);
   }
 
   function nextSlide(slideset) {
-    slideset.scrollBy(250,0)
+    slideset.scrollBy(250, 0);
   }
 
-  function stripHTML(htmlString) {
-    const span = document.createElement('span')
-    span.innerHTML = htmlString
-
-    return span.innerText
+  function enlargeImage(path) {
+    let dialog = new ImageDialog(path)
+    dialog.open()
   }
 </script>

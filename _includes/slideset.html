@@ -29,6 +29,7 @@ where: 'code', code | first %}
         src="/slidesets/{{ slideset.code }}/{{ slide.image }}"
         alt="{{ slide.description | strip_html }}"
       />
+      <button class="btn-enlarge" onclick="enlargeImage(`/slidesets/{{ slideset.code }}/{{ slide.image }}`)"><span class="visuallyhidden">Enlarge image</span></button>
       <!--figcaption class="slide__body">{{ slide.description }}</figcaption-->
     </figure>
     {% endfor %}
