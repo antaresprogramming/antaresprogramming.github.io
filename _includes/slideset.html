@@ -1,0 +1,57 @@
+{% assign code = include.code %} {% assign slideset = site.data.slidesets |
+where: 'code', code | first %}
+<article class="slideset">
+  <button onclick="previousSlide(this.nextElementSibling)">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      class="feather feather-chevron-left"
+      aria-hidden="true"
+      focusable="false"
+    >
+      <polyline points="15 18 9 12 15 6"></polyline>
+    </svg>
+    <span class="visually-hidden">previous slide</span>
+  </button>
+  <div class="slideset__scroller">
+    <div class="slide-spacer"></div>
+    {% for slide in slideset.slides %}
+    <figure class="slide">
+      <img
+        class="slide__image"
+        src="/slidesets/{{ slideset.code }}/{{ slide.image }}"
+        alt="{{ slide.description | strip_html }}"
+      />
+      <button class="btn-enlarge" onclick="enlargeImage(`/slidesets/{{ slideset.code }}/{{ slide.image }}`)"><span class="visuallyhidden">Enlarge image</span></button>
+      <!--figcaption class="slide__body">{{ slide.description }}</figcaption-->
+    </figure>
+    {% endfor %}
+    <div class="slide-spacer"></div>
+  </div>
+  <button onclick="nextSlide(this.previousElementSibling)">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      class="feather feather-chevron-right"
+      aria-hidden="true"
+      focusable="false"
+    >
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+    <span class="visually-hidden">next slide</span>
+  </button>
+</article>
