@@ -191,3 +191,20 @@
     firebase.analytics();
   });
 </script>
+
+<script>
+  function previousSlide(slideset) {
+    slideset.scrollBy(-250,0)
+  }
+
+  function nextSlide(slideset) {
+    slideset.scrollBy(250,0)
+  }
+
+  function stripHTML(htmlString) {
+    const span = document.createElement('span')
+    span.innerHTML = htmlString
+
+    return span.innerText
+  }
+</script>

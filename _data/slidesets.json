@@ -1,0 +1,28 @@
+[
+    {
+        "code": "alt-texts",
+        "title": "Mga Alt Text",
+        "slides": [
+            {
+                "image": "alt text - 1.png",
+                "description": "<p>Ginagamit ang alt text para maging substitute ng image kapag hindi ito nag-load, o sa mga assistive technology para sa mga may visual impairment. Alamin kung paano at kailan ito dapat gamitin.</p>",
+                "alt": ""
+            },
+            {
+                "image": "alt text - 2.png",
+                "description": "<p><strong>Paano maglagay ng alt text?</strong> Maglagay ng alt text gamit ang HTML attribute na alt sa mga <code>&lt;img></code> tags. Ang alt text ang lalabas sa page kapag hindi nag-load ang image. Ito rin ang gagamitin ng assistive technologies para ipaalam sa user kung ano ang nasa image kung hindi nila ito makita.</p>",
+                "alt": ""
+            },
+            {
+                "image": "alt text - 3.png",
+                "description": "<p><strong>Ano ang dapat ilagay sa alt text?</strong> I-describe ang image. Sabihin kung ano ang makikita sa larawan. May mga tao ba? Ilan? Saan kinuha ang picture? Kailan? Sa umaga, tanghali, o gabi?",
+                "alt": ""
+            },
+            {
+                "image": "alt text - 4.png",
+                "description": "<p><strong>Ano ang dapat ilagay sa alt text?</strong>I-describe ang image. Sabihin kung ano ang makikita sa larawan. May mga tao ba? Ilan? Saan kinuha ang picture? Kailan? Sa umaga, tanghali, o gabi?",
+                "alt": ""
+            }
+        ]
+    }
+]
