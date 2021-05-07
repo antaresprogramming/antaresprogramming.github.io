@@ -4,7 +4,7 @@ description: Pag-usapan natin kung paano nakaka-influence sa layout ang box sizi
 image: /images/posts/box-sizing/cover.png
 seo_image: /images/posts/box-sizing/seo-cover.png
 author: teacherbuknoy
-tags: [css,layout]
+tags: [css, layout]
 ---
 
 Isa sa mga fundamental concepts ng CSS na dapat nating tandaan ay ang box model: **lahat sa CSS ay box**. Anuman ang hitsura ng isang element visually, box pa rin ito para sa CSS.
@@ -21,6 +21,8 @@ Isa sa mga fundamental concepts ng CSS na dapat nating tandaan ay ang box model:
 </figure>
 
 Mahalaga na tandaan ang konseptong ito sa CSS. Pero mas mahalagang maintindihan kung paano kino-compute ng browser ang magiging size ng mga box na ito at kung paano sila nakikipag-interact sa isa't isa.
+
+{% include slideset.html code="box-sizing" %}
 
 ## Ang `content-box`
 
@@ -125,7 +127,6 @@ Ayon sa W3C spec,
 <p>Naging cause ito ng maraming problema. Maraming websites ang dumepende sa IE box model. Bukod pa riyan, maraming web developers at graphic designers noon ang nagsabi na mas maganda ngang gamitin ang IE box model.</p>
 
 Kaya naman isinama na ng W3C ang [`box-sizing`](https://www.w3.org/TR/css-ui-3/#box-sizing) property kalaunan. Ang default property nito ay `content-box` (W3C box model) at ang isa pang value nito ay `border-box` (IE box model). Pero siyempre, hindi puwedeng palitan ang default nito at gawing `border-box` dahil masisira ang mga lumang website na ginawa para sa Internet Explorer. Tandaan na mahalagang property ng Web ang backwards compatibility.
-
 
 ## Further reading
 
