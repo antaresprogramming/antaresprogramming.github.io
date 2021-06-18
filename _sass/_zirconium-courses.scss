@@ -86,6 +86,15 @@ ul.course-list {
     display: flex;
     align-items: center;
 
+    --list-marker-bg: var(--bg-color);
+    --list-marker-border: #ddd;
+	--list-connector: #ddd;
+
+    &.lesson--open {
+      --list-marker-border: var(--accent);
+      --list-connector: var(--list-marker-border);
+    }
+
     &::before {
       content: counter(lesson);
       border-radius: 100%;
@@ -96,11 +105,8 @@ ul.course-list {
       text-align: center;
       align-content: center;
       z-index: 2;
-    }
-
-    &.lesson--open::before {
-      background-color: var(--bg-color);
-      box-shadow: 0 0 0 3px var(--accent);
+      background-color: var(--list-marker-bg);
+      box-shadow: 0 0 0 3px var(--list-marker-border);
     }
 
     &::after {
@@ -109,12 +115,9 @@ ul.course-list {
       height: 100%;
       width: 3px;
       background-color: #ddd;
+      background-color: var(--list-connector);
       top: 50%;
       left: 24px;
-    }
-
-    &.lesson--open::after {
-      background-color: var(--accent);
     }
 
     &:last-child::after {
