@@ -10,11 +10,10 @@
 
   --brand-2: var(--primary-light);
   --brand-fg-black: var(--fg-color);
-
-  @supports (backdrop-filter: blur(5px)) {
-    background-color: var(--nav-bg-color-blurred);
-    backdrop-filter: blur(5px);
-  }
+  
+  background-color: var(--nav-bg-color-blurred);
+  -webkit-backdrop-filter: saturate(120%) blur(72px);
+  backdrop-filter: saturate(120%) blur(72px);
 }
 
 .main-nav__list {
@@ -150,6 +149,7 @@ html.author {
     &.is-pinned {
       box-shadow: 0 10px 15px #0002;
       padding: 0.25em;
+      border-bottom: 1px solid #0005;
 
       .main-nav__link:not(.btn) {
         padding: 0.5em;

@@ -116,8 +116,8 @@ aside.medium {
   text-decoration: none;
 }
 
-.tags .tag:hover {
-  background-color: rgba(255, 8, 82, 0.1);
+.tags a.tag[href]:hover {
+	background-color: rgba(255, 8, 82, 0.1);
 }
 
 .tag-separator {
