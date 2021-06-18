@@ -6,8 +6,8 @@
       Skip to content
     </a>
     {% unless page.type %}{% assign thisCourse = page %}{% endunless %}
-    {% include nav.html %}
     {% include course-banner.html course=thisCourse %}
+    {% include nav.html %}
     <main id="main">
       <article>
       {% if page.type == 'index' %}

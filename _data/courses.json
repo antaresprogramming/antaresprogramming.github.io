@@ -1,313 +1,318 @@
 [
   {
-    "title" : "Essentials of Cascading Style Sheets",
-    "id" : "css-essentials",
-    "lessons" : [
+    "title": "Essentials of Cascading Style Sheets",
+    "id": "css-essentials",
+    "tags": ["Front End"],
+    "lessons": [
       {
-        "id" : "01-intro-css",
-        "title" : "Ang Cascading Style Sheets",
-        "summary" : "Bakit kailangan ang CSS? At paano ito gagamitin kasama ng HTML?"
+        "id": "01-intro-css",
+        "title": "Ang Cascading Style Sheets",
+        "summary": "Bakit kailangan ang CSS? At paano ito gagamitin kasama ng HTML?"
       },
       {
-        "id" : "01-1-Selectors",
-        "title" : "Mga Selector",
-        "summary" : "Bukod sa HTML tags, puwede tayong gumamit ng patterns, o selectors, para sabihin sa CSS kung sa aling HTML elements lang mag-a-apply ang styling natin."
+        "id": "01-1-Selectors",
+        "title": "Mga Selector",
+        "summary": "Bukod sa HTML tags, puwede tayong gumamit ng patterns, o selectors, para sabihin sa CSS kung sa aling HTML elements lang mag-a-apply ang styling natin."
       },
       {
-        "id" : "02-cascade-inheritance-specificity",
-        "title" : "Ang Cascade, Inheritance, at Specificity",
-        "summary" : "Mga nakakalitong concepts ng CSS, at kung paano sila gumagana."
+        "id": "02-cascade-inheritance-specificity",
+        "title": "Ang Cascade, Inheritance, at Specificity",
+        "summary": "Mga nakakalitong concepts ng CSS, at kung paano sila gumagana."
       },
       {
-        "id" : "03-box-model",
-        "title" : "Ang Box Model",
-        "summary" : "Mga spacing at sizes sa CSS"
+        "id": "03-box-model",
+        "title": "Ang Box Model",
+        "summary": "Mga spacing at sizes sa CSS"
       },
       {
-        "id" : "04-typography",
-        "title" : "Typography",
-        "summary" : "Mga fonts at iba pang styling ng text"
+        "id": "04-typography",
+        "title": "Typography",
+        "summary": "Mga fonts at iba pang styling ng text"
       },
       {
-        "id" : "05-display-types",
-        "title" : "Layout: Inline, Block, at Inline-Block Display",
-        "summary" : "Mga display types na madalas gamitin sa Web design."
+        "id": "05-display-types",
+        "title": "Layout: Inline, Block, at Inline-Block Display",
+        "summary": "Mga display types na madalas gamitin sa Web design."
       },
       {
-        "id" : "06-flexbox",
-        "title" : "Layout: Flexbox",
-        "summary" : "Ang flexible boxes layout, kung paano ito gamitin, at kung kailan ito dapat gamitin"
+        "id": "06-flexbox",
+        "title": "Layout: Flexbox",
+        "summary": "Ang flexible boxes layout, kung paano ito gamitin, at kung kailan ito dapat gamitin"
       },
       {
-        "id" : "07-grid",
-        "title" : "Layout: Grid",
-        "summary" : "Ang grid layout, kung paano ito gamitin, at kung kailan ito dapat gamitin"
+        "id": "07-grid",
+        "title": "Layout: Grid",
+        "summary": "Ang grid layout, kung paano ito gamitin, at kung kailan ito dapat gamitin"
       },
       {
-        "id" : "07-grid-flex",
-        "title" : "Layout: Paggamit Grid at Flexbox nang Sabay",
-        "summary" : "Hindi magkalabang layout techniques ang flexbox at grid. Sa katunayan, mas maganda pa nga kung gagamitin natin sila pareho. Tingnan kung paano."
+        "id": "07-grid-flex",
+        "title": "Layout: Paggamit Grid at Flexbox nang Sabay",
+        "summary": "Hindi magkalabang layout techniques ang flexbox at grid. Sa katunayan, mas maganda pa nga kung gagamitin natin sila pareho. Tingnan kung paano."
       },
       {
-        "id" : "08-positioning",
-        "title" : "Positioning: Relative, Absolute, Fixed, at Sticky",
-        "summary" : "Bukod sa display types, puwede rin nating gamitin ang position property ng CSS"
+        "id": "08-positioning",
+        "title": "Positioning: Relative, Absolute, Fixed, at Sticky",
+        "summary": "Bukod sa display types, puwede rin nating gamitin ang position property ng CSS"
       },
       {
-        "id" : "09-pseudo-elements-classes",
-        "title" : "Pseudo-elements at Pseudo-classes",
-        "summary" : "Puwede tayong magdagdag ng elements at states gamit lang ang CSS"
+        "id": "09-pseudo-elements-classes",
+        "title": "Pseudo-elements at Pseudo-classes",
+        "summary": "Puwede tayong magdagdag ng elements at states gamit lang ang CSS"
       },
       {
-        "id" : "10-transitions",
-        "title" : "Transitions",
-        "summary" : "Kapag nagpapalit ng value ang property ng isang element, puwede nating lagyan iyon ng transition."
+        "id": "10-transitions",
+        "title": "Transitions",
+        "summary": "Kapag nagpapalit ng value ang property ng isang element, puwede nating lagyan iyon ng transition."
       },
       {
-        "id" : "11-animations",
-        "title" : "Animations",
-        "summary" : "Gawing mas interesting ang Web pages mo gamit ang CSS animations."
+        "id": "11-animations",
+        "title": "Animations",
+        "summary": "Gawing mas interesting ang Web pages mo gamit ang CSS animations."
       }
     ]
   },
   {
-    "title" : "Basics of Web Programming with JavaScript",
-    "id" : "js-essentials",
-    "lessons" : [{
-        "id" : "01-hello-world",
-        "title" : "Ang Una Mong Program: <q>Hello, World!</q>",
-        "summary" : "Pagli-link ng JavaScript program sa HTML file mo, at ang una mong program."
+    "title": "Basics of Web Programming with JavaScript",
+    "id": "js-essentials",
+    "tags": ["Front End"],
+    "lessons": [
+      {
+        "id": "01-hello-world",
+        "title": "Ang Una Mong Program: <q>Hello, World!</q>",
+        "summary": "Pagli-link ng JavaScript program sa HTML file mo, at ang una mong program."
       },
       {
-        "id" : "02-statement-semicolon-comment",
-        "title" : "Statements, Semi-colons, at Comments",
-        "summary" : "Ano ang mga statement? Required ba ang semi-colons? Paano makakatulong ang paglalagay ng comments sa code?"
+        "id": "02-statement-semicolon-comment",
+        "title": "Statements, Semi-colons, at Comments",
+        "summary": "Ano ang mga statement? Required ba ang semi-colons? Paano makakatulong ang paglalagay ng comments sa code?"
       },
       {
-        "id" : "03-use-strict",
-        "title" : "Modern JavaScript: <code>'use strict'</code>",
-        "summary" : "Para saan ang <code>'use strict'</code>, at kailangan mo ba talaga nito?"
+        "id": "03-use-strict",
+        "title": "Modern JavaScript: <code>'use strict'</code>",
+        "summary": "Para saan ang <code>'use strict'</code>, at kailangan mo ba talaga nito?"
       },
       {
-        "id" : "04-variables",
-        "title" : "Variables",
-        "summary" : "Pagde-declare ng variables gamit ang <code>let</code> at <code>const</code>. At dapat pa bang gamitin ang <code>var</code>"
+        "id": "04-variables",
+        "title": "Variables",
+        "summary": "Pagde-declare ng variables gamit ang <code>let</code> at <code>const</code>. At dapat pa bang gamitin ang <code>var</code>"
       },
       {
-        "id" : "05-data-types",
-        "title" : "Data Types",
-        "summary" : "Ang iba't ibang types ng data sa JavaScript."
+        "id": "05-data-types",
+        "title": "Data Types",
+        "summary": "Ang iba't ibang types ng data sa JavaScript."
       },
       {
-        "id" : "06-operators",
-        "title" : "Basic Operators at Math Operations",
-        "summary" : "Puwede tayong gumawa ng math operations gamit ang JavaScript"
+        "id": "06-operators",
+        "title": "Basic Operators at Math Operations",
+        "summary": "Puwede tayong gumawa ng math operations gamit ang JavaScript"
       },
       {
-        "id" : "07-comparisons",
-        "title" : "Comparisons",
-        "summary" : "Gamitin natin ang comparisons (<code>&gt;</code>, <code>&lt;</code>, <code>&lt;=</code>, <code>&gt;=</code>, etc.)."
+        "id": "07-comparisons",
+        "title": "Comparisons",
+        "summary": "Gamitin natin ang comparisons (<code>&gt;</code>, <code>&lt;</code>, <code>&lt;=</code>, <code>&gt;=</code>, etc.)."
       },
       {
-        "id" : "08-selection",
-        "title" : "Selection",
-        "summary" : "Paggawa ng selection at decision gamit ang <code>if</code statements at ternary selection (</code>?:</code>)"
+        "id": "08-selection",
+        "title": "Selection",
+        "summary": "Paggawa ng selection at decision gamit ang <code>if</code statements at ternary selection (</code>?:</code>)"
       },
       {
-        "id" : "09-logical-operators",
-        "title" : "Logical Operators",
-        "summary" : "Ang logical operations ay mga operation na may boolean result."
+        "id": "09-logical-operators",
+        "title": "Logical Operators",
+        "summary": "Ang logical operations ay mga operation na may boolean result."
       },
       {
-        "id" : "10-loops",
-        "title" : "Loops: <code>while</code>, <code>do&hellip;while</code>, at <code>for</code>",
-        "summary" : "Inuulit ng mga loop ang isang set ng operations hanggang sa ma-meet ang condition na sinet mo."
+        "id": "10-loops",
+        "title": "Loops: <code>while</code>, <code>do&hellip;while</code>, at <code>for</code>",
+        "summary": "Inuulit ng mga loop ang isang set ng operations hanggang sa ma-meet ang condition na sinet mo."
       },
       {
-        "id" : "11-switch",
-        "title" : "Ang <code>switch</code> Statement",
-        "summary" : "Ang <code>switch</code> ay isang mas complex na version ng <code>if</code> statement."
+        "id": "11-switch",
+        "title": "Ang <code>switch</code> Statement",
+        "summary": "Ang <code>switch</code> ay isang mas complex na version ng <code>if</code> statement."
       },
       {
-        "id" : "12-functions",
+        "id": "12-functions",
         "title": "Functions",
-        "summary" : "Ang functions ay isang set ng operations na puwede nating gamitin nang paulit-ulit sa iba't ibang bahagi ng code."
+        "summary": "Ang functions ay isang set ng operations na puwede nating gamitin nang paulit-ulit sa iba't ibang bahagi ng code."
       },
       {
-        "id" : "13-arrow-functions",
-        "title" : "Arrow Functions", 
+        "id": "13-arrow-functions",
+        "title": "Arrow Functions",
         "summary": "Ang arrow functions ay isang way ng pagsusulat ng functions sa code."
       },
       {
-        "id" : "14-arrays",
-        "title" : "Arrays", 
+        "id": "14-arrays",
+        "title": "Arrays",
         "summary": "Ang arrays ay isang set ng mga value na puwedeng tawagin gamit lang ang isang variable."
       },
       {
-        "id" : "15-objects",
-        "title" : "Objects", 
+        "id": "15-objects",
+        "title": "Objects",
         "summary": "Ang objects ay mga value na may properties at sariling functions na kung tawagin ay method."
       },
       {
-        "id" : "16-dom",
-        "title" : "Ang Document Object Model", 
+        "id": "16-dom",
+        "title": "Ang Document Object Model",
         "summary": "Ang Document Object Model o DOM ay isang object representation ng HTML webpage na puwedeng gamitin sa JavaScript."
       },
       {
-        "id" : "17-dom-query",
-        "title" : "Paghahanap ng Elements sa DOM", 
+        "id": "17-dom-query",
+        "title": "Paghahanap ng Elements sa DOM",
         "summary": "Paano natin gagamitin ang JavaScript sa paghahanap ng HTML elements sa DOM?"
       },
       {
-        "id" : "18-attributes-properties",
-        "title" : "DOM Attributes at Properties", 
+        "id": "18-attributes-properties",
+        "title": "DOM Attributes at Properties",
         "summary": "Puwede rin nating baguhin ang HTML attributes gamit ang JavaScript"
       },
       {
-        "id" : "19-dom-manipulation",
-        "title" : "DOM Manipulation", 
+        "id": "19-dom-manipulation",
+        "title": "DOM Manipulation",
         "summary": "Gamit ang JavaScript, puwede tayong magdagdag ng elements, attributes, at text sa HTML page natin."
       },
       {
-        "id" : "20-events",
-        "title" : "Events", 
+        "id": "20-events",
+        "title": "Events",
         "summary": "Ang mga event ay mga signal na sine-send ng browser sa code natin kapag may ginawa ang user o kapag may ibang changes na nangyari na puwede nating gamitin."
       },
       {
-        "id" : "21-storage",
-        "title" : "Storage", 
+        "id": "21-storage",
+        "title": "Storage",
         "summary": "Gamit ang cookies, <code>localStorage</code>, at <code>sessionStorage</code>, puwede tayong mag-save ng data sa browser ng user."
       }
     ]
   },
   {
-    "title" : "Essentials of HyperText Markup Language",
-    "id" : "html-essentials",
-    "lessons" : [
+    "title": "Essentials of HyperText Markup Language",
+    "id": "html-essentials",
+    "tags": ["Front End"],
+    "summary": "Isang introduction sa basics ng HTML para makagawa ka ng accessible na Web sites.",
+    "lessons": [
       {
-        "id" : "01-hypertext-markup-language",
-        "title" : "HyperText Markup Language",
-        "summary" : "Ano ang HTML, at ano ang lugar nito sa Web development?"
+        "id": "01-hypertext-markup-language",
+        "title": "HyperText Markup Language",
+        "summary": "Ano ang HTML, at ano ang lugar nito sa Web development?"
       },
       {
-        "id" : "02-html-syntax",
-        "title" : "HTML Syntax",
-        "summary" : "Ang grammar na sinusunod ng HTML"
+        "id": "02-html-syntax",
+        "title": "HTML Syntax",
+        "summary": "Ang grammar na sinusunod ng HTML"
       },
       {
-        "id" : "03-html-page",
-        "title" : "Ang HTML Page",
-        "summary" : "Ang basic structure ng isang HTML page"
+        "id": "03-html-page",
+        "title": "Ang HTML Page",
+        "summary": "Ang basic structure ng isang HTML page"
       },
       {
-        "id" : "04-paragraph-headline",
-        "title" : "Paragraphs at Headlines",
-        "summary" : ""
+        "id": "04-paragraph-headline",
+        "title": "Paragraphs at Headlines",
+        "summary": ""
       },
       {
-        "id" : "05-bold-italic",
-        "title" : "Bold at Italic Text",
-        "summary" : ""
+        "id": "05-bold-italic",
+        "title": "Bold at Italic Text",
+        "summary": ""
       },
       {
-        "id" : "06-list",
-        "title" : "Mga Listahan",
-        "summary" : ""
+        "id": "06-list",
+        "title": "Mga Listahan",
+        "summary": ""
       },
       {
-        "id" : "07-quotes-blockquotes",
-        "title" : "Quotes at Blockquotes",
-        "summary" : ""
+        "id": "07-quotes-blockquotes",
+        "title": "Quotes at Blockquotes",
+        "summary": ""
       },
       {
-        "id" : "08-date-time",
-        "title" : "Date at Time",
-        "summary" : ""
+        "id": "08-date-time",
+        "title": "Date at Time",
+        "summary": ""
       },
       {
-        "id" : "09-code-preformatted-line-breaks",
-        "title" : "Code, Preformatted Text, at Line Breaks",
-        "summary" : ""
+        "id": "09-code-preformatted-line-breaks",
+        "title": "Code, Preformatted Text, at Line Breaks",
+        "summary": ""
       },
       {
-        "id" : "10-subscript-superscript-small",
-        "title" : "Subscripts, Superscripts, at Small Text",
-        "summary" : ""
+        "id": "10-subscript-superscript-small",
+        "title": "Subscripts, Superscripts, at Small Text",
+        "summary": ""
       },
       {
-        "id" : "11-debugging",
-        "title" : "Kapag may mali sa code mo&hellip;",
-        "summary" : "Mga tools at techniques na puwede mong gawin kapag may mali sa code mo."
+        "id": "11-debugging",
+        "title": "Kapag may mali sa code mo&hellip;",
+        "summary": "Mga tools at techniques na puwede mong gawin kapag may mali sa code mo."
       },
       {
-        "id" : "12-html-attributes",
-        "title" : "HTML Attributes",
-        "summary" : "Ang attributes ay additional settings na puwede nating ilagay sa mga tag para madagdagan o baguhin mismo ang functionality nila."
+        "id": "12-html-attributes",
+        "title": "HTML Attributes",
+        "summary": "Ang attributes ay additional settings na puwede nating ilagay sa mga tag para madagdagan o baguhin mismo ang functionality nila."
       },
       {
-        "id" : "13-aria",
-        "title" : "ARIA Roles",
-        "summary" : "Ang Accessible Rich Internet Applications (ARIA) ay ginawa para maging accessible sa lahat ang mga Web page."
+        "id": "13-aria",
+        "title": "ARIA Roles",
+        "summary": "Ang Accessible Rich Internet Applications (ARIA) ay ginawa para maging accessible sa lahat ang mga Web page."
       },
       {
-        "id" : "14-whitespace",
-        "title" : "HTML Whitespace at Formatting",
-        "summary" : "Ito ang puwede mong gawin para mas madaling basahin ang HTML code mo."
+        "id": "14-whitespace",
+        "title": "HTML Whitespace at Formatting",
+        "summary": "Ito ang puwede mong gawin para mas madaling basahin ang HTML code mo."
       },
       {
-        "id" : "15-entities",
-        "title" : "HTML Entities",
-        "summary" : "Paano tayo maglalagay ng special characters o symbols na wala sa keyboard natin?"
+        "id": "15-entities",
+        "title": "HTML Entities",
+        "summary": "Paano tayo maglalagay ng special characters o symbols na wala sa keyboard natin?"
       },
       {
-        "id" : "16-links",
-        "title" : "Ang <i>HyperText</i>: Web Links",
-        "summary" : "I-connect natin sa isa't isa ang mga webpage natin."
+        "id": "16-links",
+        "title": "Ang <i>HyperText</i>: Web Links",
+        "summary": "I-connect natin sa isa't isa ang mga webpage natin."
       },
       {
-        "id" : "17-url-paths",
-        "title" : "Mga URL at File Paths",
-        "summary" : ""
+        "id": "17-url-paths",
+        "title": "Mga URL at File Paths",
+        "summary": ""
       },
       {
-        "id" : "18-navigation",
-        "title" : "Navigation Links",
-        "summary" : "Sa karamihan ng webpages, may makikita tayong navigation bar. Paano natin ito gagawin sa HTML?"
+        "id": "18-navigation",
+        "title": "Navigation Links",
+        "summary": "Sa karamihan ng webpages, may makikita tayong navigation bar. Paano natin ito gagawin sa HTML?"
       },
       {
-        "id" : "19-images",
-        "title" : "Images",
-        "summary" : "Paglalagay ng images, at iba pang techniques na puwede nating gawin para ma-save ang internet data ng users natin."
+        "id": "19-images",
+        "title": "Images",
+        "summary": "Paglalagay ng images, at iba pang techniques na puwede nating gawin para ma-save ang internet data ng users natin."
       },
       {
-        "id" : "20-figure-figcaption",
-        "title" : "Figures at <code>figcaption</code>",
-        "summary" : "Ang figures ay mga media na isinasama natin sa content bilang additional information."
+        "id": "20-figure-figcaption",
+        "title": "Figures at <code>figcaption</code>",
+        "summary": "Ang figures ay mga media na isinasama natin sa content bilang additional information."
       },
       {
-        "id" : "21-audio-video-subtitles",
-        "title" : "Audio, Video, at Subtitles",
-        "summary" : ""
+        "id": "21-audio-video-subtitles",
+        "title": "Audio, Video, at Subtitles",
+        "summary": ""
       },
       {
-        "id" : "22-iframes",
-        "title" : "Pag-e-embed ng media gamit ang <code>iframe</code>",
-        "summary" : ""
+        "id": "22-iframes",
+        "title": "Pag-e-embed ng media gamit ang <code>iframe</code>",
+        "summary": ""
       },
       {
-        "id" : "23-languages",
-        "title" : "Paglalagay ng content na nasa ibang wika",
-        "summary" : ""
+        "id": "23-languages",
+        "title": "Paglalagay ng content na nasa ibang wika",
+        "summary": ""
       },
       {
-        "id" : "24-forms",
-        "title" : "HTML Forms",
-        "summary" : "Subukan nating gumawa ng sign up/log in form"
+        "id": "24-forms",
+        "title": "HTML Forms",
+        "summary": "Subukan nating gumawa ng sign up/log in form"
       },
       {
-        "id" : "25-tables",
-        "title" : "HTML Tables",
-        "summary" : "Gumawa tayo ng table para mag-display ng data"
+        "id": "25-tables",
+        "title": "HTML Tables",
+        "summary": "Gumawa tayo ng table para mag-display ng data"
       }
     ]
   }

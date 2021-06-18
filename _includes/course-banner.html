@@ -4,7 +4,9 @@
 {% else %}
   {% assign courseIsDone = course.is_done %}
 {% endif %}
-<header class="banner">
+{% if course.image %}
+{% endif %}
+<header class="banner{% if course.image %} has-image{% endif %}"{% if course.image %} style="--banner-image: url('{{ course.image }}');"{% endif %}>
   <div class="banner__wrapper">
     <h1 class="banner__title">
       {{ page.title }}
@@ -20,6 +22,6 @@
     {% else %}
         {% assign lead = site.description %}
     {% endif %}
-    <p>{{ lead }}</p>
+    <p class="banner__paragraph">{{ lead }}</p>
   </div>
 </header>

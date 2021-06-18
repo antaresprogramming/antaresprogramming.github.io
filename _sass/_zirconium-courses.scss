@@ -49,12 +49,16 @@ ul.course-list {
 }
 
 .badge {
-	font-size: 1rem;
+	font-size: small;
 	font-weight: normal;
-	background-color: var(--banana-100);
+	background-color: var(--primary);
 	padding: 0.25rem;
 	border-radius: 0.25rem;
-	border: 1px solid var(--banana-500);
+	border: 1px solid var(--primary);
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: 0.4px;
+	color: #fff;
 }
 
 .note {
@@ -144,4 +148,19 @@ ul.course-list {
   a:not([href]) {
     opacity: 0.5;
   }
+}
+
+.courses .featured.post {
+	grid-column: span 2;
+	width: 100%;
+}
+
+.course-list__title {
+	font-size: 3rem;
+	margin: 0;
+}
+
+.courses .latest {
+	max-width: 100ch;
+	margin: auto;
 }
