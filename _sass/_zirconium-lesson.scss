@@ -106,8 +106,9 @@
       margin: 1rem;
       position: relative;
       top: -2rem;
-
       transition: top 300ms, opacity 300ms;
+      height: -moz-fit-content;
+      height: fit-content;
     }
   }
 
@@ -307,17 +308,17 @@
 }
 
 .error h1 {
-	font-size: 10vw;
-	margin-top: 10vh;
-	line-height: 0.8;
-	margin-bottom: 5vh;
+  font-size: 10vw;
+  margin-top: 10vh;
+  line-height: 0.8;
+  margin-bottom: 5vh;
 }
 
 .error .error-code {
-	font-weight: bolder;
-	opacity: 0.5;
-	font-size: 0.5em;
-	line-height: 0.6;
-	letter-spacing: 5px;
-	margin-bottom: 1rem;
+  font-weight: bolder;
+  opacity: 0.5;
+  font-size: 0.5em;
+  line-height: 0.6;
+  letter-spacing: 5px;
+  margin-bottom: 1rem;
 }
