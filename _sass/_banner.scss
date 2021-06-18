@@ -1,71 +1,90 @@
-@import 'utilities/variables';
+@import "utilities/variables";
+
 .banner {
-	background-color: $purple;
-	color: #fff;
-	min-height: 75vh;
-	display: grid;
-	align-items: center;
-	justify-content: center;
-	
-	&.banner--cta {
-	    display: grid;
-	    grid-template-columns: repeat(3, 1fr);
-	    
-	    .banner__wrapper {
-	      grid-column: 1/3;
-	      grid-row: 1/3;
-	      z-index: 1;
-	      
-	      .banner-actions {
-	        display: flex;
-	        gap: 1rem;
-	        flex-wrap: wrap;
-	        margin-top: 2rem;
-        }
-      }
-      
-      & > svg {
-	      grid-column: 2/4;
-	      grid-row: 2/3;
-	      height: 30vw;
-	      margin-left: auto;
-	      margin-right: -5vw;
-      }
-    }
+  min-height: 50vh;
+  display: grid;
+  background-size: cover, contain;
+  background-position: right -100px center;
+  background-repeat: repeat, no-repeat;
+  grid-template-rows: 20vh 1fr;
 }
 
-.banner__wrapper {
-	max-width: calc(var(--content-width) * 2);
-	padding: 2rem;
-	display: flex;
-	flex-direction: column;
+.banner::after,
+.banner::before {
+  content: "";
+  grid-row: 1/3;
+  height: 100%;
+  grid-column: 1/2;
+
+}
+
+.banner::after {
+  background-image: linear-gradient(
+    to bottom,
+    hsla(0, 0%, 100%, 0) 0%,
+    hsla(0, 0%, 100%, 0.013) 8.1%,
+    hsla(0, 0%, 100%, 0.049) 15.5%,
+    hsla(0, 0%, 100%, 0.104) 22.5%,
+    hsla(0, 0%, 100%, 0.175) 29%,
+    hsla(0, 0%, 100%, 0.259) 35.3%,
+    hsla(0, 0%, 100%, 0.352) 41.2%,
+    hsla(0, 0%, 100%, 0.45) 47.1%,
+    hsla(0, 0%, 100%, 0.55) 52.9%,
+    hsla(0, 0%, 100%, 0.648) 58.8%,
+    hsla(0, 0%, 100%, 0.741) 64.7%,
+    hsla(0, 0%, 100%, 0.825) 71%,
+    hsla(0, 0%, 100%, 0.896) 77.5%,
+    hsla(0, 0%, 100%, 0.951) 84.5%,
+    hsla(0, 0%, 100%, 0.987) 91.9%,
+    hsl(0, 0%, 100%) 100%
+  );
+  background-size: cover;
+  background-position: center;
+
+  @media (prefers-color-scheme: dark) {
+    background-image: linear-gradient(
+      to bottom,
+      hsla(0, 0%, 13%, 0) 0%,
+      hsla(0, 0%, 13%, 0.013) 8.1%,
+      hsla(0, 0%, 13%, 0.049) 15.5%,
+      hsla(0, 0%, 13%, 0.104) 22.5%,
+      hsla(0, 0%, 13%, 0.175) 29%,
+      hsla(0, 0%, 13%, 0.259) 35.3%,
+      hsla(0, 0%, 13%, 0.352) 41.2%,
+      hsla(0, 0%, 13%, 0.45) 47.1%,
+      hsla(0, 0%, 13%, 0.55) 52.9%,
+      hsla(0, 0%, 13%, 0.648) 58.8%,
+      hsla(0, 0%, 13%, 0.741) 64.7%,
+      hsla(0, 0%, 13%, 0.825) 71%,
+      hsla(0, 0%, 13%, 0.896) 77.5%,
+      hsla(0, 0%, 13%, 0.951) 84.5%,
+      hsla(0, 0%, 13%, 0.987) 91.9%,
+      hsl(0, 0%, 13%) 100%
+    );
+  }
+}
+
+.banner::before {
+  background-image: url("/images/course-banner-pic.png");
+  background-size: contain;
+  background-position: right -100px center;
+  background-repeat: no-repeat;
+
+  @media (prefers-color-scheme: dark) {
+    filter: invert(100%);
+  }
 }
 
 .banner__title {
-	margin: 0;
-	font-size: calc(2rem + 1vw);
-	padding-bottom: 0.05rem;
-	background-image: linear-gradient(
-	    to right,
-	    $yellow,
-	    $yellow 60px,
-	    $pink 60px,
-	    $pink 120px,
-	    $blue 120px,
-	    $blue 180px,
-	    $orange 180px,
-	    $orange 240px,
-	    transparent 240px);
-	background-size: 100% 5px;
-	background-repeat: no-repeat;
-	background-position: bottom center;
-	letter-spacing: 0;
+  margin: 0;
+  font-size: 5rem;
+  font-size: clamp(3rem, 10vw, 7rem);
+  line-height: 1;
 }
 
-.banner__subtitle {
-	order: -1;
-	margin: 0;
-	margin-bottom: 0.25rem;
-	font-size: 1rem;
-	text-transform: uppercase;
+.banner__wrapper {
+  margin: 4vw;
+  grid-row: 2/3;
+  grid-column: 1/2;
+  z-index: 1;
 }
