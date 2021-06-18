@@ -1,15 +1,15 @@
 @import "utilities/variables";
 ul.course-list {
-	list-style-type: none;
-	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-	gap: 1rem;
-	margin: 2rem auto;
-	padding: 0;
-	max-width: var(--content-width);
-	
-	li{
-	  a {
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+  margin: 2rem auto;
+  padding: 0;
+  max-width: var(--content-width);
+
+  li {
+    a {
       display: grid;
       padding: 1.5rem;
       background: none;
@@ -19,59 +19,61 @@ ul.course-list {
       transition: box-shadow 300ms;
       gap: 1em;
 
-	    &:hover {
-	      box-shadow: 0 8px 15px #0003;
+      &:hover {
+        box-shadow: 0 8px 15px #0003;
       }
-      
+
       &:active {
         box-shadow: none;
         transition: box-shadow 30ms;
       }
-	  
-	    strong {
-	      font-size: 1.5em;
-	      line-height: 1.25;
+
+      strong {
+        font-size: 1.5em;
+        line-height: 1.25;
       }
-	    
-	    p {
-	      margin: 0
-	    }
-	    
-	    .release-date {
-	      color: #888;
-	      
-	      svg {
-	        display: inline;
-	      }
+
+      p {
+        margin: 0;
+      }
+
+      .release-date {
+        color: #888;
+
+        svg {
+          display: inline;
+        }
       }
     }
   }
 }
 
 .badge {
-	font-size: small;
-	font-weight: normal;
-	background-color: var(--primary);
-	padding: 0.25rem;
-	border-radius: 0.25rem;
-	border: 1px solid var(--primary);
-	font-weight: bold;
-	text-transform: uppercase;
-	letter-spacing: 0.4px;
-	color: #fff;
+  font-size: small;
+  font-weight: normal;
+  background-color: var(--primary);
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+  border: 1px solid var(--primary);
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  color: #fff;
 }
 
 .note {
-	display: block;
-	padding: 1rem;
-	border-radius: 0.5rem;
-	margin: 1rem;
-	border: 1px solid #0003;
-
-	&.note--info {
-		background-color: rgba($blue, 0.15);
-		border-color: rgba($color: $blue, $alpha: 0.5);
-	}
+  display: block;
+  padding: 1rem;
+  margin: 1rem;
+  border: 1px solid #0003;
+  box-shadow: none;
+  background-color: var(--mark-bg);
+  color: var(--mark-fg);
+  --mark-bg: #1e90ff1c;
+  --mark-fg: var(--fg-color);
+  border-left: 5px solid;
+  --mark-color: dodgerblue;
+  border-color: var(--mark-color);
 }
 
 .lessons-list {
@@ -83,65 +85,69 @@ ul.course-list {
     position: relative;
     display: flex;
     align-items: center;
-    
+
     &::before {
-	    content: counter(lesson);
-	    border-radius: 100%;
-	    background-color: #ddd;
-	    width: 50px;
-	    height: 50px;
-	    display: grid;
-	    text-align: center;
-	    align-content: center;
-	    z-index: 2;
+      content: counter(lesson);
+      border-radius: 100%;
+      background-color: #ddd;
+      width: 50px;
+      height: 50px;
+      display: grid;
+      text-align: center;
+      align-content: center;
+      z-index: 2;
     }
-    
+
     &.lesson--open::before {
-	    background-color: var(--banana-100);
-	    box-shadow: 0 0 0 3px var(--banana-500);
+      background-color: var(--bg-color);
+      box-shadow: 0 0 0 3px var(--accent);
     }
-    
+
     &::after {
-	    content: '';
-	    position: absolute;
-	    height: 100%;
-	    width: 3px;
-	    background-color: #ddd;
-	    top: 50%;
-	    left: 28px;
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: 3px;
+      background-color: #ddd;
+      top: 50%;
+      left: 24px;
     }
-    
+
     &.lesson--open::after {
-      background-color: var(--banana-500);
+      background-color: var(--accent);
     }
-    
-    &:last-child::after { content: none; }
-    
+
+    &:last-child::after {
+      content: none;
+    }
+
     a {
-	    display: block;
-	    background: none;
-	    color: inherit;
-	    padding: 1rem;
-	    margin: 0.5rem;
-	    border-radius: 0.5rem;
-	    border: 1px solid #0000;
-	    transition: box-shadow 300ms;
-	    flex: 1;
-	    
-	    &[href]:hover, &:focus {
-	      border-color: #0003;
-	      box-shadow: 0 18px 45px #0003;
-	    }
-	    
-	    &:active {
-	      box-shadow: none;
-	      transition: box-shadow 30ms;
-	    }
-	    
-	    p {
-	      margin: 0;
-	      text-indent: 0;
-	    }
+      display: block;
+      background: none;
+      color: inherit;
+      padding: 1rem;
+      margin: 0.5rem;
+      border-radius: 0.5rem;
+      border: 1px solid #0000;
+      transition: box-shadow 300ms;
+      flex: 1;
+      text-decoration: none;
+
+      &[href]:hover,
+      &:focus {
+        border-color: #0003;
+        box-shadow: 0 18px 45px #0003;
+      }
+
+      &:active {
+        box-shadow: none;
+        transition: box-shadow 30ms;
+      }
+
+      p {
+        margin: 0;
+        text-indent: 0;
+      }
     }
   }
 
@@ -151,16 +157,16 @@ ul.course-list {
 }
 
 .courses .featured.post {
-	grid-column: span 2;
-	width: 100%;
+  grid-column: span 2;
+  width: 100%;
 }
 
 .course-list__title {
-	font-size: 3rem;
-	margin: 0;
+  font-size: 3rem;
+  margin: 0;
 }
 
 .courses .latest {
-	max-width: 100ch;
-	margin: auto;
+  max-width: 100ch;
+  margin: auto;
 }
