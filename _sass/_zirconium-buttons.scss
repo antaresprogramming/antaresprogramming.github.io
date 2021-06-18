@@ -1,37 +1,46 @@
 .btn {
-	background-image: none;
-	border-radius: 0.5rem;
-	padding: 1rem;
-	border-radius: 0.5rem;
-	border: none;
-	color: var(--button-fg);
-	transition: filter 300ms;
-	display: inline-flex;
-	align-items: center;
-	align-content: center;
-	gap: 0.5rem;
-	cursor: pointer;
-	font-family: var(--ui-font);
-	background-color: transparent;
-	font-weight: bold;
-	text-decoration: none;
+  background-image: none;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  color: var(--button-fg);
+  transition: filter 300ms;
+  display: inline-flex;
+  align-items: center;
+  align-content: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  font-family: var(--ui-font);
+  --button-bg: transparent;
+  background-color: var(--button-bg);
+  font-weight: bold;
+  text-decoration: none;
 
-	&:active,
-	&:hover,
-	&:focus {
-		background-color: var(--button-bg);
-		color: var(--button-fg);
-	}
+  &:hover,
+  &:active {
+    background-color: #ff085222;
+  }
 
-	&:active {
-		filter: saturate(150%);
-		box-shadow: 0 0 0 #0000;
-	}
+  &:focus {
+    box-shadow: 0 0 0 3px var(--primary);
+  }
 
-	&--primary {
-	}
+  &.btn--primary:hover,
+  &.btn--primary:active {
+    color: var(--primary);
+  }
 
-	svg {
-		min-width: 2em;
-	}
+  &:active {
+    filter: saturate(150%);
+  }
+
+  &--primary {
+    --button-fg: #fff;
+    --button-bg: var(--primary);
+  }
+
+  svg {
+    min-width: 2em;
+  }
 }
