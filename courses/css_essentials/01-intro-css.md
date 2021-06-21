@@ -9,40 +9,25 @@ description: Bakit kailangan ang CSS? At paano ito gagamitin kasama ng HTML?
 
 has_downloads: false
 ---
+## Bakit kailangan ang CSS?
+Kailangan ang CSS (Cascading Stylesheets) para mabigyan ng styling at layout ang HTML pages.
 
-## Ang Cascading Stylesheets
-Bakit kailangan ang CSS? At paano ito gagamitin kasama ng HTML?
+Nang magsimula ang World Wide Web (WWW), HTML lang ang language[^see-more] na ginagamit nito. Ito ang nagdidikta kung ano ang magiging content *at* styling ng isang webpage. Wala pang scripting noon, kaya hindi pa interactive ang mga website.
 
+Nang tumagal, na-realize ng mga web developer (o webmaster, gaya ng tawag sa kanila noon) na kailangan nilang paghiwalayin ang content at styling para maging mas efficient ang paggawa nila ng websites. Dito nila sinimulang gamitin ang CSS. Maraming benefits sa paggamit ng CSS. Heto ang ilan:
 
-Gumagamit tayo ng tatlong programming languages[^see-more] para sa Web: <a href="/glossary/#HTML" data-glossary-term="HTML" class="glossary-entry-link">HTML</a>, <a href="/glossary/#CSS" class="glossary-entry-link" data-glossary-term="CSS">CSS</a>, at <a class="glossary-entry-link" href="/glossary/#JavaScript" data-glossary-term="JavaScript">JavaScript</a>. Pero hindi laging ganito. Noong nagsimula ang World Wide Web, HTML lang ang ginagamit sa paggawa ng webpages. HTML ang nagha-handle ng content at presentation. Walang scripting noon, hindi puwedeng dagdagan ang behavior ng browser.
+- <b>Nasa iisang lugar ang lahat ng styles.</b> Dahil nakahiwalay sa HTML ang styles. Hindi na kailangang isa-isang i-edit ang bawat isang HTML file para lang baguhin ang design ng isang element.
+- <b>Puwedeng i-share sa iba ang design mo.</b> Puwede kang gumawa ng isang <i>stylesheet library</i> na pwedeng gamitin ng iba para sa sarili nilang mga website.
+- <b>Mas advanced ang styling na puwedeng gawin.</b> Hindi katulad ng styling sa HTML na kulay lang ng text at background ang pwedeng baguhin, mas maraming advanced features ang CSS. Bukod sa styling ng text, puwede mo ring baguhin ang layout ng buong webpage. Puwede ka ring maglagay ng mga transition at animation. At higit sa lahat, puwede mong i-customize ang styles ng webpage mo depende sa size ng screen ng user.
 
-[^see-more]: Marami pa rin ang nagtatalo kung matatawag ba talagang programming language ang HTML at CSS. Para sa purposes ng course na ito, iko-consider natin sila bilang programming language. Kung gusto mong malaman ang opinyon ng bawat side, puwede mong basahin ang sites na ito:
-      - [Is HTML A Programming Language?](https://anyonecanlearntocode.com/blog_posts/is-html-a-programming-language)
-      - [Of course HTML is a programming language](https://mortoray.com/2019/02/11/of-course-html-is-a-programming-language/), Edaqa Mortoray
-      - [Is HTML considered a programming language?](https://stackoverflow.com/questions/145176/is-html-considered-a-programming-language), StackOverflow question
+## Paano maglalagay ng CSS sa loob ng isang webpage?
 
-### BCE (Before CSS Era)
-May iba't ibang techniques at <i>hacks</i> para malagyan ng design ang webpages noon. Nandiyan ang `bgcolor=""` attribute, ang `<font>` at `<center>` tags, at ang notorious at kasumpa-sumpang `<marquee>` at `<blink>` tags. Para sa layout, gumamit sila ng `<table>` tags para magkaroon ng kunwaring grid sa isang page.
+May tatlong paraan ng paglalagay ng CSS sa HTML.
+* <b>Inline styles.</b> Puwede mong ilagay ang styles sa loob ng `style=""` attribute ng HTML tag na gusto mong lagyan ng styling. Isang element lang ang apektado ng mga inline style.
+* <b>Internal styles.</b> Puwede mong ilagay sa loob ng `<style></style>` ang CSS mo. Ang mga element lang sa loob ng isang HTML file ang apektado ng internal styles.
+* <b>External styles.</b> Puwede kang gumawa ng hiwalay na file na may `.css` na file extension. Pagkatapos, puwede mong gamitin ito sa loob ng HTML file mo gamit ang `<link>` tag sa loob ng `<head></head>`.
 
-Maraming problema rito. Una, naging <i>marumi</i> ang code dahil nagkaroon ito ng maraming tags na kung tutuusin ay hindi naman kailangan. Kapag dumami rin ang mga page ng isang website, mas mahirap na itong maintain. Halimbawa, kapag gusto mong palitan ang font ng isang headline, kailangan mong isa-isahin ang lahat ng HTML file mo, hanapin ang mga headlines na gusto mong palitan ng font&mdash; nakakapagod ito, hindi praktikal.
-
-Naging resulta rin ito ng isang giyera. Dahil sa pagpapaligsahan ng magkalabang browsers [^2], ang Netscape Navigator at Internet Explorer, umimbento sila ng sarili nilang mga HTML tags para makakuha ng developers at users. Nahirapan ang mga developers na gumawa ng webpages dahil kailangan nilang siguruhin na gagana ito sa lahat ng browsers.
-
-[^2]: Nakilala ang competition na ito bilang <i>Browser Wars</i>. Isa itong madilim pero exciting na era sa Web history. Dahil sa digmaang ito, nabuo ang World Wide Web Consortium (W3C) para tipunin ang lahat ng mga browser at magkasundo sa iisang set ng HTML tags, at nang magtagal, CSS at JavaScript.
-
-### Nang dumating ang CSS&hellip;
-Maraming problemang nawala nang dumating ang CSS. Totoo, hindi agad ginamit ng developers ang CSS. Pero noong dumami na ang mga gumagamit nito, na-realize nila ang benefits nito.
-
-Ang <dfn>separation of concerns</dfn> ay isang concept na nagsasabi na dapat nakahati sa mga sections ang isang computer program&mdash;o sa kaso natin, mga webpage&mdash;at dapat na isang bagay lang ang ginagawa ng mga section na iyon. Nang dumating ang CSS, nahati ang Web sa dalawang sections, ang section para sa content at para sa presentation. Naibalik ang dating purpose ng HTML na mag-focus sa purpose, structure, at meaning ng content. Lahat ng visual styling at layout ay trabaho na ngayon ng CSS.
-
-Dahil dito, mas madali nang i-maintain ang webpages. Halimbawa, kapag gusto mong palitan ang font at text color ng mga headline sa webpages mo, hindi mo na kailangang suyurin ang bawat isang HTML file mo at hanapin ang lahat ng `<font>` tags. Sa halip, nasa iisang CSS file lang ang lahat ng styles, at kapag binago mo ito, magbabago na ang font ng lahat ng headlines sa lahat ng webpages mo.
-
-Dahil din sa separation na ito ng concerns, puwedeng magkaroon ng iba't ibang layout at visual styles ang iisang HTML page. Ipinapakita ito ng [CSS Zen Garden](https://www.csszengarden.com). Iisang HTML file lang ang ginagamit ng website na ito, pero gamit ang iba't ibang CSS files, puwedeng magmukhang iba-ibang websites ang tinitingnan mo.
-
-### Paano gamitin ang CSS?
-May tatlong paraan ng paggamit sa CSS. Puwede itong gamitin bilang inline styles, internal, o external stylesheet.
-
-#### Inline styles
+### Inline styles
 Puwede nating lagyan ng styles ang indibiduwal na HTML tags. Sa susunod na halimbawa, pansinin kung paano ginamit ang `style=""` attribute para maglagay ng styles sa isang paragraph lang.
 
 <pre><code data-language="html">&lt;p>I'm not nothing without a steady hand. I'm not nothing unless I know I can. I'm still something if I don't got a man. I'm a free woman.&lt;/p>
@@ -177,32 +162,7 @@ May dalawa tayong attributes na nilagay sa `<link>` tag:
 `href`
 : Ang path papunta sa CSS file mo.
 
-### Task
-Kaya mo bang i-replicate ang design na ito? Puwede kang gumamit ng inline, internal, o external stylesheet.
-
-![Isang webpage na may asul na headline at paragraph na may black text at gray na background. May isa rin itong ordered list na lime ang kulay ng background color, ang items nito ay may orange na background.]({{ site.baseurl }}/images/courses/css-essentials/01-intro-css/activity-1.png)
-
-Heto ang HTML code na puwede mong gawing starter:
-<pre><code data-language="html">&lt;html>
-&lt;head>&lt;/head>
-&lt;body>
-  &lt;h1>This is a headline&lt;/h1>
-  &lt;p>Turning up emotional faders, keep on keeping self-hating phrases, I have heard enough of these voices. It's almost like I have no choice.&lt;/p>
-  &lt;ol>
-    &lt;li>Alice&lt;/li>
-    &lt;li>Stupid Love&lt;/li>
-    &lt;li>Rain On Me&lt;/li>
-    &lt;li>Free Woman&lt;/li>
-    &lt;li>Fun Tonight&lt;/li>
-  &lt;/ol>
-&lt;/body>
-&lt;/html>
-</code></pre>
-
-#### Hint
-- `blue` ang text color ng headline
-- `gray` ang background-color ng paragraph
-- `lime` ang ginamit sa background ng ordered list
-- `orange` ang background ng mga list items.
-
-<b>I-tweet o i-post ang progress mo!</b> Gamitin ang <i>#100DaysOfCode</i> at <i>#CoursesByAntares</i> at i-tag ang Twitter account namin ([@antaresphdev](https://twitter.com/antaresphdev)) o ang Facebook account namin ([Antares Programming](https://facebook.com/antaresprogramming)). Mag-post o mag-tweet ng screenshot para makita natin ang progress mo!
+[^see-more]: Marami pa rin ang nagtatalo kung matatawag ba talagang programming language ang HTML at CSS. Para sa purposes ng course na ito, iko-consider natin sila bilang programming language. Kung gusto mong malaman ang opinyon ng bawat side, puwede mong basahin ang sites na ito:
+      - [Is HTML A Programming Language?](https://anyonecanlearntocode.com/blog_posts/is-html-a-programming-language)
+      - [Of course HTML is a programming language](https://mortoray.com/2019/02/11/of-course-html-is-a-programming-language/), Edaqa Mortoray
+      - [Is HTML considered a programming language?](https://stackoverflow.com/questions/145176/is-html-considered-a-programming-language), StackOverflow question
