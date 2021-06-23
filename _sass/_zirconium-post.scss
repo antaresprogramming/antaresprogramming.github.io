@@ -116,8 +116,8 @@ aside.medium {
   text-decoration: none;
 }
 
-.tags .tag:hover {
-  background-color: rgba(255, 8, 82, 0.1);
+.tags a.tag[href]:hover {
+	background-color: rgba(255, 8, 82, 0.1);
 }
 
 .tag-separator {
@@ -440,9 +440,16 @@ main.article {
 .post.post--inpost {
   border: 1px solid #0003;
   margin: 1rem auto;
+  grid-template-columns: minmax(100px, 1fr) 2fr;
 
-  @media screen and (min-width: 480px) {
+  @media screen and (min-width: 550px) {
     height: 250px;
+  }
+
+  .post__image {
+    max-height: 300px;
+    width: 100%;
+    object-fit: cover;
   }
 }
 
@@ -456,4 +463,34 @@ main.article {
   overflow: hidden;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
+}
+
+@media screen and (min-width: 720px) {
+  figure.full-bleed {
+    display: grid;
+    grid-template-columns: inherit;
+  }
+
+  figure.full-bleed figcaption {
+    grid-row: 2;
+    grid-column: 2;
+  }
+
+  figure.full-bleed > :not(figcaption) {
+    grid-row: 1;
+    grid-column: 1/4;
+  }
+
+  .full-bleed.half > :not(figcaption) {
+    width: 50%;
+  }
+}
+
+main.article .footnotes ol,
+.footnotes ul {
+  max-width: none;
+}
+
+.post.with-border {
+	border: 1px solid #0003;
 }
