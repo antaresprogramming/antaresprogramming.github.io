@@ -1,15 +1,29 @@
-{% if (include.checkpoints) %}<script src="/js/checkpoint.js"></script>{% endif %}
+{% if (include.checkpoints) %}
+<script src="/js/checkpoint.js"></script>
+{% endif %}
 <script src="/js/rainbow.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/ireade/caniuse-embed/public/caniuse-embed.min.js"></script>
+<script>
+  Rainbow.onHighlight(function (block, language) {
+    block.innerHTML = block.innerHTML
+      .replaceAll(
+        "&lt;mark-antares-highlight-code&gt;",
+        '<mark class="antares-highlight-code">'
+      )
+      .replaceAll("&lt;/mark-antares-highlight-code&gt;", "</mark>");
+  });
+</script>
+
 <script>
   // Makes figure images focusable for zooming
-  let figureImages = document.querySelectorAll ("figure img");
-  figureImages.forEach (function (figureImage) {
-    figureImage.setAttribute ("tabindex", -1);
-    document.addEventListener ('mousedown', event => {
+  let figureImages = document.querySelectorAll("figure img");
+  figureImages.forEach(function (figureImage) {
+    figureImage.setAttribute("tabindex", -1);
+    document.addEventListener("mousedown", (event) => {
       if (document.activeElement === figureImage) {
         // Prevent it from triggering on focusIn
-        setTimeout (function () {
-          document.activeElement.blur ();
+        setTimeout(function () {
+          document.activeElement.blur();
         }, 100);
       }
     });
@@ -17,110 +31,115 @@
 </script>
 
 <script>
-  const sidebarTogglers = document.querySelectorAll('.js-sidebar-toggler');
-  const sidebar = document.querySelector('.sidebar')
-  const sidebarWrapper = document.querySelector('.sidebar__wrapper')
-  sidebarTogglers.forEach(btn => {
-    btn.classList.remove('hide-if-noscript')
-    btn.addEventListener('click', event => {
-      sidebar.classList.toggle('open');
-    })
-  })
-  
-  if(sidebar != null) {
-    sidebar.addEventListener('click', event => sidebar.classList.toggle('open'))
-    sidebarWrapper.addEventListener('click', event => event.stopPropagation())
+  const sidebarTogglers = document.querySelectorAll(".js-sidebar-toggler");
+  const sidebar = document.querySelector(".sidebar");
+  const sidebarWrapper = document.querySelector(".sidebar__wrapper");
+  sidebarTogglers.forEach((btn) => {
+    btn.classList.remove("hide-if-noscript");
+    btn.addEventListener("click", (event) => {
+      sidebar.classList.toggle("open");
+    });
+  });
+
+  if (sidebar != null) {
+    sidebar.addEventListener("click", (event) =>
+      sidebar.classList.toggle("open")
+    );
+    sidebarWrapper.addEventListener("click", (event) =>
+      event.stopPropagation()
+    );
   }
 </script>
 
 <script>
-  let search
-  (function() {
-    document.body.classList.add('with-js')
-    search = document.querySelector('.js-search-control')
+  let search;
+  (function () {
+    document.body.classList.add("with-js");
+    search = document.querySelector(".js-search-control");
 
-    var navButton = document.querySelector('.js-nav-toggler');
-    navButton.addEventListener('click', function() {
-      let expanded = this.getAttribute('aria-expanded') === 'true' || false;
-      this.setAttribute('aria-expanded', !expanded);
-      
-      let menu = document.querySelector('.js-nav');
+    var navButton = document.querySelector(".js-nav-toggler");
+    navButton.addEventListener("click", function () {
+      let expanded = this.getAttribute("aria-expanded") === "true" || false;
+      this.setAttribute("aria-expanded", !expanded);
+
+      let menu = document.querySelector(".js-nav");
       menu.hidden = !menu.hidden;
     });
 
-    let searchButtons = document.querySelectorAll('.js-search-toggler')
-    searchButtons.forEach(btn => {
-      btn.addEventListener('click', function() {
-        let expanded = this.getAttribute('aria-expanded') === 'true' || false;
-        searchButtons.forEach(button => button.setAttribute('aria-expanded', !expanded))
+    let searchButtons = document.querySelectorAll(".js-search-toggler");
+    searchButtons.forEach((btn) => {
+      btn.addEventListener("click", function () {
+        let expanded = this.getAttribute("aria-expanded") === "true" || false;
+        searchButtons.forEach((button) =>
+          button.setAttribute("aria-expanded", !expanded)
+        );
 
         search.hidden = !search.hidden;
-      })
-    })
-    
-    document.body.addEventListener('keydown', e => {
-      if(e.key === 'Escape') {
+      });
+    });
+
+    document.body.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") {
         closeSearchUI();
       }
-    })
-  })()
+    });
+  })();
 
   function closeSearchUI() {
-    let searchButtons = document.querySelectorAll('.js-search-toggler')
-    searchButtons.forEach(button => {
-      button.setAttribute('aria-expanded', false);
+    let searchButtons = document.querySelectorAll(".js-search-toggler");
+    searchButtons.forEach((button) => {
+      button.setAttribute("aria-expanded", false);
       search.hidden = true;
-    })
+    });
   }
 
   function toggleGCashMenu(btn) {
-    const gCashControls = document.getElementById('gcash-controls')
-    let expanded = btn.getAttribute('aria-expanded') === 'true' || false;
-    console.log({expanded})
-    btn.setAttribute('aria-expanded', !expanded)
-    gCashControls.hidden = !gCashControls.hidden
+    const gCashControls = document.getElementById("gcash-controls");
+    let expanded = btn.getAttribute("aria-expanded") === "true" || false;
+    console.log({ expanded });
+    btn.setAttribute("aria-expanded", !expanded);
+    gCashControls.hidden = !gCashControls.hidden;
   }
 
   function copyGCashNumber(textboxID) {
     const textbox = document.getElementById(textboxID);
 
     textbox.select();
-    textbox.setSelectionRange(0, 99999); 
-    
+    textbox.setSelectionRange(0, 99999);
+
     document.execCommand("copy");
   }
 </script>
 
 <script>
   // For sticky navbar shadow
-  (function() {
-    const el = document.querySelector(".main-nav")
-    const observer = new IntersectionObserver( 
+  (function () {
+    const el = document.querySelector(".main-nav");
+    const observer = new IntersectionObserver(
       ([e]) => e.target.classList.toggle("is-pinned", e.intersectionRatio < 1),
-      { 
+      {
         root: document.querySelector("body"),
-        threshold: [1]
+        threshold: [1],
       }
     );
 
     observer.observe(el);
-  })()
+  })();
 </script>
-
 
 <!-- or without installing anything -->
 <script src="https://unpkg.com/simple-jekyll-search@latest/dest/simple-jekyll-search.min.js"></script>
 <script>
   var sjs = SimpleJekyllSearch({
-    searchInput: document.getElementById('search-input'),
-    resultsContainer: document.getElementById('results-container'),
-    json: '/js/postindex.json',
+    searchInput: document.getElementById("search-input"),
+    resultsContainer: document.getElementById("results-container"),
+    json: "/js/postindex.json",
     searchResultTemplate: '<li><a href="{{ site.url }}{url}">{title}</a></li>',
-    templateMiddleware: function(prop, value, template) {
-      console.log({prop, value})
-      return value.replaceAll('&lt;', '<').replaceAll('&gt;', '>')
-    }
-  })
+    templateMiddleware: function (prop, value, template) {
+      console.log({ prop, value });
+      return value.replaceAll("&lt;", "<").replaceAll("&gt;", ">");
+    },
+  });
 </script>
 
 <!-- Analytics -->
@@ -133,22 +152,23 @@
 <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-analytics.js"></script>
 
 <script>
-  const gdpr = document.querySelector('.gdpr')
-  
+  const gdpr = document.querySelector(".gdpr");
 
-  const analyticsPreference = localStorage.getItem('analytics-enabled')
-  if(analyticsPreference == null) {
-    gdpr.setAttribute('open', 'true')
+  const analyticsPreference = localStorage.getItem("analytics-enabled");
+  if (analyticsPreference == null) {
+    gdpr.setAttribute("open", "true");
 
-    const dismissButtons = gdpr.querySelectorAll('.btn')
-    dismissButtons.forEach(button => button.addEventListener('click', function(e) {
-      gdpr.removeAttribute('open')
-      saveGdprPreference(button.matches('.js-gdpr-btn'))
-    }))
+    const dismissButtons = gdpr.querySelectorAll(".btn");
+    dismissButtons.forEach((button) =>
+      button.addEventListener("click", function (e) {
+        gdpr.removeAttribute("open");
+        saveGdprPreference(button.matches(".js-gdpr-btn"));
+      })
+    );
   }
 
   function saveGdprPreference(cookies) {
-    localStorage.setItem('analytics-enabled', cookies);
+    localStorage.setItem("analytics-enabled", cookies);
   }
 </script>
 
@@ -161,16 +181,141 @@
     projectId: "antares-programming",
     storageBucket: "antares-programming.appspot.com",
     messagingSenderId: "472998753703",
-    appId: "1:472998753703:web:19112e55d5bb5b6d10f282"
+    appId: "1:472998753703:web:19112e55d5bb5b6d10f282",
   };
 
-  const gdprBtn = document.querySelector('.js-gdpr-btn')
-  gdprBtn.addEventListener('click', function(e) {
-      console.log(e)
+  const gdprBtn = document.querySelector(".js-gdpr-btn");
+  gdprBtn.addEventListener("click", function (e) {
+    console.log(e);
 
-      // Initialize Firebase
-      firebase.initializeApp(firebaseConfig);
-      // Initialize analytics
-      firebase.analytics();
-  })
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    // Initialize analytics
+    firebase.analytics();
+  });
+</script>
+
+<script>
+  class ImageDialog {
+    constructor(path) {
+      const modal = document.createElement("dialog");
+      modal.tabIndex = -1;
+      modal.classList.add("dialog");
+      this.modal = modal;
+      document.body.appendChild(modal);
+
+      const article = document.createElement("article");
+      article.classList.add("dialog__contents");
+      this.modal.appendChild(article);
+      this.modalContents = article
+
+      const img = document.createElement('img')
+      img.src = path
+      this.modalContents.appendChild(img)
+
+      const closeButton = document.createElement("button");
+      closeButton.classList.add("btn", "js-close-dialog");
+      closeButton.innerHTML = "&times;";
+      closeButton.addEventListener("click", (e) => this.close());
+      this.modalContents.appendChild(closeButton)
+
+      this.refreshFocusableElements();
+
+      const dlg = this;
+      this.modal.addEventListener("keydown", (e) => {
+        const KEY_TAB = "Tab";
+        const KEY_ESCAPE = "Escape";
+
+        function handleBackwardTab() {
+          if (document.activeElement === dlg.firstFocusableElement) {
+            e.preventDefault();
+            dlg.lastFocusableElement.focus();
+          }
+        }
+
+        function handleForwardTab() {
+          if (document.activeElement === dlg.lastFocusableElement) {
+            e.preventDefault();
+            dlg.firstFocusableElement.focus();
+          }
+        }
+
+        if (e.key === KEY_TAB) {
+          if (dlg.focusableElements.length === 1) {
+            e.preventDefault();
+            return;
+          }
+
+          if (e.shiftKey) {
+            handleBackwardTab();
+          } else {
+            handleForwardTab();
+          }
+        } else if (e.key === KEY_ESCAPE) {
+          dlg.close();
+        }
+      });
+    }
+
+    refreshFocusableElements() {
+      let focusableElements = this.modal.querySelectorAll(
+        'a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), [tabindex="0"]'
+      );
+      this.focusableElements = Array.prototype.slice.call(focusableElements);
+      this.firstFocusableElement = this.focusableElements[0];
+      this.lastFocusableElement = this.focusableElements[
+        this.focusableElements.length - 1
+      ];
+      this.focusableElementBeforeOpen = null;
+    }
+
+    toggle(show = null) {
+      const dialog = this.modal;
+      if (show == null) {
+        if (dialog.hasAttribute("open")) {
+          this.close();
+        } else {
+          this.open();
+        }
+      } else {
+        if (show) {
+          this.open();
+        } else {
+          this.close();
+        }
+      }
+    }
+
+    open() {
+      const dialog = this.modal;
+      dialog.setAttribute("open", "true");
+      document.body.classList.add("no-scroll");
+      this.focusableElementBeforeOpen = document.activeElement;
+      this.firstFocusableElement.focus();
+      this.onOpen && this.onOpen();
+    }
+
+    close() {
+      const dialog = this.modal;
+      dialog.removeAttribute("open");
+      document.body.classList.remove("no-scroll");
+      this.focusableElementBeforeOpen.focus();
+      this.onClose && this.onClose();
+    }
+  }
+</script>
+
+<script>
+  function previousSlide(slideset) {
+    slideset.scrollBy(-250, 0);
+  }
+
+  function nextSlide(slideset) {
+    slideset.scrollBy(250, 0);
+  }
+
+  function enlargeImage(path) {
+    let dialog = new ImageDialog(path)
+    dialog.open()
+  }
 </script>
