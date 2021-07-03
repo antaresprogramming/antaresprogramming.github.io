@@ -2,9 +2,12 @@ title: "Antares Programming"
 description: "Web technologies for aspiring Filipino web developers."
 permalink: /blog/:title/
 theme-color: "#FF9500"
+color: "#FF9500"
 gravatar: aeec9ba19ac358be11a053ffcafac8f1
 author: Francis Rubio
 seo_image: /images/seo_image.png
+language: 'fil'
+lang_direction: 'ltr'
 
 facebook: antaresprogramming
 mastodon: 
