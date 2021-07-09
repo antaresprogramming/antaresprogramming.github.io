@@ -67,7 +67,7 @@ blockquote {
   padding: 1rem;
   margin-right: auto;
   font-style: italic;
-  border-left: 0.125em solid var(--accent-color);
+  border-left: 0.125em solid var(--accent);
 
   em,
   i {
@@ -144,9 +144,9 @@ blockquote {
 	font-style: normal;
 	font-size: 1.5rem;
 	border: none;
+  border-right: 0.125em solid var(--primary-light);
 	text-align: right;
 	line-height: 1.5;
-	border-right: 5px solid #0003;
 }
 
 code, var, output, pre, kbd {
@@ -180,4 +180,15 @@ math {
 	padding: 1ch;
 	display: block;
 	width: 100%;
+}
+
+code:not(.rainbow) {
+  background-color: var(--code-bg);
+  color: var(--code-fg);
+  padding: 0 0.25em;
+  border-radius: 0.25em;
+}
+
+img {
+	background-color: #fff;
 }

@@ -26,8 +26,11 @@
   --link-color: var(--primary);
   --link-fg: #ffcedc;
 
-  --header-bg-color:#F9C440;
+  --header-bg-color: #f9c440;
   --header-fg-color: hsl(43, 94%, 11%);
+
+  --code-fg: hsl(43, 94%, 11%);
+  --code-bg: hsl(43, 94%, 61%, 0.25);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -42,5 +45,8 @@
     --kbd-shadow: 0 2px 0 #0006, inset 0 1px 0 #fff1;
     --link-color: #ffcedc;
     --link-fg: var(--primary);
+
+    --code-bg: hsl(43, 94%, 11%, 0.25);
+    --code-fg: hsl(43, 94%, 61%);
   }
 }
