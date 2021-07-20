@@ -1,0 +1,130 @@
+.alert {
+    align-items     : center;
+    background-color: #0003;
+    border          : 1px solid #0005;
+    border-radius   : var(--border-radius);
+    display         : flex;
+    gap             : 1em;
+    padding         : var(--space-l);
+
+    --focus-color: currentColor;
+    --hover-color: var(--silver-100);
+}
+
+.alert.info {
+    background-color: var(--info-t);
+    border-color    : var(--info-500);
+
+    --focus-color: var(--info-500);
+    --hover-color: var(--info-500);
+
+    strong {
+        color: var(--info-900);
+    }
+}
+
+.alert.error {
+    background-color: var(--error-t);
+    border-color    : var(--error-500);
+
+    --focus-color: var(--error-500);
+    --hover-color: var(--error-500);
+
+    strong {
+        color: var(--error-900);
+    }
+}
+
+.alert.warning {
+    background-color: var(--warning-t);
+    border-color    : var(--warning-500);
+
+    --focus-color: var(--warning-500);
+    --hover-color: var(--warning-500);
+
+    strong {
+        color: var(--warning-900);
+    }
+}
+
+.alert.success {
+    background-color: var(--success-t);
+    border-color    : var(--success-500);
+
+    --focus-color: var(--success-500);
+    --hover-color: var(--success-500);
+
+    strong {
+        color: var(--success-900);
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .alert {
+        strong {
+            color: var(--fg-300);
+        }
+
+        --focus-color: currentColor;
+        --hover-color: #fff3;
+    }
+
+    .alert.info {
+        strong {
+            color: var(--info-100);
+        }
+
+        --focus-color: currentColor;
+        --hover-color: var(--info-900);
+    }
+
+    .alert.error {
+        strong {
+            color: var(--error-100);
+        }
+
+        --focus-color: currentColor;
+        --hover-color: var(--error-900);
+    }
+
+    .alert.warning {
+        strong {
+            color: var(--warning-100);
+        }
+
+        --focus-color: currentColor;
+        --hover-color: var(--warning-900);
+    }
+
+    .alert.success {
+        strong {
+            color: var(--success-100);
+        }
+
+        --focus-color: currentColor;
+        --hover-color: var(--success-900);
+    }
+}
+
+.alert__body {
+    flex: 1;
+    gap : 0;
+}
+
+.alert__body>* {
+    font-size: inherit;
+    margin   : 0;
+}
+
+.alert .button.no-bg {
+    color: inherit;
+}
+
+.alert>.button.no-bg:hover {
+    background-color: var(--hover-color);
+}
+
+.alert>.button.no-bg:focus {
+    background-color: transparent;
+    box-shadow      : 0 0 0 5px var(--focus-color);
+}
