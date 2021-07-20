@@ -1,19 +1,19 @@
 kbd {
   background-color: var(--bg-code);
-  display: inline-block;
-  padding: 0.1em 0.25em;
-  border-radius: 0.25em;
-  font-family: var(--monospace);
-  border: 1px solid #0002;
-  text-indent: 0;
-  box-shadow: var(--kbd-shadow);
+  display         : inline-block;
+  padding         : 0.1em 0.25em;
+  border-radius   : 0.25em;
+  font-family     : var(--monospace);
+  border          : 1px solid #0002;
+  text-indent     : 0;
+  box-shadow      : var(--kbd-shadow);
 }
 
 div.highlighter-rouge {
-	margin: 2em auto;
-	display: block;
-	width: max-content;
-	max-width: var(--content-width);
+  margin   : 2em auto;
+  display  : block;
+  width    : max-content;
+  max-width: var(--content-width);
 }
 
 .highlight {
@@ -23,13 +23,13 @@ div.highlighter-rouge {
 
   table {
     border-spacing: 0;
-    margin: 0;
-    width: 100%;
+    margin        : 0;
+    width         : 100%;
   }
 }
 
 .rouge-code {
-  padding-left: 0.25em;
+  padding-left : 0.25em;
   padding-right: 1em;
 }
 
@@ -38,4 +38,193 @@ div.highlighter-rouge {
     color: inherit;
   }
 
+}
+
+.code-snippet {
+  background-color: #eee;
+  border-radius   : var(--border-radius);
+  font-size       : 1rem;
+  overflow        : auto;
+  padding         : 0 !important;
+  padding-top     : calc(var(--space-l) * 3) !important;
+  position        : relative;
+  scrollbar-color : var(--bg-500) transparent !important;
+}
+
+@media (prefers-color-scheme: dark) {
+  .code-snippet {
+    background-color: #333;
+  }
+}
+
+.code-snippet code[data-language]::before {
+  background-color: var(--secondary-100) !important;
+  border-radius   : var(--border-radius);
+  color           : var(--secondary-900) !important;
+  content         : attr(data-language) !important;
+  font-family     : var(--font-sans) !important;
+  font-size       : smaller;
+  font-weight     : bold !important;
+  left            : 0 !important;
+  margin          : var(--space-s) !important;
+  padding         : var(--space-s) !important;
+  position        : absolute !important;
+  text-transform  : uppercase !important;
+  top             : 0 !important;
+}
+
+.code-snippet code {
+  border-radius   : 0;
+  background-color: transparent;
+}
+
+@media (prefers-color-scheme: dark) {
+  .code-snippet code[data-language]::before {
+    color: var(--secondary-100);
+  }
+}
+
+:root {
+  --strawberry-100: #ff8c82;
+  --strawberry-300: #ed5353;
+  --strawberry-500: #c6262e;
+  --strawberry-700: #a10705;
+  --strawberry-900: #7a0000;
+
+  --orange-100: #ffc27d;
+  --orange-300: #ffa154;
+  --orange-500: #f37329;
+  --orange-700: #cc3b02;
+  --orange-900: #a62100;
+
+  --banana-100: #fff394;
+  --banana-300: #ffe16b;
+  --banana-500: #f9c440;
+  --banana-700: #d48e15;
+  --banana-900: #ad5f00;
+
+  --lime-100: #d1ff82;
+  --lime-300: #9bdb4d;
+  --lime-500: #68b723;
+  --lime-700: #3a9104;
+  --lime-900: #206b00;
+
+  --blueberry-100: #8cd5ff;
+  --blueberry-300: #64baff;
+  --blueberry-500: #3689e6;
+  --blueberry-700: #0d52bf;
+  --blueberry-900: #002e99;
+
+  --grape-100: #e4c6fa;
+  --grape-300: #cd9ef7;
+  --grape-500: #a56de2;
+  --grape-700: #7239b3;
+  --grape-900: #452981;
+
+  --cocoa-100: #a3907c;
+  --cocoa-300: #8a715e;
+  --cocoa-500: #715344;
+  --cocoa-700: #57392d;
+  --cocoa-900: #3d211b;
+
+  --slate-100: #95a3ab;
+  --slate-300: #667885;
+  --slate-500: #485a6c;
+  --slate-700: #273445;
+  --slate-900: #0e141f;
+
+  --silver-100: #fafafa;
+  --silver-300: #d4d4d4;
+  --silver-500: #abacae;
+  --silver-700: #7e8087;
+  --silver-900: #555761;
+}
+
+.rainbow {
+  color: var(--silver-900) !important;
+}
+
+.code-snippet {
+  .support.tag {
+    display: inline-block;
+  }
+
+  .support.tag-name {
+    color: var(--grape-700) !important;
+  }
+
+  .support.attribute {
+    color: var(--blueberry-700) !important;
+  }
+
+  .string.quote,
+  .string.value {
+    color: var(--orange-700) !important;
+  }
+
+  .entity.name.tag {
+    color: var(--accent-700) !important;
+  }
+
+
+  .entity.name.class {
+    color: var(--orange-700) !important;
+  }
+
+  .entity.name.id {
+    color: var(--banana-700) !important;
+  }
+
+  .support.css-property {
+    color      : var(--grape-700) !important;
+    font-weight: bold;
+  }
+
+  .support.css-value {
+    color: var(--banana-700) !important;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .rainbow {
+    color: var(--silver-500) !important;
+  }
+
+  .code-snippet {
+    .support.tag-name {
+      color: var(--grape-300) !important;
+    }
+
+    .support.attribute {
+      color: var(--blueberry-300) !important;
+    }
+
+    .string.quote,
+    .string.value {
+      color: var(--orange-100) !important;
+    }
+
+    .entity.name.tag {
+      color: var(--accent-300) !important;
+    }
+
+    .entity.name.class {
+      color: var(--banana-300) !important;
+    }
+
+    .entity.name.id {
+      color: var(--banana-300) !important;
+    }
+
+    .support.css-property {
+      color: var(--grape-300) !important;
+    }
+  }
+}
+
+.code-snippet {
+  .support.operator,
+  .support.tag {
+    color: inherit !important;
+  }
 }
