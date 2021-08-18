@@ -142,15 +142,6 @@
   });
 </script>
 
-<!-- Analytics -->
-<!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
-
-<!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
-
-<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-analytics.js"></script>
-
 <script>
   const gdpr = document.querySelector(".gdpr");
 
@@ -170,29 +161,6 @@
   function saveGdprPreference(cookies) {
     localStorage.setItem("analytics-enabled", cookies);
   }
-</script>
-
-<script>
-  // Your web app's Firebase configuration
-  var firebaseConfig = {
-    apiKey: "AIzaSyCJLbulL8xRhCbiJmhUVPXBjmwqBkH18k4",
-    authDomain: "antares-programming.firebaseapp.com",
-    databaseURL: "https://antares-programming.firebaseio.com",
-    projectId: "antares-programming",
-    storageBucket: "antares-programming.appspot.com",
-    messagingSenderId: "472998753703",
-    appId: "1:472998753703:web:19112e55d5bb5b6d10f282",
-  };
-
-  const gdprBtn = document.querySelector(".js-gdpr-btn");
-  gdprBtn.addEventListener("click", function (e) {
-    console.log(e);
-
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-    // Initialize analytics
-    firebase.analytics();
-  });
 </script>
 
 <script>
